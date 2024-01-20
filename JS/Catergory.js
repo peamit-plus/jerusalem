@@ -6,8 +6,8 @@ function createCategory(json)
       "<div class='thumbnail'>"+
         "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+"' title='"+json[i].p+"' style='width:100%; height:250px;' class='carsor' onclick='index"+json[i].image+"()'>"+
           "<div class='caption'>"+
-            "<p>"+json[i].p+"<br/>"+
-     "<button class='btn btn-primary fade-in' onclick='index"+(i+1)+"()'>&laquo; לקטגוריה לחץ</button> </p>"+
+            "<p class='text-primary'>"+json[i].p+"<br/>"+
+     "<button class='btn btn-primary fade-in ' onclick='index"+(i+1)+"()'>&laquo; לקטגוריה לחץ</button> </p>"+
           "</div>"+
        "</div>"+
     "</div></div>";
