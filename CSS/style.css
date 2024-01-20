@@ -311,3 +311,7 @@ hr{
 .top{
   margin-top: 50px;
 }
+  #addToCartBtn:hover .glyphicon {
+        transition: transform 0.5s ease-in-out;
+        transform: rotate(360deg);
+    }

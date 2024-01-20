@@ -11,7 +11,7 @@ gallery+=`<p>בדף זה יש ${json.length} מוצרים</p>
                   <div class='caption product-caption'>
                       <p class='text-center'>
                           <b>${json[i].p}</b><br/>
-                          <button class='btn btn-info' onclick='addToLocalStorage(${json[i].productId})'>הוסף לסל</button>
+                          <button class='btn btn-info' onclick='addToLocalStorage(${json[i].productId})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
                       </p>
                   </div>
               </div>
