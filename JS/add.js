@@ -168,11 +168,11 @@ function addToLocalStorage(productId)
   if (product) 
   {
       localStorage.setItem(`product_${productId}`, JSON.stringify(product));
-      showMessage(" <span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:25px;'></span><br/>  המוצר "+"<span class='text-primary'><b>"+ product.name+"</b></span>"+" נוסף לסל הקניות <br/> בסיום ההזמנה יהיה ניתן לשנות כמויות וצבע");
+      showMessage(" <span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:35px;'></span><br/>  המוצר "+"<span class='text-primary'><b>"+ product.name+"</b></span>"+" נוסף לסל הקניות <br/> בסיום ההזמנה יהיה ניתן לשנות כמויות וצבע");
   } 
   else 
   {
-   showMessage("מצטערים, אירעה בעיה בהוספת המוצר.");
+   showMessage("<span class='glyphicon glyphicon-remove-circle text-danger' style='font-size:35px;'></span><br/> מצטערים, אירעה בעיה בהוספת המוצר.");
   }
 }
   function showMessage(message) 
