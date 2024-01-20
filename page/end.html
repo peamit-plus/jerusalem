@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פעמית פלוס + בחירת כמויות וצבע</title>
+  <link rel="stylesheet" href="https://peamit-plus.github.io/jerusalem/CSS/style.css">
+  <link rel="stylesheet" href="https://peamit-plus.github.io/jerusalem/CSS/style2.css">
+  <link rel="stylesheet" href="https://peamit-plus.github.io/jerusalem/CSS/stylebtn.css">
+  <!-- הוספת Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="../image/rel.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="https://peamit-plus.github.io/jerusalem/JS/app.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV8E525X7H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XV8E525X7H');
+  </script>
+</head>
+
+<body style=" padding-top: 70px;">
+
+
+
+  <div class="container">
+    <h1 class="text-center" id="demotext">סיכום משלוח</h1>
+    <!-- המוצרים יופיעו כאן -->
+    <!-- hh -->
+    <div id="productsContainer"></div>
+
+  </div>
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 id="demotext" >:סיכום הזמנה</h3>
+        <b><u><p>מחיר כולל: <span id="totalPrice">0</span>₪</p></u></b>
+        <br />
+        <p style="font-size:15px;">
+          אופציות לתשלום:
+          אשראי טלפוני
+          ,ש'יק
+          ,העברה בנקאית
+          ,ביט
+          ,מזומן
+          
+        </p>
+
+      </div>
+    </div>
+
+<p class="text-center">
+      <div class="button-container text-center">
+        <p class="text-center">
+          <div class="button-container">
+            <button id="animatedButton1" class="btn btn-primary" onclick="btnhome()">חזרה להמשך הקנייה</button>
+          </div> 
+          </p>
+       
+              <button id="animatedButton3" class="btn btn-primary" onclick="copyUpdatedData()">לשלב הבא</button>
+     <!--   <div class="col-sm-3"></div>-->
+      </div>
+    </p>
+  </div>
+
+
+
+  <!-- הוספת הספריות הדרושות ל-Bootstrap 3 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://peamit-plus.github.io/jerusalem/JS/clculate.js"></script>
+  <script src="https://peamit-plus.github.io/jerusalem/JS/add.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("animatedButton1");
+
+        const colors = ["#00d1b2", "#3273dc", "#23d160", "#ffdd57", "#ff3860"];
+        let currentIndex = 0;
+
+        function changeButtonStyle() {
+            button.style.backgroundColor = colors[currentIndex];
+            button.style.transform = "scale(1.2)";
+
+            setTimeout(() => {
+                button.style.transform = "scale(1)";
+            }, 500);
+
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        function startAnimation() {
+            setInterval(() => {
+                changeButtonStyle();
+            }, 2000);
+        }
+
+        // Initial animation trigger
+        startAnimation();
+    });
+
+
+
+    //
+    document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("animatedButton2");
+
+        const colors = ["#00d1b2", "#3273dc", "#23d160", "#ffdd57", "#ff3860"];
+        let currentIndex = 0;
+
+        function changeButtonStyle() {
+            button.style.backgroundColor = colors[currentIndex];
+            button.style.transform = "scale(1.2)";
+
+            setTimeout(() => {
+                button.style.transform = "scale(1)";
+            }, 500);
+
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        function startAnimation() {
+            setInterval(() => {
+                changeButtonStyle();
+            }, 2000);
+        }
+
+        // Initial animation trigger
+        startAnimation();
+    });
+
+
+    //
+    document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("animatedButton3");
+
+        const colors = ["#00d1b2", "#3273dc", "#23d160", "#ffdd57", "#ff3860"];
+        let currentIndex = 0;
+
+        function changeButtonStyle() {
+            button.style.backgroundColor = colors[currentIndex];
+            button.style.transform = "scale(1.2)";
+
+            setTimeout(() => {
+                button.style.transform = "scale(1)";
+            }, 500);
+
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        function startAnimation() {
+            setInterval(() => {
+                changeButtonStyle();
+            }, 2000);
+        }
+
+        // Initial animation trigger
+        startAnimation();
+    });
+</script>
+  <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
+
+</body>
+
+</html>

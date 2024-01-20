@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="he">
+<head><title>פעמית פלוס + סכו"ם</title>
+  <meta charset="utf-8">
+      <meta name="description" content=' פעמית פלוס +| כלים חד פעמיים| סכו"ם '>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://peamit-plus.github.io/jerusalem/CSS/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="image/rel.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link href="https://peamit-plus.github.io/jerusalem/CSS/styleproduct.css" rel="stylesheet" type="text/css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV8E525X7H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XV8E525X7H');
+  </script>
+</head>
+<body onload="page4()">
+  <div class="container mt-5" style="margin-top:25px">
+    <div class="header">
+        <div class="row">
+          <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" onclick="index5()">הבא</button>
+         </div>
+         <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" onclick="btnsale()">מבצעים</button>
+         </div>
+         <div class="col-xs-12 col-md-4">
+          <button class="btn btn-info btn-block" onclick="end()">סיים הזמנה</button>
+        </div>
+          <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" onclick="btnhome()">דף הבית</button>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" onclick="index3()">הקודם</button>
+        </div>
+        </div>
+    </div>
+</div>
+  
+ <div class="container" style="margin-top:25px">
+   <h1 class="text-center">פעמית פלוס - סכו"ם</h1>
+ 
+   <span id="id_gallery"></span>
+   <div class="row text-center">
+     <div class="col-xs-12">
+       <div class="btn-group">
+         <button type="button" class="btn btn-default" onclick="index5()"><i class="fa fa-chevron-left"></i> הבא </button>
+
+         <button type="button" class="btn btn-default" onclick="index3()"> הקודם <i class="fa fa-chevron-right"></i></button>
+       </div>
+     </div>
+   </div>
+
+ </div>
+
+   <a href="#" class="back-to-top" style="display: none;">חזור למעלה</a>
+   <script src="https://peamit-plus.github.io/jerusalem/JS/app.js"></script>
+<script src="https://peamit-plus.github.io/jerusalem/JS/product.js"/></script>
+<script src="https://peamit-plus.github.io/jerusalem/JS/add.js"></script>
+  <div class="modal fade" id="customModal" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p id="modalMessage">הודעה</p>
+        </div>
+        <div class="center text-center">
+
+
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+   <div id="salebutton" onclick="end()"><span class="glyphicon glyphicon-shopping-cart"></span></div>
+  <div id="sharebutton" onclick="share()"><i class="fa fa-share-alt"></i></div>
+  <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
+   <script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) { // אם הגלילה היא מעל 100 פיקסל
+                $('.back-to-top').fadeIn();
+            } else {
+                $('.back-to-top').fadeOut();
+            }
+        });
+
+        $('.back-to-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 800);
+        });
+    });
+      </script>
+</body>
+
+</html>

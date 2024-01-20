@@ -1,0 +1,313 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  text-align:right ;
+  font-family:sans-serif;
+  background: #fffafa;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+.BorderAbout {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.BorderAbout p {
+    margin: 15px 0;
+}
+p{
+  text-align: center;
+}
+/* הסתרת הקישור למחשב במכשירים עם מסך קטן */
+        @media only screen and (max-width: 768px) {
+            .desktop-link {
+                display: none;
+            }
+        }
+
+        /* הסתרת הקישור לפלאפון במכשירים עם מסך גדול */
+        @media only screen and (min-width: 769px) {
+            .mobile-link {
+                display: none;
+            }
+        }
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 3px 6px;
+    font-size: 14px;
+    color: #fffafa;
+    background: #337ab7;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 9999;
+ }
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 50px;
+}
+.rotating-image {
+    width: 200px; /* או כל רוחב אחר שאתה רוצה */
+    position: fixed;
+    bottom: 0;
+    animation: spin 10s infinite linear;
+    transform-origin: center;
+    mix-blend-mode: multiply;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.bottom-center {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.txt-center{
+  align-items: center;
+}
+ /* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #0eddec #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0eddec;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+p{
+  text-align: center;
+  align-items: center;
+}
+.product-image {
+    width: 100%;
+    height: 270px;
+}
+.product-caption {
+    height: 75px;
+}
+.custom-video {
+    width: 400px;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+@media only screen and (min-width: 769px) {
+    #question-button {
+  position: fixed;
+  bottom:40px;
+  left: 5px;
+  width:27.94px; /* אפשר להתאים לגודל שאתה רוצה */
+  height:27.94px; /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7; /* צבע רקע */
+  color: #fff; /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding:1px 2px 3px 1px;
+  cursor: pointer;
+}
+    #salebutton{
+  position: fixed;
+  bottom: 40px;
+  left: 5px;
+  width: 27.94px; /* אפשר להתאים לגודל שאתה רוצה */
+  height: 27.94px; /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7; /* צבע רקע */
+  color: #fff; /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding:3px 2px 3px 1px;
+  cursor: pointer;
+}
+    #sharebutton{
+  position: fixed;
+  bottom: 70px;
+  left: 5px;
+  width: 27.94px; /* אפשר להתאים לגודל שאתה רוצה */
+  height: 27.94px; /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7; /* צבע רקע */
+  color: #fff; /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding:1px 3px 6px 3px;
+  cursor: pointer;
+}
+}
+/*to comuter*/
+@media only screen and (max-width: 769px) {
+    #question-button {
+  position: fixed;
+  bottom:50px;
+  left: 2px;
+  width: 40px; /* אפשר להתאים לגודל שאתה רוצה */
+  height: 40px; /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7; /* צבע רקע */
+  color: #fff; /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding:5px 2px 3px 1px;
+  cursor: pointer;
+}
+    #salebutton{
+  position: fixed;
+  bottom: 50px;
+  left: 2px;
+  width:40px; /* אפשר להתאים לגודל שאתה רוצה */
+  height:40px; /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7; /* צבע רקע */
+  color: #fff; /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding:6px 2px 3px 1px;
+  cursor: pointer;
+}
+    #sharebutton{
+  position: fixed;
+  bottom: 93px;
+  left: 2px;
+  width:40px; /* אפשר להתאים לגודל שאתה רוצה */
+  height:40px; /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7; /* צבע רקע */
+  color: #fff; /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding:5px 2px 3px 1px;
+  cursor: pointer;
+}
+}
+#demotext {
+color: #444444;
+background: #FFFFFF;
+text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+background: #FFFFFF;
+}
+.textcarsola{
+  background-color: rgba(255, 255, 255, 0.5); /* צבע רקע עם שקיפות (כאן בצבע לבן ושקיפות של 50%) */
+  color:black;
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: #333;
+  padding: 20px 0;
+  height: auto;
+  padding-right: 5px;
+  border-top:solid 4px #40c5f2 ;
+}
+
+
+.footer h3 {
+  color: #ece755;
+  margin-top: 0;
+}
+.footer a {
+ color: #40c5f2;
+  transition:0.7s;
+  text-decoration: none;
+}
+.footer a:hover{
+   color: #ece755;
+   content: "-";
+}
+.footer a:hover::before{
+   color: #40c5f2;
+   content: "-";
+}
+
+.footer p {
+ color:#ffffff;
+}
+hr{
+ border: 1px solid #337ab7 ;
+ width: 80%;
+}
+
+
+@media (min-width: 768px) {
+ #myCarousel {
+    width: 70%;
+    /* קביעת רוחב ספציפי לקרוסלה */
+    margin: auto;
+    /* להבטיח מרכוז הקרוסלה במחשב */
+  }
+  #myCarousel .carousel-inner .item img {
+    width: 100%;
+    /* קביעת רוחב כללי לתמונות בקרוסלה */
+    height: 400px;
+    /* קביעת גובה כללי לתמונות בקרוסלה */
+    object-fit: cover;
+    /* הבאת יתרונות של התמונה במסגרת נתונה */
+  }
+}
+
+@media (max-width: 768px) {
+  #myCarousel {
+    width: 100%;
+    /* קביעת רוחב ספציפי לקרוסלה */
+    margin: auto;
+    /* להבטיח מרכוז הקרוסלה במחשב */
+  }
+
+  #myCarousel .carousel-inner .item img {
+    width: 100%;
+    /* קביעת רוחב כללי לתמונות בקרוסלה */
+    height: 200px;
+    /* קביעת גובה כללי לתמונות בקרוסלה */
+
+  }
+}
+.carsor{
+  cursor: pointer;
+}
+.bg-dark{
+  background: #4a4a4a;
+  color:#d0cdcd;
+  margin-bottom: 20px;
+  min-height: 100px;
+  align-items: center;
+  border-bottom:solid 4px #ece513 ;
+}
+.top{
+  margin-top: 50px;
+}
