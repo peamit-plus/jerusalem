@@ -254,7 +254,8 @@ hr{
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+{
   #myCarousel {
     width: 100%;
     /* קביעת רוחב ספציפי לקרוסלה */
@@ -284,7 +285,8 @@ hr{
 .top{
   margin-top: 50px;
 }
-  #addToCartBtn:hover .glyphicon {
+  #addToCartBtn:hover .glyphicon 
+  {
         transition: transform 0.5s ease-in-out;
         transform: rotate(360deg);
-    }
+}
