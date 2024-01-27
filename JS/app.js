@@ -31,4 +31,4 @@ function share() {
 }
 function printPage() {window.print();} // פתח את דיאלוג ההדפסה של הדפדפן
 function notfound(){alert("אפשרות זאת לא פעילה בדף הנוכחי")}
-
+function search(){window.location.href="../page/search.html"}
