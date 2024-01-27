@@ -49,7 +49,7 @@ function createModule(){
          <h4 class='modal-title text-center'>מידע - יצירת קשר</h4>
           </div><div class='modal-body' style='text-align:right;'>
 
-<img src="https://5d80a659-68a0-4257-a84a-6f5053521dcb-00-1gz1y4gtoccy3.pike.replit.dev/imgctg/ashray.jpg" alt="Popup Image" class="img-responsive center-block" style="border: 1px solid;">
+<img src="../imgctg/ashray.jpg" alt="פרסום אשראי" class="img-responsive center-block" style="border: 1px solid;">
 <hr/>
       <!--  <h4 style='text-align: center;'><u>! התחדשנו </u></h2>
           <p> אפשר עכשיו גם למצוא אותנו בגוגל <a href='information.html'>למידע נוסף</a></p>
