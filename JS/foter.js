@@ -13,7 +13,8 @@ document.getElementById("footer").innerHTML=`
 
           <div class="col-md-4">
               <h3>המוצרים שלנו</h3>
-                <a href="#category1">צפיה בקטלוג</a><br/>
+                <a href="#category1">צפיה בקטלוג</a><br/ 
+                >
                 <a href="https://peamit-plus.github.io/jerusalem/page/searchproduct.html">חיפוש מוצר 👌</a><br/>
                 <a href="https://peamit-plus.github.io/jerusalem/page/products/index1.html">התחלת קניה</a><br/>
                 <!-- <a href="#"  onclick="notfound()"></a>-->
