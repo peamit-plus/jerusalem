@@ -27,10 +27,10 @@ document.getElementById("footer").innerHTML=`
                   <a href="https://peamit-plus.github.io/jerusalem/page/help.html">עזרה</a>
           </div>
     </div>
-    </div>
+    
   <br/>
     <p class="text-center">© כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2024</p>
-
+    </div>
 `}
 start()
 
