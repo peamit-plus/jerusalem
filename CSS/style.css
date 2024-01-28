@@ -297,6 +297,8 @@ hr{
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
     text-align: center;
+    align-items: center;
+    float: center;
   }
   
   /* Safari */
