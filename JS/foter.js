@@ -1,7 +1,7 @@
 function start(){
 document.getElementById("footer").innerHTML=`
 
-    <div class="container">
+    <div class="container" style="background-color: #333;">
         <div class="row">
           <div class="col-md-4">
                 <h3>יצירת קשר</h3>
