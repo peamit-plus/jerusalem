@@ -204,11 +204,9 @@ background: #FFFFFF;
   margin-top: 100px;
   background-color: #333;
   padding: 20px 0;
+  height: auto;
   border-top:solid 4px #40c5f2 ;
-  
 }
-
-
 .footer h3 {
   color: #ece755;
   margin-top: 0;
