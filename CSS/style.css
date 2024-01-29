@@ -297,6 +297,7 @@ hr{
     text-align: center;
     align-items: center;
     float: center;
+    margin: 0 auto;
   }
   
   /* Safari */
