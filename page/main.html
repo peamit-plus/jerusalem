@@ -29,11 +29,15 @@
     gtag('config', 'G-XV8E525X7H');
   </script>
   <style type="text/css">
+    .lds-ring-parent {
+  text-align: center;
+}
     .lds-ring,
     .lds-ring div {
       box-sizing: border-box;
       margin: 0 auto;
       text-align: center;
+      align-items: center;
     }
     
     .lds-ring {
@@ -43,6 +47,7 @@
       height: 80px;
       margin: 0 auto;
       text-align: center;
+      align-items: center;
     }
     .lds-ring div {
       box-sizing: border-box;
@@ -57,6 +62,7 @@
       border-color: currentColor transparent transparent transparent;
       margin: 0 auto;
       text-align: center;
+      align-items: center;
       }
     .lds-ring div:nth-child(1) {
       animation-delay: -0.45s;
@@ -112,7 +118,10 @@
     <!-- <div class="alert alert-info" style="text-align: right; padding: 1px; font-size: 17px;"> 
        <strong>הודעה ! </strong>מחפשים מוצר ולא יודעים באיזו קטגוריה לחצו על הקישור הבא <a href="https://peamit-plus.github.io/jerusalem/page/search.html" class="alert-link">לחיפוש המוצר</a>
     </div> -->
-    <div class="row"><span id="id_category"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></span></div>
+    <div class="row"><span id="id_category"><div class="lds-ring-parent">
+      <div class="lds-ring"><div></div><div></div><div></div><div></div>
+      </div>
+    </div></span></div>
     
       <hr data-aos="zoom-in" data-aos-duration="2000"/>
       <h2 class="text-center" id="demotext" data-aos="zoom-in" data-aos-duration="2000">מוצרים חמים</h2>
