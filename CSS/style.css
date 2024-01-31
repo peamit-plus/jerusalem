@@ -341,7 +341,9 @@ hr{
         }
       }
 
-
+      .lds-roller-parent {
+        text-align: center;
+      }
       .lds-roller {
         display: inline-block;
         position: relative;
