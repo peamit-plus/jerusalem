@@ -112,11 +112,7 @@ function confirmDeleteProduct(key) {
   const modal = document.querySelector('.modal');
   modal.remove(); // Close the modal
 
-  // Proceed with product deletion
-  deleteProductFromStorage(key);
-}
-
-function deleteProductFromStorage(key) {
+  
 let productCard = document.getElementById(`product-${key}`);
 
   // Add fade-out animation using CSS class
