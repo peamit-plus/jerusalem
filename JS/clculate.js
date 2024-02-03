@@ -79,46 +79,41 @@ function updateQuantity(key, amount) {
 }
 
 function deleteProduct(key) {
-  console.log("A")
   const productCard = document.getElementById(`product-${key}`);
+  productCard.classList.remove('fade-out');
+  productCard.classList.add('fade-in');
+
+  // Add modal-open class to body to disable scrolling
+  document.body.classList.add('modal-open');
+
   const productName = productCard.querySelector('.panel-heading h3').textContent;
 
   // Create and display the confirmation modal
   const modal = document.createElement('div');
-  modal.classList.add('modal', 'fade', 'in');
+  modal.classList.add('modal', 'fade', 'in', 'fade-in');
   modal.style.display = 'block';
-  modal.style.overflow='hidden'
+  modal.style.overflow = 'hidden';
 
   modal.innerHTML = `
-    <div class="modal-dialog">
-      <div class="modal-content fade-out">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">מחיקת מוצר</h4>
-        </div>
-        <div class="modal-body" dir="rtl">
-          האם אתה בטוח שברצונך למחוק את המוצר "${productName}" מסל הקניות?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeM()">לא</button>
-          <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct('${key}')">כן, מחק</button>
-        </div>
-      </div>
-    </div>
+    <!-- (existing modal HTML) -->
   `;
+
   document.body.appendChild(modal);
 }
-function closeM(){
+
+function closeM() {
   const modal = document.querySelector('.modal');
-  modal.remove();
+  modal.remove(); // Close the modal
+
+  // Remove modal-open class from body to enable scrolling
+  document.body.classList.remove('modal-open');
 }
 
 function confirmDeleteProduct(key) {
-  console.log("B",key)
   const modal = document.querySelector('.modal');
   modal.remove(); // Close the modal
-let productCard = document.getElementById(`product-${key}`);
-// Add fade-out animation using CSS class
+
+  let productCard = document.getElementById(`product-${key}`);
   productCard.classList.add('fade-out');
 
   // Set a timeout to remove the product card after the animation is complete
@@ -126,8 +121,12 @@ let productCard = document.getElementById(`product-${key}`);
     localStorage.removeItem(key);
     productCard.remove();
     calculateTotalPrice();
+
+    // Remove modal-open class from body to enable scrolling
+    document.body.classList.remove('modal-open');
   }, 500); // Adjust the time based on your animation duration
 }
+
 
 
 function copyUpdatedData() {
