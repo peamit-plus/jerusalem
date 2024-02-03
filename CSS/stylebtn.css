@@ -61,7 +61,8 @@
     background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
     color: white;
     padding: 0.8em 1.2em;
-    display: flex;
+    display: grid;
+    place-items: center;
     align-items: center;
     text-align: center;
     border: none;
@@ -115,6 +116,8 @@
   }
   
   .home_btn > button {
+    display: grid;
+  place-items: center;
     --border-radius: 15px;
     --border-width: 4px;
     appearance: none;
