@@ -89,7 +89,7 @@ function deleteProduct(key) {
   modal.style.display = 'block';
   modal.innerHTML = `
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content fade-out">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title">מחיקת מוצר</h4>
@@ -106,8 +106,11 @@ function deleteProduct(key) {
   `;
   document.body.appendChild(modal);
 }
-function closeM(){const modal = document.querySelector('.modal');
-modal.remove();}
+function closeM(){
+  const modal = document.querySelector('.modal');
+  modal.remove();
+}
+
 function confirmDeleteProduct(key) {
   console.log("B",key)
   const modal = document.querySelector('.modal');
