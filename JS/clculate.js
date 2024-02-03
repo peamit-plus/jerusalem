@@ -78,10 +78,44 @@ function updateQuantity(key, amount) {
   calculateTotalPrice();
 }
 
-function updateColor(key, inputElement) {
-  let product = JSON.parse(localStorage.getItem(key));
-  product.color = inputElement.value;
-  localStorage.setItem(key, JSON.stringify(product));
+function deleteProduct(key) {
+  const productCard = document.getElementById(`product-${key}`);
+  const productName = productCard.querySelector('.panel-heading h3').textContent;
+
+  // Create and display the confirmation modal
+  const modal = document.createElement('div');
+  modal.classList.add('modal', 'fade', 'in');
+  modal.style.display = 'block';
+  modal.innerHTML = `
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">מחיקת מוצר</h4>
+        </div>
+        <div class="modal-body">
+          האם אתה בטוח שברצונך למחוק את המוצר "${productName}" מסל הקניות?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">לא</button>
+          <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct('${key}')">כן, מחק</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+function confirmDeleteProduct(key) {
+  const modal = document.querySelector('.modal');
+  modal.remove(); // Close the modal
+
+  // Proceed with product deletion
+  deleteProductFromStorage(key);
+}
+
+function deleteProductFromStorage(key) {
+  // ... (Your existing deleteProduct logic, now called from confirmDeleteProduct)
 }
 
 function deleteProduct(key) {
