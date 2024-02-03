@@ -181,19 +181,4 @@
    .home_btn > button:active {
     --border-width: 5px;
    }
-   /* CSS for fade-in animation */
-.modal.fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  /* CSS for fade-out animation */
-  .modal.fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  body.modal-open {
-    overflow: hidden;
-  }
-  
+   
