@@ -85,9 +85,10 @@ function deleteProduct(key) {
 
   // Create and display the confirmation modal
   const modal = document.createElement('div');
-  modal.classList.add('modal', 'fade', 'in');
+
   modal.style.display = 'block';
   modal.innerHTML = `
+  <div class='modal fade' id='myModal' role='dialog'>
     <div class="modal-dialog">
       <div class="modal-content fade-out">
         <div class="modal-header">
@@ -102,6 +103,7 @@ function deleteProduct(key) {
           <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct('${key}')">כן, מחק</button>
         </div>
       </div>
+    </div>
     </div>
   `;
   document.body.appendChild(modal);
