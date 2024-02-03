@@ -79,6 +79,7 @@ function updateQuantity(key, amount) {
 }
 
 function deleteProduct(key) {
+  console.log("A")
   const productCard = document.getElementById(`product-${key}`);
   const productName = productCard.querySelector('.panel-heading h3').textContent;
 
@@ -107,6 +108,7 @@ function deleteProduct(key) {
 }
 
 function confirmDeleteProduct(key) {
+  console.log("B")
   const modal = document.querySelector('.modal');
   modal.remove(); // Close the modal
 
