@@ -106,7 +106,8 @@ function deleteProduct(key) {
   `;
   document.body.appendChild(modal);
 }
-function closeM(){modal.remove();}
+function closeM(){const modal = document.querySelector('.modal');
+modal.remove();}
 function confirmDeleteProduct(key) {
   console.log("B",key)
   const modal = document.querySelector('.modal');
