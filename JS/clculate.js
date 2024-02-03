@@ -88,8 +88,8 @@ function deleteProduct(key) {
   modal.classList.add('modal', 'fade', 'in');
   modal.style.display = 'block';
   modal.innerHTML = `
-    <div class="modal-dialog" role='dialog'>
-      <div class="modal-content ">
+    <div class="modal-dialog">
+      <div class="modal-content fade-out">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title text-center">מחיקת מוצר</h4>
