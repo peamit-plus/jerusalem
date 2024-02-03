@@ -108,14 +108,11 @@ function deleteProduct(key) {
 }
 
 function confirmDeleteProduct(key) {
-  console.log("B")
+  console.log("B",key)
   const modal = document.querySelector('.modal');
   modal.remove(); // Close the modal
-
-  
 let productCard = document.getElementById(`product-${key}`);
-
-  // Add fade-out animation using CSS class
+// Add fade-out animation using CSS class
   productCard.classList.add('fade-out');
 
   // Set a timeout to remove the product card after the animation is complete
