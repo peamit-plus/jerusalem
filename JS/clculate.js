@@ -91,14 +91,14 @@ function deleteProduct(key) {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title">מחיקת מוצר</h4>
         </div>
         <div class="modal-body">
           האם אתה בטוח שברצונך למחוק את המוצר "${productName}" מסל הקניות?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">לא</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeM()">לא</button>
           <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct('${key}')">כן, מחק</button>
         </div>
       </div>
@@ -106,7 +106,7 @@ function deleteProduct(key) {
   `;
   document.body.appendChild(modal);
 }
-
+function closeM(){modal.remove();}
 function confirmDeleteProduct(key) {
   console.log("B",key)
   const modal = document.querySelector('.modal');
