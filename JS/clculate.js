@@ -92,7 +92,7 @@ function deleteProduct(key) {
       <div class="modal-content fade-out">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title text-center">מחיקת מוצר</h4>
+          <h4 class="modal-title">מחיקת מוצר</h4>
         </div>
         <div class="modal-body" dir="rtl">
           האם אתה בטוח שברצונך למחוק את המוצר "${productName}" מסל הקניות?
