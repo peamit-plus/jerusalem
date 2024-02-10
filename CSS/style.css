@@ -40,7 +40,7 @@ p{
     right: 20px;
     display: none;
     padding: 3px 6px;
-    font-size: 14px;
+    font-size: 16px;
     color: #fffafa;
     background: #337ab7;
     border-radius: 4px;
@@ -127,20 +127,7 @@ p{
     border-radius: 10px;
 }
 @media only screen and (min-width: 769px) {
-    #question-button {
-  position: fixed;
-  bottom:40px;
-  left: 5px;
-  width:27.94px; /* אפשר להתאים לגודל שאתה רוצה */
-  height:27.94px; /* אפשר להתאים לגודל שאתה רוצה */
-  border-radius: 50%;
-  background-color: #337ab7; /* צבע רקע */
-  color: #fff; /* צבע טקסט */
-  font-size: 20px;
-  text-align: center;
-  padding:1px 2px 3px 1px;
-  cursor: pointer;
-}
+   
     #salebutton{
   position: fixed;
   bottom: 40px;
@@ -159,20 +146,7 @@ p{
 }
 /*to comuter*/
 @media only screen and (max-width: 769px) {
-    #question-button {
-  position: fixed;
-  bottom:50px;
-  left: 2px;
-  width: 40px; /* אפשר להתאים לגודל שאתה רוצה */
-  height: 40px; /* אפשר להתאים לגודל שאתה רוצה */
-  border-radius: 50%;
-  background-color: #337ab7; /* צבע רקע */
-  color: #fff; /* צבע טקסט */
-  font-size: 20px;
-  text-align: center;
-  padding:5px 2px 3px 1px;
-  cursor: pointer;
-}
+   
     #salebutton{
   position: fixed;
   bottom: 50px;
@@ -212,7 +186,7 @@ background: #FFFFFF;
 }
 .footer a {
   color: #40c5f2;
-  transition:0.7s;
+  transition:0.5s;
   text-decoration: none;
 }
 .footer a:hover{
