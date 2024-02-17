@@ -168,7 +168,7 @@ function addToLocalStorage(productId)
   if (product) 
   {
       localStorage.setItem(`product_${productId}`, JSON.stringify(product));
-      showMessage("<div class='col-sm-3' style='font-size:30px;'> <span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:45px;'></span><br/>  המוצר "+"<span class='text-primary'><b>"+ product.name+"</b></span>"+" נוסף לסל הקניות <br/> בסיום ההזמנה יהיה ניתן לשנות כמויות וצבע</div>");
+      showMessage("<div class='' style='font-size:30px;'> <span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:45px;'></span><br/>  המוצר "+"<span class='text-primary'><b>"+ product.name+"</b></span>"+" נוסף לסל הקניות <br/> בסיום ההזמנה יהיה ניתן לשנות כמויות וצבע</div>");
   } 
   else 
   {
