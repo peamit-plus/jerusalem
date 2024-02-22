@@ -259,6 +259,9 @@ hr{
   text-align: center;
   align-items: center;
 } */
+.main{
+  display: flex;
+}
 .main > .container-fluid{
   min-height: 250px;
   background-color: #444444;
@@ -268,8 +271,8 @@ hr{
   text-align: center;
   justify-content: center;
   align-items: center;
-
 }
+
 
   #addToCartBtn:hover .glyphicon 
   {
