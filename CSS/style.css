@@ -261,6 +261,8 @@ hr{
 } */
 .main{
   display: flex;
+  max-width: 100%;
+  background-color: #444444;
 }
 .main > .container-fluid{
   min-height: 250px;
