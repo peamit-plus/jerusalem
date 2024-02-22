@@ -246,23 +246,6 @@ hr{
 }
 
 
-
-/* .bg-dark{
-min-height: 150px;
-background-color:#4a4a4a;
-display: flex;
-text-align: center;
-align-items: center;
-}
-.bg-dark-center{
-  padding: 8px;
- 
-  min-height:inherit;
-  color: #fff;
-
-  margin-bottom: 15px;
-} */
-
 .main-t{
   min-height: 200px;
   background-color: #4a4a4a;
@@ -271,7 +254,7 @@ align-items: center;
 }
 .text-p{
   min-height: inherit;
-  max-width: 100px;
+  max-width: 500px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -280,8 +263,8 @@ align-items: center;
 
   #addToCartBtn:hover .glyphicon 
   {
-        transition: transform 0.5s ease-in-out;
-        transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(360deg);
   }
 
   .lds-ring-parent {
