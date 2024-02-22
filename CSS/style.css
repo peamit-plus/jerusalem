@@ -259,10 +259,10 @@ hr{
   min-height: 250px;
   background-color:#4a4a4a;
   color: #fff;
-  
+  display: flex;
   text-align: center;
   align-items: center;
-  margin: 0 auto;
+  
   margin-bottom: 15px;
 } 
 
