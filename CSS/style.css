@@ -246,7 +246,7 @@ hr{
 }
 
 
-.main-t{
+/* .main-t{
   min-height: 200px;
   background-color: #4a4a4a;
   color: #fff;
@@ -254,12 +254,17 @@ hr{
 }
 .text-p{
   min-height: inherit;
-  width: auto;
+  max-width: 1000px;
   display: flex;
-   text-align: center;
+  text-align: center;
   align-items: center;
+} */
+.main > .container-fluid{
+  min-height: 250px;
+  background-color: #444444;
+  color: #EEEEEE;
+  
 }
-
 
   #addToCartBtn:hover .glyphicon 
   {
