@@ -244,17 +244,26 @@ hr{
 .carsor{
   cursor: pointer;
 }
-.bg-dark{
+/* .bg-dark .bg-dark > h2{
+  margin-top: 50px;
   background: #4a4a4a;
   color:#d0cdcd;
   margin-bottom: 20px;
   min-height: 150px;
+  text-align:center;
   align-items: center;
   border-bottom:solid 4px #40c5f2 ;
-}
-.top{
-  margin-top: 50px;
-}
+  
+} */
+/* .bg-dark{
+  min-height: 250px;
+  background-color:#4a4a4a;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+} */
+
   #addToCartBtn:hover .glyphicon 
   {
         transition: transform 0.5s ease-in-out;
