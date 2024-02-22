@@ -254,7 +254,7 @@ hr{
 }
 .text-p{
   min-height: inherit;
-  max-width: 1000px;
+  max-width: 250px;
   display: flex;
   margin:0 auto;
   text-align: center;
