@@ -244,31 +244,38 @@ hr{
 .carsor{
   cursor: pointer;
 }
+
+
+
 /* .bg-dark{
-  margin-top: 50px;
-  background: #4a4a4a;
-  color:#d0cdcd;
-  margin-bottom: 20px;
-  min-height: 150px;
-  text-align:center;
-  align-items: center;
-  border-bottom:solid 4px #40c5f2 ;
-  
-} */
-.bg-dark{
 min-height: 150px;
 background-color:#4a4a4a;
+display: flex;
+text-align: center;
+align-items: center;
 }
 .bg-dark-center{
   padding: 8px;
   max-width: 400px;
   min-height:inherit;
   color: #fff;
+
+  margin-bottom: 15px;
+} */
+
+.main-t{
+  min-height: 200px;
+  background-color: #4a4a4a;
+  color: #fff;
+}
+.text{
+  min-height: inherit;
+  max-width: 400px;
   display: flex;
   text-align: center;
   align-items: center;
-  margin-bottom: 15px;
 }
+
 
   #addToCartBtn:hover .glyphicon 
   {
