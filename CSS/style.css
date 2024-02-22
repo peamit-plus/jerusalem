@@ -255,14 +255,14 @@ hr{
   border-bottom:solid 4px #40c5f2 ;
   
 } */
-/* .bg-dark{
+.bg-dark{
   min-height: 250px;
   background-color:#4a4a4a;
   color: #fff;
   display: flex;
   text-align: center;
   align-items: center;
-} */
+} 
 
   #addToCartBtn:hover .glyphicon 
   {
