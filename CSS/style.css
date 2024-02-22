@@ -262,6 +262,8 @@ hr{
   display: flex;
   text-align: center;
   align-items: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
 } 
 
   #addToCartBtn:hover .glyphicon 
