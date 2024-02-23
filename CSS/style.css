@@ -335,3 +335,6 @@ hr{
           transform: rotate(360deg);
         }
       }
+      .btn:hover{
+        transform: scale(1.2,1.2);
+      }
