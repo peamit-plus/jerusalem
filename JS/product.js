@@ -1,5 +1,5 @@
 function generateGallery(json) {
-  var gallery = "";
+var gallery = "";
 gallery+=`<p>בדף זה יש ${json.length} מוצרים</p>
 <div class="row">`
 
@@ -7,13 +7,17 @@ gallery+=`<p>בדף זה יש ${json.length} מוצרים</p>
       gallery += `
           <div class='col-md-3 product-container' id='${json[i].image}'>
               <div class='thumbnail'>
+               <figure>
                   <img src='../image/${json[i].image}.WebP'  alt='${json[i].image}' style='height:250px; width: 100%;'>
-                  <div class='caption product-caption'>
+                  <figcaption>
+                    <div class='caption product-caption'>
                       <p class='text-center'>
                           <b>${json[i].p}</b><br/>
                           <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${json[i].productId})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
                       </p>
-                  </div>
+                    </div>
+                  </figcaption>
+                </figure>
               </div>
           </div>`;
   }

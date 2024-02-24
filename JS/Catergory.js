@@ -1,16 +1,21 @@
 function createCategory(json)
 {
   var gallery = "";
-  for (var i = 0; i < json.length; i++) {
+  for(var i = 0; i < json.length; i++) {
   gallery += "<div class='col-md-3' id='category"+i+"'>"+
       "<div class='thumbnail'>"+
-        "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+"' title='"+json[i].p+"' style='width:100%; height:250px;' class='carsor' onclick='index"+json[i].image+"()'>"+
-          "<div class='caption'>"+
+      "<figure>"+
+        "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+" style='width:100%; height:250px;' class='carsor' onclick='index"+json[i].image+"()'>"+
+            "<div class='caption'>"+
+            "<figcaption>"+
             "<p class='text-primary'>"+json[i].p+"<br/>"+
-     "<button class='btn btn-primary' onclick='index"+(i+1)+"()'>&laquo; לקטגוריה לחץ</button> </p>"+
+            "<button class='btn btn-primary' onclick='index"+(i+1)+"()'>&laquo; לקטגוריה לחץ</button> </p>"+
+            "<figcaption>"+
+            "</figure>"+
           "</div>"+
        "</div>"+
-    "</div></div>";
+    "</div>"+
+    "</div>";
   }
 
   document.getElementById("id_category").innerHTML = gallery;

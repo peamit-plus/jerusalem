@@ -245,20 +245,6 @@ hr{
   cursor: pointer;
 }
 
-
-/* .main-t{
-  min-height: 200px;
-  background-color: #4a4a4a;
-  color: #fff;
- 
-}
-.text-p{
-  min-height: inherit;
-  max-width: 1000px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-} */
 .main{
   display: flex;
   max-width: 100%;
