@@ -6,7 +6,6 @@ function createCategory(json)
   "<div class='col-md-3' id='category"+i+"'>"+
       "<div class='thumbnail'>"+
       "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+" style='height:250px; width: 100%;' class='carsor' onclick='index"+json[i].image+"()'>"+
-      
             "<div class='caption'>"+
             "<p class='text-primary'>"+json[i].p+"<br/>"+
             "<button class='btn btn-primary' onclick='index"+(i+1)+"()'>&laquo; לקטגוריה לחץ</button> </p>"+
@@ -15,7 +14,7 @@ function createCategory(json)
     "</div>"+
     "</div>";
   }
-
+console.log(gallery)
   document.getElementById("id_category").innerHTML = gallery;
   createaadd()
 }
