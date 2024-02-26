@@ -13,7 +13,7 @@ function createCategory(json)
        "</div>"+
     "</div>"+
     "</div>";
-  }
+  
 console.log(gallery)
   document.getElementById("id_category").innerHTML = gallery;
   createaadd()
