@@ -6,7 +6,7 @@ function createCategory(json)
   "<div class='col-md-3' id='category"+i+"'>"+
       "<div class='thumbnail'>"+
       // "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+" style='width:100%;height:270px;' class='carsor' onclick='index"+json[i].image+"()'>"+
-      "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+"' style='width:100%; height:270px;' class='carsor' onclick='index"+json[i].image+"()'>"
+         "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+"'style='width:100%;height:270px;' class='carsor' onclick='index"+json[i].image+"()'>"+
 
             "<div class='caption'>"+
             "<p class='text-primary'>"+json[i].p+"<br/>"+
