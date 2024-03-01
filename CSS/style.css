@@ -86,7 +86,10 @@ p{
     transform: translateX(-50%);
 }
 .txt-center{
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
  /* ===== Scrollbar CSS ===== */
 /* Firefox */
