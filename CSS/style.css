@@ -324,4 +324,6 @@ hr{
           transform: rotate(360deg);
         }
       }
-    
+      .icon-large {
+        font-size: 2.5em;
+      }
