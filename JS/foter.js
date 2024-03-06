@@ -29,7 +29,7 @@ document.getElementById("footer").innerHTML=`
     </div>
     
   <br/>
-    <p class="text-center">© כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2024</p>
+    <p class="text-center"> ט.ל.ח © כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2024</p>
     </div>
 `}
 start()
