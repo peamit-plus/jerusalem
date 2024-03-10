@@ -91,6 +91,7 @@ var json = [
   { "productId":"1012","image": "ck7", "p": "סכין קרם קשיח 7.5₪","price":"" },
   { "productId":"1013","image": "ck8", "p": "כפיות קרם קשיח 5₪","price":"" },
   { "productId":"1014","image": "ck9", "p": "כף הגשה 2.5₪","price":"" },
+  { "productId":"2015","image": "ck9", "p": "כף הגשה בתפזורת 1.9₪","price":"" },
   { "productId":"32","image": "32", "p": "מצקת מרק 4₪","price":"" }]
 generateGallery(json)}
 
