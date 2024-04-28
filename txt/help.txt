@@ -1,0 +1,33 @@
+<!--
+ <div class="alert alert-info" style="text-align: right; padding: 1px; font-size: 17px;">
+  <button class="btn btn-info navbar-btn fade-in btn-sm" data-toggle="modal" data-target="#myModal">לצפיה</button>
+  <strong>הודעה ! </strong> יש עדכונים חדשים 
+ </div>
+-->
+
+
+
+
+.strip_new {
+    background-image: url(../image/cover.png);
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 375px;
+}
+
+ <!-- <div class="alert alert-info" style="text-align: right; padding: 1px; font-size: 17px;"> 
+    <strong>הודעה ! </strong> יש מבצעים חדשים ! <u><a href="sale.html">לצפייה</a></u> המבצעים בתוקף עד ה
+    DD/MM/YY<br />המוצרים שבמבצע מחירם יקובע עפ"י המחיר שכתוב בלשונית המבצעים<br />
+    ולא לפי מה שכתוב בקטגוריה 
+    <button class="btn btn-info navbar-btn fade-in btn-sm" data-toggle="modal" data-target="#myModal">לצפיה</button>
+    <strong>הודעה ! </strong> יש עדכונים חדשים  
+    </div> -->
+
+      <!-- Trigger the modal after 5 seconds 
+  <script>
+      $(document).ready(function(){
+          setTimeout(function(){
+              $('#ashray').modal('show');
+          }, 3000);
+      });
+  </script>-->
