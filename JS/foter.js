@@ -14,7 +14,7 @@ document.getElementById("footer").innerHTML=`
           <div class="col-md-4">
               <h3>המוצרים שלנו</h3>
                 <a href="#category1">צפיה בקטלוג</a><br/ >
-                <a href="https://peamit-plus.github.io/jerusalem/page/searchproduct.html">חיפוש מוצר 👌</a><br/>
+                <a href="./search.html">חיפוש מוצר 👌</a><br/>
                 <a href="https://peamit-plus.github.io/jerusalem/page/products/index1.html">התחלת קניה</a><br/>
                 <!-- <a href="#"  onclick="notfound()"></a>-->
           </div>
@@ -22,7 +22,6 @@ document.getElementById("footer").innerHTML=`
               <h3>פעמית פלוס ירושלים</h3>
                   <a href="https://pehamitplus.repl.co">דף הבית</a><br/>
                   <a href="https://peamit-plus.github.io/jerusalem/page/about.html">אדותינו</a><br/>
-                  <a href="https://maps.app.goo.gl/uXLjgRBSmhZsoBBh8" target="_blank">מיקומינו במפה</a><br/>
                   <a href="https://peamit-plus.github.io/jerusalem/page/help.html">עזרה</a>
           </div>
     </div>
