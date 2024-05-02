@@ -57,14 +57,13 @@
 <div class="container" dir="rtl" >
   <h1 id="demotext" class="text-center">חיפוש מוצרים</h1>
   <div class="well">
-  <span class="form-group">
-    <label for="searchInput">הכנס שם מוצר לחיפוש .</label>
-    <div class="input-group" dir="rtl">
+
+    <div class="input-group " dir="ltr">
+      <input type="text" class="form-control" id="searchInput" oninput="searchProducts()" placeholder=" הכנס את שם המוצר ." style="text-align:right;">
       <div class="input-group-btn">
-       <button class="btn btn-default" ><i class="glyphicon glyphicon-search"></i></button>
-        </div>
-       <input type="text" class="form-control" id="searchInput" oninput="searchProducts()" placeholder=" הכנס את שם המוצר .">
+        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
       </div>
+    </div>
   </div>
   <table class="table table-hover table-striped table-bordered " id="resultTable" style="display: none; ">
     <thead>
