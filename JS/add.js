@@ -892,7 +892,7 @@ const productsDB = {
       "id": "119",
       "image": "108",
       "descraption": "סנו 00 לניקוי אסלות",
-      "price": "9.0 "
+      "price": "10"
   },
   {
       "id": "120",
@@ -904,7 +904,7 @@ const productsDB = {
       "id": "121",
       "image": "109",
       "descraption": "סנו ז'אוול מרסס",
-      "price": "20.0 "
+      "price": "18"
   },
   {
       "id": "122",
