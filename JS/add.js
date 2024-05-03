@@ -925,13 +925,6 @@ const productsDB = {
       "price": "4.0 "
   },
   {
-      "id": "114",
-      "image": "100",
-      "descraption": "זוג סלוטייפ רחב (100 מ׳)",
-      "price": "14.0 "
-  },
-
-  {
       "id": "117",
       "image": "101",
       "descraption": "נוזל כלים סנו (700 מל׳)",
