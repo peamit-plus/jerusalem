@@ -861,19 +861,55 @@ const productsDB = {
 {
     "id": "123451",
     "image": "metaer_1",
-    "descraption": "מבשם לבית סנו - מאסק מעודן 12₪",
+    "descraption": "מבשם לבית סנו - מאסק מעודן ",
     "price": "12"
 },
 {
     "id": "123452",
     "image": "metaer_2",
-    "descraption": "מבשם לבית סנו -סבון מפנק  12₪",
+    "descraption": "מבשם לבית סנו -סבון מפנק  ",
     "price": "12"
 },
 {
     "id": "123453",
     "image": "metaer_3",
-    "descraption": "מבשם לבית סנו - וניל וקוקוס 12₪",
+    "descraption": "מבשם לבית סנו - וניל וקוקוס ",
+    "price": "12"
+},
+{
+    "id": "123454",
+    "image": "tahliv_1",
+    "descraption": "תחליב - פינוק קלאסי",
+    "price": "11"
+},
+{
+    "id": "123455",
+    "image": "tahliv_2",
+    "descraption": "תחליב- שיק תפוח ותות",
+    "price": "11"
+},
+{
+    "id": "123456",
+    "image": "tahliv_3",
+    "descraption": "תחליב- שיק אפרסק ומנגו",
+    "price": "11"
+},
+{
+    "id": "123457",
+    "image": "tahliv_4",
+    "descraption": "תחליב -שמן קוקוס",
+    "price": "11"
+},
+{
+    "id": "123458",
+    "image": "tahliv_5",
+    "descraption": "תחליב - שיק פירות יער",
+    "price": "11"
+},
+{
+    "id": "123459",
+    "image": "shampo_1",
+    "descraption": "שמפו 2 ב-1 ",
     "price": "12"
 },
   {
