@@ -224,6 +224,11 @@ var json = [{ "productId":"103","image": "89", "p": "אלכוהול 70% (100מל
 { "productId":"110","image": "96", "p": "ספוג רחצה 8₪","price":"" },
 { "productId":"111","image": "97", "p": "צמר גפן (100 גר')5₪","price":"" },
 { "productId":"1000","image": "sano", "p": "שלישית סבון ידים כיף 22₪","price":"" }
+{ "productId":"115","image": "110", "p": "מטהר אויר 8₪","price":"" },
+{ "productId":"116","image": "111", "p": "מילוי למטהר אויר חשמלי 14₪","price":"" },
+{ "productId":"123451","image": "metaer_1", "p":"מבשם לבית סנו - מאסק מעודן 12₪","price":"" },
+{ "productId":"123452","image": "metaer_2", "p":"מבשם לבית סנו -סבון מפנק  12₪","price":"" },
+{ "productId":"123453","image": "metaer_3", "p":"מבשם לבית סנו - וניל וקוקוס 12₪","price":"" },
             ]
 generateGallery(json)}
 
@@ -232,8 +237,7 @@ var json = [
 { "productId":"112","image": "98", "p": "קשים לשתיה (200) 6.50₪ ","price":"" },
 { "productId":"113","image": "99", "p": "שלישית דבק סלוטייפ 4₪","price":"" },
 { "productId":"114","image": "100", "p": "זוג סלוטייפ רחב (100 מ׳) 14₪ " ,"price":""},
-{ "productId":"115","image": "110", "p": "מטהר אויר 8₪","price":"" },
-{ "productId":"116","image": "111", "p": "מילוי למטהר אויר חשמלי 14₪","price":"" },
+
 { "productId":"117","image": "101", "p": "נוזל כלים סנו (700 מל׳) 11₪","price":"" },
 { "productId":"118","image": "102", "p": "סנובון לאסלה 12₪","price":"" },
 { "productId":"119","image": "108", "p": "סנו 00 לניקוי אסלות 10₪","price":"" },
