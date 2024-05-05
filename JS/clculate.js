@@ -16,7 +16,7 @@ function displayProductsFromLocalStorage() {
     let totalProductPrice = product.price * (product.quantity || 1);
 
     let productCard = `
-            <div class="col-md-4 product-card" id="product-${key}">
+            <div class="col-md-4 product-card fade" id="product-${key}">
                 <div class="panel panel-info">
                     <div class="panel-heading text-center">
                         <h3>${product.descraption}</h3>
@@ -34,7 +34,7 @@ function displayProductsFromLocalStorage() {
 
                     <div class="panel-footer text-center" style="background:#d9edf7;">
                         <h4 id="productPrice-${key}">${totalProductPrice}₪</h4>
-                        <button class="button" onclick="deleteProduct('${key}')">
+                        <button  class="button" onclick="deleteProduct('${key}')">
                         <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
                       </button>
                     </div>
@@ -84,38 +84,13 @@ function deleteProduct(key) {
   var confirmation = confirm("האם אתה בטוח שברצונך למחוק מוצר זה מסל הקניות ?");
 
   // בדיקה אם המשתמש אישר את הפעולה
-  if (confirmation) 
-  {
-    // הפעולה לאישור
+  if (confirmation) {// הפעולה לאישור
     confirmDeleteProduct(`${key}`)
-
-   }
-  else 
-  {
-   return
+  }
+  else {
+    return
   }
 
-  // const modal = document.createElement('div');
-  // modal.classList.add('modal', 'fade', 'in');
-  // modal.style.display = 'block';
-  // modal.innerHTML = `
-  //   <div class="modal-dialog">
-  //     <div class="modal-content fade-out">
-  //       <div class="modal-header">
-  //         <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
-  //         <h4 class="modal-title">מחיקת מוצר</h4>
-  //       </div>
-  //       <div class="modal-body" dir="rtl">
-  //         האם אתה בטוח שברצונך למחוק את המוצר "${productName}" מסל הקניות?
-  //       </div>
-  //       <div class="modal-footer">
-  //         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeM()">לא</button>
-  //         <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct('${key}')">כן, מחק</button>
-  //       </div>
-  //     </div>
-  //   </div>
-  // `;
-  // document.body.appendChild(modal);
 }
 function closeM() {
   const modal = document.querySelector('.modal');
@@ -124,13 +99,9 @@ function closeM() {
 
 function confirmDeleteProduct(key) {
   console.log("B", key)
-  // const modal = document.querySelector('.modal');
-  // modal.remove(); // Close the modal
   let productCard = document.getElementById(`product-${key}`);
-  // Add fade-out animation using CSS class
   productCard.classList.add('fade-out');
 
-  // Set a timeout to remove the product card after the animation is complete
   setTimeout(() => {
     localStorage.removeItem(key);
     productCard.remove();
