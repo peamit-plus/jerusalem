@@ -87,7 +87,7 @@ function deleteProduct(key) {
   if (confirmation) 
   {
     // הפעולה לאישור
-    confirmDeleteProduct('${key}')
+    confirmDeleteProduct(`${key}`)
    }
   else 
   {
