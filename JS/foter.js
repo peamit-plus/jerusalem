@@ -1,6 +1,4 @@
-window.onload =()=>{
-  start()
-}
+
 function start(){
 document.getElementById("footer").innerHTML=`
 
@@ -33,6 +31,6 @@ document.getElementById("footer").innerHTML=`
     <p class="text-center"> ט.ל.ח © כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2024</p>
     </div>
 `}
-
+start()
 
 
