@@ -16,7 +16,7 @@ function displayProductsFromLocalStorage() {
     let totalProductPrice = product.price * (product.quantity || 1);
 
     let productCard = `
-            <div class="col-md-4 product-card fade" id="product-${key}">
+            <div class="col-md-4 product-card" id="product-${key}">
                 <div class="panel panel-info">
                     <div class="panel-heading text-center">
                         <h3>${product.descraption}</h3>
