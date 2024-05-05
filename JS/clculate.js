@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = () => {
   displayProductsFromLocalStorage();
   calculateTotalPrice();
 }
@@ -9,8 +9,7 @@ function displayProductsFromLocalStorage() {
     var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
     productsContainer.innerHTML = productCard;
   }
-  for (let i = 0; i < localStorage.length; i++)
-   {
+  for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
     let product = JSON.parse(localStorage.getItem(key));
 
@@ -23,12 +22,12 @@ function displayProductsFromLocalStorage() {
                         <h3>${product.descraption}</h3>
                     </div>
                     <div class="panel-body text-center">
-  <div class="btn-group">
+      <div class="btn-group">
     <button type="button" class="btn btn-danger" onclick="updateQuantity('${key}', -1)">-</button>
     <button type="button" class="btn "><span id="quantity-${key}">${product.quantity || 1}</span></button>
     <button type="button" class="btn btn-success" onclick="updateQuantity('${key}', 1)">+</button>
   </div>
-</div>
+      </div>
                     <div class="panel-body text-center">
                         <input type="text" dir="rtl" class="form-control" value="${product.color || 'צבע ברירת מחדל (מה שקיים במלאי) '}" onchange="updateColor('${key}', this)">
                     </div>
@@ -45,7 +44,7 @@ function displayProductsFromLocalStorage() {
 
     productsContainer.innerHTML += productCard;
 
-}
+  }
 }
 function calculateTotalPrice() {
   let totalPrice = 0;
@@ -82,40 +81,52 @@ function deleteProduct(key) {
   const productCard = document.getElementById(`product-${key}`);
   const productName = productCard.querySelector('.panel-heading h3').textContent;
 
-  // Create and display the confirmation modal
-  const modal = document.createElement('div');
-  modal.classList.add('modal', 'fade', 'in');
-  modal.style.display = 'block';
-   modal.innerHTML = `
-    <div class="modal-dialog">
-      <div class="modal-content fade-out">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">מחיקת מוצר</h4>
-        </div>
-        <div class="modal-body" dir="rtl">
-          האם אתה בטוח שברצונך למחוק את המוצר "${productName}" מסל הקניות?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeM()">לא</button>
-          <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct('${key}')">כן, מחק</button>
-        </div>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(modal);
+  var confirmation = confirm("האם אתה בטוח שברצונך למחוק מוצר זה מסל הקניות ?");
+
+  // בדיקה אם המשתמש אישר את הפעולה
+  if (confirmation) 
+  {
+    // הפעולה לאישור
+    confirmDeleteProduct('${key}')
+   }
+  else 
+  {
+   return
+  }
+
+  // const modal = document.createElement('div');
+  // modal.classList.add('modal', 'fade', 'in');
+  // modal.style.display = 'block';
+  // modal.innerHTML = `
+  //   <div class="modal-dialog">
+  //     <div class="modal-content fade-out">
+  //       <div class="modal-header">
+  //         <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeM()"><span aria-hidden="true">&times;</span></button>
+  //         <h4 class="modal-title">מחיקת מוצר</h4>
+  //       </div>
+  //       <div class="modal-body" dir="rtl">
+  //         האם אתה בטוח שברצונך למחוק את המוצר "${productName}" מסל הקניות?
+  //       </div>
+  //       <div class="modal-footer">
+  //         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeM()">לא</button>
+  //         <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct('${key}')">כן, מחק</button>
+  //       </div>
+  //     </div>
+  //   </div>
+  // `;
+  // document.body.appendChild(modal);
 }
-function closeM(){
+function closeM() {
   const modal = document.querySelector('.modal');
   modal.remove();
 }
 
 function confirmDeleteProduct(key) {
-  console.log("B",key)
+  console.log("B", key)
   const modal = document.querySelector('.modal');
   modal.remove(); // Close the modal
-let productCard = document.getElementById(`product-${key}`);
-// Add fade-out animation using CSS class
+  let productCard = document.getElementById(`product-${key}`);
+  // Add fade-out animation using CSS class
   productCard.classList.add('fade-out');
 
   // Set a timeout to remove the product card after the animation is complete
