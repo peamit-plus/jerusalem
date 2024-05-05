@@ -1,3 +1,4 @@
+
 function createCategory(json)
 {
   var gallery = "";

@@ -1,3 +1,6 @@
+window.onload =()=>{
+  start()
+}
 function start(){
 document.getElementById("footer").innerHTML=`
 
@@ -15,14 +18,14 @@ document.getElementById("footer").innerHTML=`
               <h3>המוצרים שלנו</h3>
                 <a href="#category1">צפיה בקטלוג</a><br/ >
                 <a href="./search.html">חיפוש מוצר 👌</a><br/>
-                <a href="https://peamit-plus.github.io/jerusalem/page/products/index1.html">התחלת קניה</a><br/>
+                <a href="../page/products/index1.html">התחלת קניה</a><br/>
                 <!-- <a href="#"  onclick="notfound()"></a>-->
           </div>
           <div class="col-md-4">
               <h3>פעמית פלוס ירושלים</h3>
-                  <a href="https://pehamitplus.repl.co">דף הבית</a><br/>
-                  <a href="https://peamit-plus.github.io/jerusalem/page/about.html">אדותינו</a><br/>
-                  <a href="https://peamit-plus.github.io/jerusalem/page/help.html">עזרה</a>
+                  <a href="../">דף הבית</a><br/>
+                  <a href="./about.html">אדותינו</a><br/>
+                  <a href="./help.html">עזרה</a>
           </div>
     </div>
     
@@ -30,6 +33,6 @@ document.getElementById("footer").innerHTML=`
     <p class="text-center"> ט.ל.ח © כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2024</p>
     </div>
 `}
-start()
+
 
 

@@ -1,19 +1,19 @@
-function generateGallery(json) {
+function generateGallery(_json) {
 var gallery = "";
-gallery+=`<p>בדף זה יש ${json.length} מוצרים</p>
+gallery+=`<p>בדף זה יש ${_json.length} מוצרים</p>
 <div class="row">`
 
-  for (var i = 0; i < json.length; i++) {
+  for (var i = 0; i < _json.length; i++) {
       gallery += `
-          <div class='col-md-3 product-container' id='${json[i].image}'>
+          <div class='col-md-3 product-container' id='${_json[i].image}'>
               <div class='thumbnail'>
                <figure>
-                  <img src='../image/${json[i].image}.WebP'  alt='${json[i].image}' style='height:250px; width: 100%;'>
+                  <img src='../image/${_json[i].image}.WebP'  alt='${_json[i].image}' style='height:250px; width: 100%;'>
                   <figcaption>
                     <div class='caption product-caption'>
                       <p class='text-center'>
-                          <b>${json[i].p}</b><br/>
-                          <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${json[i].productId})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
+                          <b>${_json[i].p}</b><br/>
+                          <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${_json[i].productId})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
                       </p>
                     </div>
                   </figcaption>
@@ -24,7 +24,7 @@ gallery+=`<p>בדף זה יש ${json.length} מוצרים</p>
 gallery+=`</div> `
 
 
-if(json.length<1)
+if(_json.length<1)
 {
   gallery=`<h3 class='text-center' style='color:red;'>
   אין מוצרים בדף זה 
