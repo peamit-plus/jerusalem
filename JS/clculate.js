@@ -123,8 +123,8 @@ function closeM() {
 
 function confirmDeleteProduct(key) {
   console.log("B", key)
-  const modal = document.querySelector('.modal');
-  modal.remove(); // Close the modal
+  // const modal = document.querySelector('.modal');
+  // modal.remove(); // Close the modal
   let productCard = document.getElementById(`product-${key}`);
   // Add fade-out animation using CSS class
   productCard.classList.add('fade-out');
