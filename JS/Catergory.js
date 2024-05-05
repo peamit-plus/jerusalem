@@ -1,4 +1,3 @@
-
 function createCategory(json)
 {
   var gallery = "";
@@ -16,6 +15,7 @@ function createCategory(json)
     "</div>"+
     "</div>";
   }
+  console.log(gallery)
   document.getElementById("id_category").innerHTML = gallery;
 }
 function page1() {
