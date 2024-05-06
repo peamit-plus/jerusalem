@@ -1,5 +1,4 @@
-function createCategory(json)
-{
+function createCategory(json) {
   var gallery = "";
   json.forEach(element => {
     gallery += `
@@ -12,7 +11,7 @@ function createCategory(json)
     </div></div></div></div>
     `
   });
- 
+
   // for(var i = 0; i < json.length; i++) {
   // gallery += 
   // "<div class='col-md-3' id='category"+i+"'>"+
@@ -32,28 +31,28 @@ function createCategory(json)
 }
 function page1() {
   var json = [
-    { "image": "1", "p": "כוסות"},
-    { "image": "2", "p": "צלחות לבן / מארזי חיסכון"},
-    { "image": "3", "p": "צלחת צבעוני"},
-    { "image": "4", "p": 'סכו"ם'},
-    { "image": "5", "p": "שקיות מזון + מפות"},
-    { "image": "6", "p": "אפיה"},
-    { "image": "7", "p": "קופסאות אחסון + נרות"},
-    { "image": "8", "p": "מוצרי נייר"},
-    { "image": "9", "p": "שקיות אשפה"},
-    { "image": "10", "p": "עזרי ניקיון"},
-    { "image": "11", "p": "היגיינה וטיפוח"},
-    { "image": "12", "p": "שונות - חומרי ניקוי"},
-    ]
+    { "image": "1", "p": "כוסות" },
+    { "image": "2", "p": "צלחות לבן / מארזי חיסכון" },
+    { "image": "3", "p": "צלחת צבעוני" },
+    { "image": "4", "p": 'סכו"ם' },
+    { "image": "5", "p": "שקיות מזון + מפות" },
+    { "image": "6", "p": "אפיה" },
+    { "image": "7", "p": "קופסאות אחסון + נרות" },
+    { "image": "8", "p": "מוצרי נייר" },
+    { "image": "9", "p": "שקיות אשפה" },
+    { "image": "10", "p": "עזרי ניקיון" },
+    { "image": "11", "p": "היגיינה וטיפוח" },
+    { "image": "12", "p": "שונות - חומרי ניקוי" },
+  ]
   createCategory(json)
   createModule()
 
 
 }
 
-function createModule(){
+function createModule() {
   var module = "";
-  
+
   module +=
     `<div class='modal fade' id='myModal' role='dialog'>
     <div class='modal-dialog modal-lg'>
@@ -78,9 +77,9 @@ function createModule(){
         <div class='modal-footer'>
           <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
         </div></div></div></div>`;
-  
+
   document.getElementById("id_Module").innerHTML = module;
- 
+
 }
 
 
