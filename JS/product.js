@@ -8,7 +8,7 @@ gallery+=`<p>בדף זה יש ${_json.length} מוצרים</p>
           <div class='col-md-3 product-container' id='${_json[i].image}'>
               <div class='thumbnail'>
                <figure>
-                  <img src='../image/${_json[i].image}.WebP'  alt='${_json[i].image}' style='height:250px; width: 100%;'>
+                  <img src='../image/${_json[i].image || 2043}.WebP'  alt='${_json[i].image}' style='height:250px; width: 100%;'>
                   <figcaption>
                     <div class='caption product-caption'>
                       <p class='text-center'>
@@ -85,14 +85,14 @@ var json = [
   { "productId":"1005","image": "c100", "p": "כפיות לבן (*100) 4.5₪ ","price":"" },
   { "productId":"1006","image": "ck1", "p":"מזלג שקוף קשיח 7.5₪" ,"price":""},
   { "productId":"1007","image": "ck2", "p": "כף שקוף קשיח 7.5₪","price":"" },
-  { "productId":"1008","image": "2043", "p": "סכין שקוף קשיח 7.5₪","price":"" },
+  { "productId":"1008","image": "", "p": "סכין שקוף קשיח 7.5₪","price":"" },
   { "productId":"1009","image": "ck4", "p": "כפיות שקוף קשיח 5₪","price":"" },
-  { "productId":"1010","image": "2043", "p": "מזלג קרם קשיח 7.5₪","price":"" },
+  { "productId":"1010","image": "", "p": "מזלג קרם קשיח 7.5₪","price":"" },
   { "productId":"1011","image": "ck6", "p": "כף קרם קשיח 7.5₪","price":"" },
   { "productId":"1012","image": "ck7", "p": "סכין קרם קשיח 7.5₪","price":"" },
   { "productId":"1013","image": "ck8", "p": "כפיות קרם קשיח 5₪","price":"" },
   { "productId":"1014","image": "ck9", "p": "כף הגשה 2.5₪","price":"" },
-  { "productId":"2015","image": "2043", "p": "כף הגשה בתפזורת 1.9₪","price":"" },
+  { "productId":"2015","image": "", "p": "כף הגשה בתפזורת 1.9₪","price":"" },
   { "productId":"32","image": "32", "p": "מצקת מרק 4₪","price":"" }]
 generateGallery(json)}
 
@@ -125,7 +125,7 @@ var json = [
 { "productId":"1241","image": "tp2", "p": "תבניות קטנות בתפזורת 70 אג' ליחידה","price":"" },
 { "productId":"1240","image": "tp1", "p": "תבניות אינגליש בתפזורת 70 אג' ליחידה","price":"" },
 { "productId":"1242","image": "tp5", "p": "תבניות קטנות עמוקת בתפזורת 90 אג' ליחידה","price":"" },
-{ "productId":"0000","image": "2043", "p": "מכסה לתבניות קטנות עמוקת בתפזורת 35 אג' ליחידה" ,"price":""},
+{ "productId":"0000","image": "", "p": "מכסה לתבניות קטנות עמוקת בתפזורת 35 אג' ליחידה" ,"price":""},
 { "productId":"1243","image": "tp3", "p": "תבניות בינוני  1₪ ליחידה","price":"" },
 { "productId":"1244","image": "tp4", "p": "תבניות גדול 1₪ ליחידה","price":"" },
 { "productId":"1245","image": "tp6", "p": " תבניות ענק 2₪ ליחידה","price":"" },
@@ -250,7 +250,7 @@ var json = [
 { "productId":"122","image": "104", "p": "מסיר שומנים סנט מוריץ 15₪","price":"" },
 { "productId":"123","image": "112", "p": "מסיר שומנים סנו פורטה 17₪","price":"" },
 { "productId":"21704","image": "rases", "p": "רסס ונגב סנו 17₪ ","price":"" },
-{ "productId":"204317","image": "hitoi", "p": "תרסיס חיטוי משטחים סנו 16₪ ","price":"" },
+{ "productId":"17","image": "hitoi", "p": "תרסיס חיטוי משטחים סנו 16₪ ","price":"" },
 { "productId":"124","image": "113", "p": "מגבוני דלי 22₪","price":"" },
 { "productId":"125","image": "106", "p": "נוזל רצפות סנו פרש 4 ליטר 28₪","price":"" },
 {"productId":"4040","image": "sion", "p": "נוזל רצפות שיאון 4 ל' 18₪","price":"" },
