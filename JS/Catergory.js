@@ -3,12 +3,12 @@ function createCategory(json)
   var gallery = "";
   json.forEach(element => {
     gallery += `
-    <div class='col-md-3' id='category${element}'>
+    <div class='col-md-3' id='category${element.image}'>
     <div class='thumbnail shaow'>
     <img src='../imgctg/${element.image}.WebP' alt='${element.p}' style='width:100%;height:270px;' class='carsor' onclick='index${element.image}()'>"
     <div class='caption'>
-    <p class='text-primary'>"+${element.p}+"<br/>
-    <button class='btn btn-primary' onclick='index${element+1}()'>&laquo; לקטגוריה לחץ</button> </p>
+    <p class='text-primary'>${element.p}<br/>
+    <button class='btn btn-primary' onclick='index${element.image}()'>&laquo; לקטגוריה לחץ</button> </p>
     </div></div></div></div>
     `
   });
