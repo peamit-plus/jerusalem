@@ -12,21 +12,7 @@ function createCategory(json) {
     `
   });
 
-  // for(var i = 0; i < json.length; i++) {
-  // gallery += 
-  // "<div class='col-md-3' id='category"+i+"'>"+
-  //     "<div class='thumbnail shaow'>"+
-  //        "<img src='../imgctg/"+json[i].image+".WebP' alt='"+json[i].p+"'style='width:100%;height:270px;' class='carsor' onclick='index"+json[i].image+"()'>"+
 
-  //           "<div class='caption'>"+
-  //           "<p class='text-primary'>"+json[i].p+"<br/>"+
-  //           "<button class='btn btn-primary' onclick='index"+(i+1)+"()'>&laquo; לקטגוריה לחץ</button> </p>"+
-  //           "</div>"+
-  //      "</div>"+
-  //   "</div>"+
-  //   "</div>";
-  // }
-  console.log(gallery)
   document.getElementById("id_category").innerHTML = gallery;
 }
 function page1() {

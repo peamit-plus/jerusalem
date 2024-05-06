@@ -22,24 +22,6 @@ function generateGallery(_json) {
 
   });
 
-  // for (var i = 0; i < _json.length; i++) {
-  //     gallery += `
-  //         <div class='col-md-3 product-container' id='${_json[i].image}'>
-  //             <div class='thumbnail'>
-  //              <figure>
-  //                 <img src='../image/${_json[i].image || 2043}.WebP'  alt='${_json[i].image}' style='height:250px; width: 100%;'>
-  //                 <figcaption>
-  //                   <div class='caption product-caption'>
-  //                     <p class='text-center'>
-  //                         <b>${_json[i].p}</b><br/>
-  //                         <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${_json[i].productId})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
-  //                     </p>
-  //                   </div>
-  //                 </figcaption>
-  //               </figure>
-  //             </div>
-  //         </div>`;
-  // }
   gallery += `</div> `
 
 
@@ -49,7 +31,7 @@ function generateGallery(_json) {
   <br/> עקב תקלה תכנית לא צפויה פנו אלינו בלשונית העזרה שבדף הראשי 
   <br>שנטפל בזה </h3>`
   }
-  console.log(gallery)
+
   displayProductsFromLocalStorageToNuv()
   document.getElementById("id_gallery").innerHTML = gallery;
 }
