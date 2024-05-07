@@ -164,6 +164,7 @@ const productsDB = {
 };
 
 function searchProducts() {
+  checkDataList()
   const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
   const resultBody = document.getElementById('resultBody');
 
@@ -205,4 +206,20 @@ function searchProducts() {
   } else {
     document.getElementById("resultTable").style.display = "block";
   }
+}
+function checkDataList() {
+  var searchInput = document.querySelector("#searchInput").value
+  if (searchInput.lenth > 2) {
+    AddToDataList()
+  }
+  else{
+    return;
+  }
+}
+function AddToDataList(){
+  var data_list;
+  productsDB.forEach(element => {
+  data_list +=`<option>${element.product.name}</option>`;
+});
+document.querySelector("#datalist").innerHTML=data_list;
 }
