@@ -164,7 +164,7 @@ const productsDB = {
 };
 
 function searchProducts() {
-  checkDataList()
+  checkDataList(productsDB)
   const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
   const resultBody = document.getElementById('resultBody');
 
@@ -188,11 +188,9 @@ function searchProducts() {
       const row = resultBody.insertRow();
       const cell2 = row.insertCell(0);
       const cell3 = row.insertCell(1);
-      // const cell4 = row.insertCell(2);
 
       cell2.innerHTML = product.name;
       cell3.innerHTML = `<a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html" >מעבר לקטגוריה</a>`;
-      // cell4.innerHTML = ;
     }
   }
 
@@ -207,16 +205,16 @@ function searchProducts() {
     document.getElementById("resultTable").style.display = "block";
   }
 }
-function checkDataList() {
+function checkDataList(productsDB) {
   var searchInput = document.querySelector("#searchInput").value
   if (searchInput.lenth > 2) {
-    AddToDataList()
+    AddToDataList(productsDB)
   }
   else{
     return;
   }
 }
-function AddToDataList(){
+function AddToDataList(productsDB){
   var data_list;
   productsDB.forEach(element => {
   data_list +=`<option>${element.product.name}</option>`;
