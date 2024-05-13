@@ -4,7 +4,7 @@ const productsDB = {
             "id": "1",
             "image": "1",
             "descraption": "כוס פלסטיק ",
-            "price": "3.5 "
+            "price": "3.5"
         },
         {
             "id": "2",
@@ -154,7 +154,7 @@ const productsDB = {
             "id": "25",
             "image": "25",
             "descraption": "קעריות ענק לסלט צבעוני ",
-            "price": "10.0 "
+            "price": "9"
         },
         {
             "id": "1003",
@@ -232,7 +232,7 @@ const productsDB = {
             "id": "2015",
             "image": "2043",
             "descraption": "כף הגשה בתפזורת",
-            "price": "1.9 "
+            "price": "2"
         },
         {
             "id": "32",
@@ -382,13 +382,13 @@ const productsDB = {
             "id": "1243",
             "image": "tp3",
             "descraption": "תבניות בינוני",
-            "price": "1.0 "
+            "price": "1.1 "
         },
         {
             "id": "1244",
             "image": "tp4",
             "descraption": "תבניות גדול",
-            "price": "1.0 "
+            "price": "1.1"
         },
         {
             "id": "1245",
@@ -400,43 +400,43 @@ const productsDB = {
             "id": "50",
             "image": "122",
             "descraption": "מארז תבניות עגולות",
-            "price": "9.0 "
+            "price": "10"
         },
         {
             "id": "1023",
             "image": "m1",
             "descraption": "מנג'ט לבן 1.5",
-            "price": "4.0 "
+            "price": "3.5"
         },
         {
             "id": "1024",
             "image": "m2",
             "descraption": "מנג'ט לבן 2",
-            "price": "4.5 "
+            "price": "4"
         },
         {
             "id": "1025",
             "image": "m3",
             "descraption": "מנג'ט לבן 3",
-            "price": "5.0 "
+            "price": "4.5"
         },
         {
             "id": "1026",
             "image": "m1c",
             "descraption": "מנג'ט מעוטר 1.5",
-            "price": "4.5 "
+            "price": "4"
         },
         {
             "id": "1027",
             "image": "m2c",
             "descraption": "מנג'ט מעוטר 2",
-            "price": "5.0 "
+            "price": "4.5"
         },
         {
             "id": "1028",
             "image": "m3c",
             "descraption": "מנג'ט מעוטר 3",
-            "price": "5.5 "
+            "price": "5"
         },
         {
             "id": "53",
@@ -508,7 +508,7 @@ const productsDB = {
             "id": "60",
             "image": "45",
             "descraption": "פתיל צף משושה גדול",
-            "price": "6.0 "
+            "price": "5"
         },
         {
             "id": "1036",
@@ -550,13 +550,13 @@ const productsDB = {
             "id": "66",
             "image": "52",
             "descraption": "נייר טואלט חתוך(*800)",
-            "price": "14.0 "
+            "price": "12 "
         },
         {
             "id": "67",
             "image": "53",
             "descraption": "נייר סופג (*6)",
-            "price": "12.0 "
+            "price": "11 "
         },
         {
             "id": "68",
@@ -568,7 +568,7 @@ const productsDB = {
             "id": "69",
             "image": "55",
             "descraption": "שישית גללי נייר ניגוב (600 מטר)",
-            "price": "45.0 "
+            "price": "47 "
         },
         {
             "id": "70",
@@ -609,8 +609,8 @@ const productsDB = {
         {
             "id": "76",
             "image": "62",
-            "descraption": "אשפתון שחור 75/90 (*50)",
-            "price": "14.0 "
+            "descraption": "אשפתון שחור מרשרש 75/90 (*50)",
+            "price": "16 "
         },
         {
             "id": "77",
@@ -634,7 +634,7 @@ const productsDB = {
             "id": "80",
             "image": "66",
             "descraption": "שקיות אשפה + ידית 75/90 גדול (*40)",
-            "price": "17.0 "
+            "price": "18"
         },
         {
             "id": "81",
@@ -706,7 +706,7 @@ const productsDB = {
             "id": "93",
             "image": "79",
             "descraption": "כפפות ניטריל ללא אבקה (100)",
-            "price": "22.0 "
+            "price": "24"
         },
         {
             "id": "94",
@@ -736,7 +736,7 @@ const productsDB = {
             "id": "1040",
             "image": "p1",
             "descraption": "פח שובך 10 ל'",
-            "price": "35.0 "
+            "price": "37 "
         },
         {
             "id": "97",
@@ -748,7 +748,7 @@ const productsDB = {
             "id": "98",
             "image": "85",
             "descraption": "כף אשפה עם ידית",
-            "price": "13.0 "
+            "price": "15 "
         },
         {
             "id": "2030",
@@ -929,6 +929,12 @@ const productsDB = {
             "image": "101",
             "descraption": "נוזל כלים סנו (700 מל׳)",
             "price": "11.0 "
+        },
+        {
+            "id": "123460",
+            "image": "",
+            "descraption": "סבון נוזלי 4 ל'",
+            "price": "25"
         },
         {
             "id": "118",

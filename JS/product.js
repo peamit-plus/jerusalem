@@ -76,7 +76,7 @@ function page3() {
   { "productId": "22", "image": "22", "p": "צלחות ענקיות צבעוני (*25) 10₪", "price": "" },
   { "productId": "23", "image": "23", "p": "מגש אובלי גדול צבעוני (*25) 12₪", "price": "" },
   { "productId": "24", "image": "24", "p": "מגש אובלי גדול עמוק צבעוני (*12) 10₪", "price": "" },
-  { "productId": "25", "image": "25", "p": "קעריות ענק לסלט צבעוני (*10) 10₪", "price": "" }]
+  { "productId": "25", "image": "25", "p": "קעריות ענק לסלט צבעוני (*10) 9₪", "price": "" }]
   generateGallery(json)
 }
 
@@ -94,7 +94,7 @@ function page4() {
     { "productId": "1012", "image": "ck7", "p": "סכין קרם קשיח 7.5₪", "price": "" },
     { "productId": "1013", "image": "ck8", "p": "כפיות קרם קשיח 5₪", "price": "" },
     { "productId": "1014", "image": "ck9", "p": "כף הגשה 2.5₪", "price": "" },
-    { "productId": "2015", "image": "", "p": "כף הגשה בתפזורת 1.9₪", "price": "" },
+    { "productId": "2015", "image": "", "p": "כף הגשה בתפזורת 2₪", "price": "" },
     { "productId": "32", "image": "32", "p": "מצקת מרק 4₪", "price": "" }]
   generateGallery(json)
 }
@@ -130,16 +130,16 @@ function page6() {
     { "productId": "1240", "image": "tp1", "p": "תבניות אינגליש בתפזורת 70 אג' ליחידה", "price": "" },
     { "productId": "1242", "image": "tp5", "p": "תבניות קטנות עמוקת בתפזורת 90 אג' ליחידה", "price": "" },
     { "productId": "0000", "image": "", "p": "מכסה לתבניות קטנות עמוקת בתפזורת 35 אג' ליחידה", "price": "" },
-    { "productId": "1243", "image": "tp3", "p": "תבניות בינוני  1₪ ליחידה", "price": "" },
-    { "productId": "1244", "image": "tp4", "p": "תבניות גדול 1₪ ליחידה", "price": "" },
+    { "productId": "1243", "image": "tp3", "p": "תבניות בינוני  1.1₪ ליחידה", "price": "" },
+    { "productId": "1244", "image": "tp4", "p": "תבניות גדול 1.1₪ ליחידה", "price": "" },
     { "productId": "1245", "image": "tp6", "p": " תבניות ענק 2₪ ליחידה", "price": "" },
-    { "productId": "50", "image": "122", "p": "מארז תבניות עגולות 9₪", "price": "" },
-    { "productId": "1023", "image": "m1", "p": "מנג'ט לבן 1.5 4₪", "price": "" },
-    { "productId": "1024", "image": "m2", "p": "מנג'ט לבן 2 4.5₪", "price": "" },
-    { "productId": "1025", "image": "m3", "p": "מנג'ט לבן 3  5₪", "price": "" },
-    { "productId": "1026", "image": "m1c", "p": "מנג'ט מעוטר 1.5 4.5₪", "price": "" },
-    { "productId": "1027", "image": "m2c", "p": "מנג'ט מעוטר 2  5₪", "price": "" },
-    { "productId": "1028", "image": "m3c", "p": "מנג'ט מעוטר 3 5.5₪", "price": "" },
+    { "productId": "50", "image": "122", "p": "מארז תבניות עגולות 10₪", "price": "" },
+    { "productId": "1023", "image": "m1", "p": "מנג'ט לבן 1.5 3.5₪", "price": "" },
+    { "productId": "1024", "image": "m2", "p": "מנג'ט לבן 2 4₪", "price": "" },
+    { "productId": "1025", "image": "m3", "p": "מנג'ט לבן 3  4.5₪", "price": "" },
+    { "productId": "1026", "image": "m1c", "p": "מנג'ט מעוטר 1.5 4₪", "price": "" },
+    { "productId": "1027", "image": "m2c", "p": "מנג'ט מעוטר 2  4.5₪", "price": "" },
+    { "productId": "1028", "image": "m3c", "p": "מנג'ט מעוטר 3 5₪", "price": "" },
     { "productId": "53", "image": "125", "p": "מאפינס בינוני (*20) 8₪", "price": "" },
   ]
   generateGallery(json)
@@ -158,7 +158,7 @@ function page7() {
     { "productId": "56", "image": "43", "p": "גפרורים ענק 5₪", "price": "" },
     { "productId": "57", "image": "42", "p": "גפרורים עשיריה 4₪", "price": "" },
     { "productId": "58", "image": "44", "p": "פתיל צף עגול 4₪", "price": "" },
-    { "productId": "60", "image": "45", "p": "פתיל צף משושה גדול 6₪", "price": "" },
+    { "productId": "60", "image": "45", "p": "פתיל צף משושה גדול 5₪", "price": "" },
     { "productId": "1036", "image": "nn24", "p": "נר נשמה 24 שעות 1.50₪", "price": "" },
     { "productId": "1037", "image": "nn48", "p": " נר 48 שעות בזכוכית 4₪", "price": "" },
     { "productId": "62", "image": "47", "p": "נרות חימום (*50) 10₪", "price": "" }]
@@ -170,10 +170,10 @@ function page8() {
     { "productId": "63", "image": "49", "p": "מפיות אירוח (*80) 4₪ ", "price": "" },
     { "productId": "64", "image": "50", "p": "מפיות אירוח מנוקדות(*80) 5₪", "price": "" },
     { "productId": "65", "image": "51", "p": "טישו חמישיה (*500) 9₪", "price": "" },
-    { "productId": "66", "image": "52", "p": "נייר טואלט חתוך(*800) 14₪", "price": "" },
-    { "productId": "67", "image": "53", "p": "נייר סופג (*6) 12₪", "price": "" },
+    { "productId": "66", "image": "52", "p": "נייר טואלט חתוך(*800) 12₪", "price": "" },
+    { "productId": "67", "image": "53", "p": "נייר סופג (*6) 11₪", "price": "" },
     { "productId": "68", "image": "54", "p": "סופר מגבת כ-800 גר' 20₪", "price": "" },
-    { "productId": "69", "image": "55", "p": "שישית גללי נייר ניגוב (600 מטר) 45₪", "price": "" },
+    { "productId": "69", "image": "55", "p": "שישית גללי נייר ניגוב (600 מטר) 47₪", "price": "" },
     { "productId": "70", "image": "56", "p": "נייר טואלט טישו (32 גלילים) 30₪", "price": "" },
     { "productId": "71", "image": "57", "p": "נייר טואלט חתוך (*9000) 80₪", "price": "" },
     { "productId": "72", "image": "58", "p": "נייר ניגוב צץ רץ (*4000) 65₪", "price": "" }]
@@ -185,11 +185,11 @@ function page9() {
     { "productId": "73", "image": "59", "p": "שקיות נשיאה קטן(*100) 10₪", "price": "" },
     { "productId": "74", "image": "60", "p": "שקיות נשיאה גדול (*100) 13₪", "price": "" },
     { "productId": "75", "image": "61", "p": "אשפתון כתום 75/90 (*50) 9₪", "price": "" },
-    { "productId": "76", "image": "62", "p": "אשפתון שחור 75/90 (*50) 14₪", "price": "" },
+    { "productId": "76", "image": "62", "p": "אשפתון שחור מרשרש 75/90 (*50) 16₪", "price": "" },
     { "productId": "77", "image": "63", "p": "אשפתון עבה 75/85 (*25) 10₪", "price": "" },
     { "productId": "78", "image": "64", "p": "אשפתון עבה מאוד 75/90 גדול (*25) 13₪", "price": "" },
     { "productId": "79", "image": "65", "p": "שקיות אשפה עם שרוך 52/65 (*60) 15₪", "price": "" },
-    { "productId": "80", "image": "66", "p": "שקיות אשפה + ידית 75/90 גדול (*40) 17₪", "price": "" }]
+    { "productId": "80", "image": "66", "p": "שקיות אשפה + ידית 75/90 גדול (*40) 18₪", "price": "" }]
   generateGallery(json)
 }
 
@@ -205,14 +205,14 @@ function page10() {
   { "productId": "89", "image": "75", "p": "שלישיית סחבות מיקרופייבר לרצפה ₪ 18", "price": "" },
   { "productId": "90", "image": "76", "p": "זוג סחבות לרצפה (גדולות) 9₪", "price": "" },
   { "productId": "91", "image": "77", "p": "מטליות לחות לניקוי רצפות גדול (*10) 10₪", "price": "" },
-  { "productId": "93", "image": "79", "p": "כפפות ניטריל ללא אבקה (*100) 22₪", "price": "" },
+  { "productId": "93", "image": "79", "p": "כפפות ניטריל ללא אבקה (*100) 24₪", "price": "" },
   { "productId": "94", "image": "81", "p": "מגב שיש/חלון 8₪", "price": "" },
   { "productId": "95", "image": "82", "p": "דלי גדול כ 12 ליטר 16₪", "price": "" },
   { "productId": "1038", "image": "p1", "p": " פח  50 ל' 60₪", "price": "" },
   { "productId": "1039", "image": "p1", "p": "פח 25 ל' 46₪", "price": "" },
-  { "productId": "1040", "image": "p1", "p": "פח שובך 10 ל' 35₪", "price": "" },
+  { "productId": "1040", "image": "p1", "p": "פח שובך 10 ל' 37₪", "price": "" },
   { "productId": "97", "image": "84", "p": "מברשת לאסלה+מתקן 11₪", "price": "" },
-  { "productId": "98", "image": "85", "p": "כף אשפה עם ידית 13₪", "price": "" },
+  { "productId": "98", "image": "85", "p": "כף אשפה עם ידית 15₪", "price": "" },
   { "productId": "2030", "image": "me3", "p": "מטאטא 10₪", "price": "" },
   { "productId": "2031", "image": "me1", "p": "מגב 10₪", "price": "" },
   { "productId": "2032", "image": "me4", "p": "מברשת מטאטא איכותי 15₪", "price": "" },
@@ -253,6 +253,7 @@ function page12() {
     { "productId": "112", "image": "98", "p": "קשים לשתיה (200) 6.50₪ ", "price": "" },
     { "productId": "113", "image": "99", "p": "שלישית דבק סלוטייפ 4₪", "price": "" },
     { "productId": "117", "image": "101", "p": "נוזל כלים סנו (700 מל׳) 11₪", "price": "" },
+    { "productId": "123460", "image": "", "p": "סבון נוזלי 4 ל' 25₪", "price": "" },
     { "productId": "118", "image": "102", "p": "סנובון לאסלה 12₪", "price": "" },
     { "productId": "119", "image": "108", "p": "סנו 00 לניקוי אסלות 10₪", "price": "" },
     { "productId": "120", "image": "103", "p": "חלונית מתז 1 ליטר 8₪", "price": "" },
