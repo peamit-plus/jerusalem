@@ -1205,7 +1205,7 @@ function searchProducts() {
     if (product.descraption.toLowerCase().includes(searchTerm)) {
       resultsContainer.innerHTML +=
         `
-<div class="card">
+<div class="card col-md-4 col-xs-12">
   <img src="../image/${product.image}.WebP" alt="${product.descraption}"/>
   <div class="card-content">
     <h3>${product.descraption}</h3>
