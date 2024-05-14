@@ -1187,7 +1187,7 @@ const productsDB = {
 
 function searchProducts() {
   console.log("A")
-  checkDataList(productsDB);
+  // checkDataList(productsDB);
   const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
   const resultsContainer = document.getElementById('resultsContainer');
 
@@ -1203,33 +1203,34 @@ function searchProducts() {
   // חיפוש והצגת התוצאות בכרטיסיות
   for (const product of productsDB.products) {
     if (product.descraption.toLowerCase().includes(searchTerm)) {
-      resultsContainer +=`
+      resultsContainer.innerHTML +=
+        `
 <div class="card">
-<img src="../image/${product.image}.WebP" alt="${product.descraption}"></img>
-<div>
-</div class="card-content">
-<h3>${product.name}</h3/>
-<a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html">מעבר לקטגוריה</a>
+  <img src="../image/${product.image}.WebP" alt="${product.descraption}"/>
+  <div class="card-content">
+    <h3>${product.descraption}</h3>
+    <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html">מעבר לקטגוריה</a>
+  </div>
 </div>
-      `
+        `;
     }
   }
-  resultsContainer.innerHTML =resultsContainer;
+
   // אם אין תוצאות, הצג הודעה
   if (resultsContainer.innerHTML === '') {
     resultsContainer.innerHTML = '<p style="color:red;">לא נמצאו תוצאות</p>';
   }
 }
 
-function checkDataList(productsDB) {
-  var searchInput = document.querySelector("#searchInput").value
-  if (searchInput.length > 2) {
-    AddToDataList(productsDB)
-  }
-  else {
-    return;
-  }
-}
+// function checkDataList(productsDB) {
+//   var searchInput = document.querySelector("#searchInput").value
+//   if (searchInput.length > 2) {
+//     AddToDataList(productsDB)
+//   }
+//   else {
+//     return;
+//   }
+// }
 // function AddToDataList(productsDB) {
 //   var data_list = "";
 //   productsDB.forEach(element => {
