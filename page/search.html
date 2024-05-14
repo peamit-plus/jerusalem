@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://peamit-plus.github.io/jerusalem/CSS/style2.css" type="text/css" />
   <link rel="stylesheet" href="https://peamit-plus.github.io/jerusalem/CSS/style.css" type="text/css" />
   <script src="JS/Catergory.js"></script>
   <script src="JS/app.js"></script>
@@ -32,7 +31,7 @@
   </script>
 </head>
 
-<body onload="createModule()" style=" padding-top: 100px;">
+<body onload="searchProducts()" style=" padding-top: 100px;">
   <nav class="navbar navbar-inverse navbar-fixed-top">
 
     <div class="container-fluid">
@@ -61,32 +60,42 @@
   <div class="container" dir="rtl">
     <h1 id="demotext" class="text-center">חיפוש מוצרים</h1>
     <div class="well">
+      <form>
+        <div class="input-group col-xs-12 col-md-4" dir="ltr">
 
-      <div class="input-group " dir="ltr">
-        <input type="text" list="datalist"  class="form-control" id="searchInput" oninput="searchProducts()"
-          placeholder=" הכנס את שם המוצר ." style="text-align:right;">
-          <datalist id="datalist"></datalist>
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          <input type="text" list="dtlist" class="form-control" name="searchInput" id="searchInput"
+            oninput="searchProducts()" placeholder=" הכנס את שם המוצר ." style="text-align:right;" dir="rtl">
+          <datalist id="dtlist"></datalist>
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
         </div>
-      </div>
+      </form>
+
     </div>
-    <table class="table table-hover table-striped table-bordered " id="resultTable" style="display: none; ">
-      <thead>
-        <tr>
-          <th style="text-align: right; width: 60%;">שם המוצר</th>
-          <th style="text-align: right; width: 10%;">לינק</th>
-        </tr>
-      </thead>
-      <tbody id="resultBody">
-      </tbody>
-    </table>
+    <div id="resultsContainer" class="card-container">
+      <!-- תוצאות יופיעו כאן דרך ג'אווהסקריפט -->
+    </div>
+
     </span>
   </div>
   <script src="https://peamit-plus.github.io/jerusalem/JS/search.js"></script>
   <div class="footer" dir="rtl" id="footer"></div>
 
-
+  <script>
+    // קריאה לפרמטר המתאים מה-URL
+    const urlParams = new URLSearchParams(window.location.search);
+    // בדיקה האם קיים פרמטר בשם 'searchInput'
+    if (urlParams.has('searchInput')) {
+      // אם קיים, משוך את הערך שלו
+      const searchInputValue = urlParams.get('searchInput');
+      // הצגת הנתון ב-DIV המתאים
+      document.getElementById('searchInput').value = searchInputValue;
+    } else {
+      // אם הפרמטר לא קיים, הצגת הודעת שגיאה
+      document.getElementById('searchInput').innerText = '';
+    }
+  </script>
 
 
 

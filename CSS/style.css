@@ -417,3 +417,35 @@ hr{
 .panel-footer{
   position: sticky;
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px; /* קביעת רוחב התוכן */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+}
+
+.card img {
+  width: 100px; /* רוחב התמונה */
+  height: auto; /* גובה מתאים */
+  margin-right: 10px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  margin: 0;
+}
+
+.card-content p {
+  margin: 5px 0;
+}
