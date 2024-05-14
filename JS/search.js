@@ -1186,7 +1186,7 @@ const productsDB = {
 }
 
 function searchProducts() {
-  console.log("A")
+
   // checkDataList(productsDB);
   const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
   const resultsContainer = document.getElementById('resultsContainer');
@@ -1209,7 +1209,7 @@ function searchProducts() {
   <img src="../image/${product.image}.WebP" alt="${product.descraption}"/>
   <div class="card-content">
     <h4>${product.descraption}</h4>
-    <p class="text-muted">${product.price}₪</p>
+    <p class="text-muted" style="text-align: right;">${product.price}₪</p>
     <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html">מעבר לקטגוריה</a>
   </div>
 </div>
