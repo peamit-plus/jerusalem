@@ -1210,7 +1210,7 @@ function searchProducts() {
   <div class="card-content">
     <h4>${product.descraption}</h4>
     <p class="text-muted" style="text-align: right;">${product.price}₪</p>
-    <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html">מעבר לקטגוריה</a>
+    <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html"> מעבר לקטגוריה<br/> ולהוספה לסל</a>
   </div>
 </div>
         `;
