@@ -1231,11 +1231,11 @@ function checkDataList(productsDB) {
     return;
   }
 }
-function AddToDataList(productsDB) {
-  var data_list = "";
-  productsDB.forEach(element => {
-    data_list += `<option>${element.product.name}</option>`;
-  });
-  document.querySelector("#datalist").innerHTML = data_list;
-}
+// function AddToDataList(productsDB) {
+//   var data_list = "";
+//   productsDB.forEach(element => {
+//     data_list += `<option>${element.product.name}</option>`;
+//   });
+//   document.querySelector("#datalist").innerHTML = data_list;
+// }
 
