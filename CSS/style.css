@@ -434,7 +434,9 @@ hr{
 
 .card img {
   width: 100px; /* רוחב התמונה */
-  height: auto; /* גובה מתאים */
+  height: 100px; /* גובה מתאים */
+  object-fit: contain;
+  background-color: #5bebfe44;
   margin-left: 30px;
 }
 
