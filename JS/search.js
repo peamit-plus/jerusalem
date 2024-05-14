@@ -1208,8 +1208,8 @@ function searchProducts() {
 <div class="card col-md-4 col-xs-12">
   <img src="../image/${product.image}.WebP" alt="${product.descraption}"/>
   <div class="card-content">
-    <h3>${product.descraption}</h3>
-    <h4 class="text-muted">${product.price}₪</h4>
+    <h4>${product.descraption}</h4>
+    <p class="text-muted">${product.price}₪</p>
     <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html">מעבר לקטגוריה</a>
   </div>
 </div>
