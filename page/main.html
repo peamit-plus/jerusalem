@@ -56,8 +56,17 @@
           <li><a href="about.html">אודות</a></li>
           <li class="active"><a href="#">בית</a></li>
         </ul>
-        <button onclick="search()" class="btn btn-defult navbar-btn fade-in"> חיפוש מוצר <span
-            class="glyphicon glyphicon-search"></span></button>
+        <form class="navbar-form navbar-right">
+          <div class="input-group">
+            <input type="text" class="form-control" id="inputForm" placeholder="Search" name="search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" onclick="searchProductForm()" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        
         <button class="btn btn-info navbar-btn fade-in" data-toggle="modal" data-target="#myModal">למידע ללקוח לחץ
           כאן</button>
       </div>

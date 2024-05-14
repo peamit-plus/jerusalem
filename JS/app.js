@@ -15,7 +15,16 @@ function btnhome(){window.location.href="../page/main.html"}
 function btnsale(){window.location.href="../page/sale.html"  }
 function help(){window.location.href="../page/help.html"}
 function whatsapp(){window.location.assign("https://wa.me/0556610747")}
-
+function searchProductForm(){
+ var word= document.getElementById("inputForm").value;
+ if(word.length >0)
+  {
+    window.location.href=`https://peamit-plus.github.io/jerusalem/page/search.html?searchInput=${word}`
+  }
+  else{
+    alert("הכנס שם מוצר לחיפוש .")
+  }
+}
 function share() {
     if (navigator.share) {
         navigator.share({
