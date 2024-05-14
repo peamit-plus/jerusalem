@@ -1202,41 +1202,17 @@ function searchProducts() {
 
   // חיפוש והצגת התוצאות בכרטיסיות
   for (const product of productsDB.products) {
-    if (product.name.toLowerCase().includes(searchTerm)) {
+    if (product.descraption.toLowerCase().includes(searchTerm)) {
       resultsContainer +=
         `
 <div class="card">
-<img src="../image/${product.image}.WebP" alt="${product.name}"></img>
+<img src="../image/${product.image}.WebP" alt="${product.descraption}"></img>
 <div>
 </div class="card-content">
 <h3>${product.name}</h3/>
 <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html">מעבר לקטגוריה</a>
 </div>
       `
-      // const card = document.createElement('div');
-      // card.classList.add('card');
-
-      // const img = document.createElement('img');
-      // img.src = `../image/${product.image}.WebP`;
-      // img.alt = product.name;
-
-      // const cardContent = document.createElement('div');
-      // cardContent.classList.add('card-content');
-
-      // const productName = document.createElement('h3');
-      // productName.textContent = product.name;
-
-      // const categoryLink = document.createElement('a');
-      // categoryLink.href = `https://peamit-plus.github.io/jerusalem/products/index${product.category}.html`;
-      // categoryLink.textContent = 'מעבר לקטגוריה';
-
-      // cardContent.appendChild(productName);
-      // cardContent.appendChild(categoryLink);
-
-      // card.appendChild(img);
-      // card.appendChild(cardContent);
-
-      // resultsContainer.appendChild(card);
     }
   }
   resultsContainer.innerHTML =resultsContainer;
