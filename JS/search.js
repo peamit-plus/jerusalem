@@ -1203,8 +1203,7 @@ function searchProducts() {
   // חיפוש והצגת התוצאות בכרטיסיות
   for (const product of productsDB.products) {
     if (product.descraption.toLowerCase().includes(searchTerm)) {
-      resultsContainer +=
-        `
+      resultsContainer +=`
 <div class="card">
 <img src="../image/${product.image}.WebP" alt="${product.descraption}"></img>
 <div>
