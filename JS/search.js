@@ -1209,6 +1209,7 @@ function searchProducts() {
   <img src="../image/${product.image}.WebP" alt="${product.descraption}"/>
   <div class="card-content">
     <h3>${product.descraption}</h3>
+    <h4 class="text-muted">${product.price}₪</h4>
     <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html">מעבר לקטגוריה</a>
   </div>
 </div>
