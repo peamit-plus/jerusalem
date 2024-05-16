@@ -400,6 +400,13 @@ const productsDB = {
             "category":"6"
         },
         {
+            "id": "1234561",
+            "image": "",
+            "descraption": "תבנית ענק לתנור ארוז 7₪",
+            "price": "7",
+            "category":"6"
+        },
+        {
             "id": "1021",
             "image": "t3",
             "descraption": "תבניות בינוני A4 ארוז",
@@ -1183,7 +1190,7 @@ const productsDB = {
             "price": "12.0 "
         }
     ]
-}
+  }
 
 function addToLocalStorage(productId) {
     var numOfProduct = parseInt(productId);
