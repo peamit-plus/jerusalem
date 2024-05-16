@@ -389,28 +389,28 @@ const productsDB = {
             "id": "1019",
             "image": "t1",
             "descraption": "תבניות קטן ארוז",
-            "price": "8.0 ",
+            "price": "7 ",
             "category":"6"
         },
         {
             "id": "1020",
             "image": "t2",
             "descraption": "תבניות קטן עמוק ארוז",
-            "price": "8.0 ",
+            "price": "7 ",
             "category":"6"
         },
         {
             "id": "1021",
             "image": "t3",
             "descraption": "תבניות בינוני A4 ארוז",
-            "price": "8.0 ",
+            "price": "7",
             "category":"6"
         },
         {
             "id": "1022",
             "image": "t4",
             "descraption": "תבניות גדול ארוז",
-            "price": "8.0 ",
+            "price": "7 ",
             "category":"6"
         },
         {
