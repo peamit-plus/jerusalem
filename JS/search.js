@@ -1226,7 +1226,7 @@ function searchProducts() {
 
   // אם אין תוצאות, הצג הודעה
   if (resultsContainer.innerHTML === '') {
-    resultsContainer.innerHTML = '<p>לא נמצאו תוצאות עבור  " <i>${searchTerm}"</i></p>';
+    resultsContainer.innerHTML = `<p>לא נמצאו תוצאות עבור  " <i>${searchTerm}"</i></p>`;
   }
 }
 
