@@ -1279,13 +1279,14 @@ function checkDataList() {
         productsDB.forEach(element => {
             data_list += `<option>${element.products.name}</option>`;
         });
-        console.log(data_list)
+       
         document.querySelector("#datalist").innerHTML = data_list;
 
     }
     else {
         return;
     }
+    console.log(data_list)
 }
 
 
