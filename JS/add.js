@@ -1281,7 +1281,7 @@ function checkDataList() {
             data_list += `<option>${element.products.name}</option>`;
         });
        
-        document.getElementById("#dtlist").innerHTML = data_list;
+        document.getElementById("dtlist").innerHTML = data_list;
 
     }
     else {
