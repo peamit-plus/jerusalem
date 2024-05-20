@@ -1249,7 +1249,7 @@ function checkDataList() {
     console.log(data_list + "A")
     if (searchInput.length > 2) {
         productsDB.products.forEach(element => {
-            data_list += `<option>${element.name}</option>`;
+            data_list += `<option>${element.descraption}</option>`;
         });
 
         document.getElementById("dtlist").innerHTML = data_list;
