@@ -16,7 +16,7 @@ function btnsale() { window.location.href = "../page/sale.html" }
 function help() { window.location.href = "../page/help.html" }
 function whatsapp() { window.location.assign("https://wa.me/0556610747") }
 function searchProductForm() {
-  var word = document.getElementById("inputForm").value;
+  var word = document.getElementById("searchInput").value;
   if (word.length > 0) {
     window.location.href = `https://peamit-plus.github.io/jerusalem/page/search.html?searchInput=${word}`
   }
