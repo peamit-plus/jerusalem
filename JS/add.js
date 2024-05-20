@@ -1240,7 +1240,7 @@ function displayProductsFromLocalStorageToNuv() {
         }
     }
 }
-querySelector("#productsContainerInNuv").innerHTML = productsContainer
+document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
 
 
 function searchProducts() {
