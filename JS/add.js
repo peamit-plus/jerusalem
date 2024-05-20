@@ -1240,9 +1240,9 @@ function displayProductsFromLocalStorageToNuv() {
             productsContainer.innerHTML += NuvProduct; // הוסף את המוצר ל productsContainer
         }
     }
-    document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
+    
 }
-
+document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
 function checkDataList() {
     var searchInput = document.getElementById("searchInput").value;
     var data_list = "";
