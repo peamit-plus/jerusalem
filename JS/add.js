@@ -1230,7 +1230,8 @@ function displayProductsFromLocalStorageToNuv() {
     if (localStorage.length < 1) {
         var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`;
         productsContainer.innerHTML = productCard;
-    } else {
+    }
+    else {
         for (let i = 0; i < localStorage.length; i++) {
             let key = localStorage.key(i);
             let product = JSON.parse(localStorage.getItem(key));
@@ -1239,8 +1240,9 @@ function displayProductsFromLocalStorageToNuv() {
             productsContainer.innerHTML += NuvProduct; // הוסף את המוצר ל productsContainer
         }
     }
+    document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
 }
-document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
+
 
 
 function searchProducts() {
@@ -1276,11 +1278,11 @@ function checkDataList() {
     var data_list = "";
     console.log(data_list + "A")
     if (searchInput.length > 2) {
-        
+
         productsDB.forEach(element => {
             data_list += `<option>${element.products.name}</option>`;
         });
-       
+
         document.getElementById("dtlist").innerHTML = data_list;
 
     }
