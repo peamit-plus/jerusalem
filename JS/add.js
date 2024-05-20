@@ -1243,6 +1243,24 @@ function displayProductsFromLocalStorageToNuv() {
     document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
 }
 
+function checkDataList() {
+    var searchInput = document.getElementById("#searchInput").value;
+    var data_list = "";
+    console.log(data_list + "A")
+    if (searchInput.length > 2) {
+
+        productsDB.forEach(element => {
+            data_list += `<option>${element.products.name}</option>`;
+        });
+
+        document.getElementById("dtlist").innerHTML = data_list;
+
+    }
+    else {
+        return;
+    }
+    console.log(data_list + "B")
+}
 
 
 function searchProducts() {
@@ -1273,23 +1291,5 @@ function searchProducts() {
     }
 }
 
-function checkDataList() {
-    var searchInput = document.getElementById("#searchInput").value;
-    var data_list = "";
-    console.log(data_list + "A")
-    if (searchInput.length > 2) {
-
-        productsDB.forEach(element => {
-            data_list += `<option>${element.products.name}</option>`;
-        });
-
-        document.getElementById("dtlist").innerHTML = data_list;
-
-    }
-    else {
-        return;
-    }
-    console.log(data_list + "B")
-}
 
 
