@@ -1257,6 +1257,7 @@ function checkDataList() {
     }
     else {
         data_list ="";
+        document.getElementById("dtlist").innerHTML = data_list;
     }
     console.log(data_list + "B")
 }
