@@ -1264,6 +1264,7 @@ function checkDataList() {
 
 
 function searchProducts() {
+    checkDataList()
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
     const resultsContainer = document.getElementById('resultsContainer');
     resultsContainer.innerHTML = "";
