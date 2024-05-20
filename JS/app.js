@@ -71,6 +71,7 @@ function displayProductsFromLocalStorageToNuv() {
       productsContainer.innerHTML += NuvProduct; // הוסף את המוצר ל productsContainer
     }
   }
+  querySelector("#productsContainerInNuv").innerHTML = productsContainer
 }
-querySelector("#productsContainerInNuv").innerHTML = productsContainer
+
 

@@ -109,7 +109,7 @@ const productsDB = {
             "id": "15",
             "image": "15",
             "descraption": "צלחת גדול קשיח (*100)",
-            "price": "24.0 ",
+            "price": "20",
             "category": "2"
         },
         {

@@ -62,7 +62,7 @@ function page2() {
     { "productId": "12", "image": "12", "p": "צלחות גדולות פשוטות(*50) 7.50₪", "price": "" },
     { "productId": "13", "image": "13", "p": "צלחת מרק קשיח(*100) 18₪", "price": "" },
     { "productId": "14", "image": "14", "p": "צלחת קטן קשיח(*100) 18₪", "price": "" },
-    { "productId": "15", "image": "15", "p": "צלחת גדול קשיח (*100) 24₪ ", "price": "" },
+    { "productId": "15", "image": "15", "p": "צלחת גדול קשיח (*100) 20₪ ", "price": "" },
     { "productId": "16", "image": "16", "p": "צלחת גדול 1 קג' קשיח (*66) 24₪", "price": "" }]
   generateGallery(json)
 }
