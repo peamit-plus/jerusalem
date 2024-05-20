@@ -1248,9 +1248,8 @@ function checkDataList() {
     var data_list = "";
     console.log(data_list + "A")
     if (searchInput.length > 2) {
-
-        productsDB.forEach(element => {
-            data_list += `<option>${element.products.name}</option>`;
+        productsDB.products.forEach(element => {
+            data_list += `<option>${element.name}</option>`;
         });
 
         document.getElementById("dtlist").innerHTML = data_list;
