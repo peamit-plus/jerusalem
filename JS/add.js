@@ -1272,7 +1272,7 @@ function searchProducts() {
 }
 
 function checkDataList() {
-    var searchInput = document.getElementById("#searchInput").value
+    var searchInput = document.getElementById("#searchInput").value;
     var data_list = "";
     console.log(data_list + "A")
     if (searchInput.length > 2) {
