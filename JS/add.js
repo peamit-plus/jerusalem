@@ -1246,8 +1246,8 @@ function displayProductsFromLocalStorageToNuv() {
 function checkDataList() {
     var searchInput = document.getElementById("searchInput").value;
     var data_list = "";
-    console.log(data_list + "A")
-    if (searchInput.length > 2) {
+
+    if (searchInput.length > 1) {
         productsDB.products.forEach(element => {
             data_list += `<option>${element.descraption}</option>`;
         });
@@ -1259,7 +1259,7 @@ function checkDataList() {
         data_list ="";
         document.getElementById("dtlist").innerHTML = data_list;
     }
-    console.log(data_list + "B")
+
 }
 
 
