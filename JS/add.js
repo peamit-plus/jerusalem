@@ -1220,6 +1220,9 @@ $(document).ready(function () {
         $("#sideMenu").collapse('hide');
     });
 });
+
+
+
 function displayProductsFromLocalStorageToNuv() {
     const productsContainer = document.getElementById('productsContainerInNuv');
     productsContainer.innerHTML = "12"; // רוקן את התוכן של productsContainer
@@ -1238,6 +1241,7 @@ function displayProductsFromLocalStorageToNuv() {
     }
 }
 querySelector("#productsContainerInNuv").innerHTML = productsContainer
+
 
 function searchProducts() {
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
@@ -1267,20 +1271,21 @@ function searchProducts() {
     }
 }
 
-// function checkDataList(productsDB) {
-//   var searchInput = document.querySelector("#searchInput").value
-//   if (searchInput.length > 2) {
-//     AddToDataList(productsDB)
-//   }
-//   else {
-//     return;
-//   }
-// }
-// function AddToDataList(productsDB) {
-//   var data_list = "";
-//   productsDB.forEach(element => {
-//     data_list += `<option>${element.product.name}</option>`;
-//   });
-//   document.querySelector("#datalist").innerHTML = data_list;
-// }
+function checkDataList() {
+  var searchInput = document.querySelector("#searchInput").value
+  if (searchInput.length > 2) {
+    AddToDataList()
+  }
+  else {
+    return;
+  }
+}
+function AddToDataList(){
+  var data_list = "";
+  productsDB.forEach(element => {
+    data_list += `<option>${element.product.name}</option>`;
+  });
+  console.log(data_list)
+  document.querySelector("#datalist").innerHTML = data_list;
+}
 
