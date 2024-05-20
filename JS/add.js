@@ -1220,9 +1220,6 @@ $(document).ready(function () {
         $("#sideMenu").collapse('hide');
     });
 });
-
-
-
 function displayProductsFromLocalStorageToNuv() {
     const productsContainer = document.getElementById('productsContainerInNuv');
     productsContainer.innerHTML = "12"; // רוקן את התוכן של productsContainer
@@ -1242,4 +1239,48 @@ function displayProductsFromLocalStorageToNuv() {
 }
 querySelector("#productsContainerInNuv").innerHTML = productsContainer
 
+function searchProducts() {
+    const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+    const resultsContainer = document.getElementById('resultsContainer');
+    resultsContainer.innerHTML = "";
+    if (searchTerm === '') {
+        resultsContainer.innerHTML = '<p>אנא הזן מונח חיפוש</p>';
+        return; // יוצא מהפונקציה ואין המשך לבדוק ולהציג תוצאות
+    }
+    for (const product of productsDB.products) {
+        if (product.descraption.toLowerCase().includes(searchTerm)) {
+            resultsContainer.innerHTML +=
+                `
+<div class="card col-md-4 col-xs-12">
+  <img src="../image/${product.image}.WebP" alt="${product.descraption}"/>
+  <div class="card-content">
+    <h4>${product.descraption}</h4>
+    <p class="text-muted" style="text-align: right;">${product.price}₪</p>
+    <a href="https://peamit-plus.github.io/jerusalem/products/index${product.category}.html"> מעבר לקטגוריה<br/> ולהוספה לסל</a>
+  </div>
+</div>
+        `;
+        }
+    }
+    if (resultsContainer.innerHTML === '') {
+        resultsContainer.innerHTML = `<p>לא נמצאו תוצאות עבור  " <i>${searchTerm}"</i></p>`;
+    }
+}
+
+// function checkDataList(productsDB) {
+//   var searchInput = document.querySelector("#searchInput").value
+//   if (searchInput.length > 2) {
+//     AddToDataList(productsDB)
+//   }
+//   else {
+//     return;
+//   }
+// }
+// function AddToDataList(productsDB) {
+//   var data_list = "";
+//   productsDB.forEach(element => {
+//     data_list += `<option>${element.product.name}</option>`;
+//   });
+//   document.querySelector("#datalist").innerHTML = data_list;
+// }
 
