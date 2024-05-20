@@ -1256,7 +1256,7 @@ function checkDataList() {
 
     }
     else {
-        return;
+        data_list ="";
     }
     console.log(data_list + "B")
 }
