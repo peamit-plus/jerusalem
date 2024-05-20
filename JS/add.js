@@ -1225,7 +1225,7 @@ $(document).ready(function () {
 
 function displayProductsFromLocalStorageToNuv() {
     const productsContainer = document.getElementById('productsContainerInNuv');
-    productsContainer.innerHTML = "12"; // רוקן את התוכן של productsContainer
+    productsContainer.innerHTML = ""; // רוקן את התוכן של productsContainer
 
     if (localStorage.length < 1) {
         var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`;
