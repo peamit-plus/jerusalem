@@ -360,7 +360,7 @@ const productsDB = {
         {
             "id": "1018",
             "image": "nc4",
-            "descraption": "נייר כסף ארוך עבה (50 מ')",
+            "descraption": "נייר כסף ארוך עבה (45 מ')",
             "price": "37.0 ",
             "category": "6"
         },
@@ -452,14 +452,14 @@ const productsDB = {
             "id": "1243",
             "image": "tp3",
             "descraption": "תבניות בינוני",
-            "price": "1.1 ",
+            "price": "1",
             "category": "6"
         },
         {
             "id": "1244",
             "image": "tp4",
             "descraption": "תבניות גדול",
-            "price": "1.1",
+            "price": "1",
             "category": "6"
         },
         {
