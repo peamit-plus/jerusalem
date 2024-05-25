@@ -1313,7 +1313,7 @@ function createGallery(val_filter) {
             <figcaption>
               <div class='caption product-caption'>
                 <p class='text-center'>
-                    <b>${element.descraption} ${element.price}₪</b><br/>
+                    <b>${element.descraption} ${element.price +"₪"}</b><br/>
                     <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${element.id})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
                 </p>
               </div>
