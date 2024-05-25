@@ -1231,7 +1231,7 @@ function displayProductsFromLocalStorageToNuv() {
         productsContainer = productCard;
     }
     else {
-        for (let i = 1; i < localStorage.length+1; i++) {
+        for (let i = 0; i < localStorage.length; i++) {
             let key = localStorage.key(i);
             let product = JSON.parse(localStorage.getItem(key));
 
