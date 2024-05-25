@@ -1226,8 +1226,6 @@ $(document).ready(function () {
 
 function displayProductsFromLocalStorageToNuv() {
     var productsContainer = document.getElementById('productsContainerInNuv').value;
-    
-
     if (localStorage.length < 1) {
         var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`;
         productsContainer = productCard;
@@ -1237,7 +1235,7 @@ function displayProductsFromLocalStorageToNuv() {
             let key = localStorage.key(i);
             let product = JSON.parse(localStorage.getItem(key));
 
-            let NuvProduct = `<li>${product.descraption}</li>`;
+            let NuvProduct = `<li>${product.descraption(key)}</li>`;
             productsContainer += NuvProduct;
         }
     }
