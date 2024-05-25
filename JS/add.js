@@ -1293,12 +1293,12 @@ function searchProducts() {
     }
 }
 
-function createGallery(val_filter){
-    var product_json = productsDB.products.filter(function(item){
-        if(val_filter== item.category){
+function createGallery(val_filter) {
+    var product_json = productsDB.products.filter(function (item) {
+        if (val_filter == item.category) {
             return true;
         }
-        else{
+        else {
             return false;
         }
     });
@@ -1306,7 +1306,7 @@ function createGallery(val_filter){
     gallery += `
     <p>בדף זה יש ${product_json.length} מוצרים</p><div class="row">`
     product_json.forEach(element => {
-      gallery += `
+        gallery += `
     <div class='col-md-3 product-container' id='${element.image}'>
         <div class='thumbnail'>
          <figure>
@@ -1314,7 +1314,7 @@ function createGallery(val_filter){
             <figcaption>
               <div class='caption product-caption'>
                 <p class='text-center'>
-                    <b>${element.descraption}</b><br/>
+                    <b>${element.descraption} ${element.price}₪</b><br/>
                     <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${element.id})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
                 </p>
               </div>
@@ -1322,19 +1322,34 @@ function createGallery(val_filter){
           </figure>
         </div>
     </div>`;
-  
+
     });
-  
+
     gallery += `</div> `
-  
-  
+    gallery += `
+    <div id="sideMenu" class="side-menu collapse" dir="rtl">
+    <!-- Menu items here -->
+    <div class="panel panel-default panel-nuv">
+        <div class="panel-heading">המוצרים בסל</div>
+        <div class="panel-body panel-body-nuv">
+            <span id="productsContainerInNuv"></span></div>
+        <div class="panel-footer navbar-fixed-bottom">
+          <button class="btn btn-link btn-block" onclick="resetLocalStorage()">איפוס הסל </button>
+            <button class="btn btn-primary btn-block" id="BtnCloseNuv">המשך הזמנה</button>
+           <button class="btn btn-info btn-block" onclick="end()">לשלב הבא</button>
+            
+        </div>
+      </div>
+</div>`
+
+
     if (product_json.length < 1) {
-      gallery = `<h3 class='text-center' style='color:red;'>
+        gallery = `<h3 class='text-center' style='color:red;'>
     אין מוצרים בדף זה 
     <br/> עקב תקלה תכנית לא צפויה פנו אלינו בלשונית העזרה שבדף הראשי 
     <br>שנטפל בזה </h3>`
     }
-  
+
     displayProductsFromLocalStorageToNuv()
     document.getElementById("id_gallery").innerHTML = gallery;
 
