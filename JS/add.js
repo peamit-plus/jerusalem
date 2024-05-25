@@ -1238,7 +1238,7 @@ function displayProductsFromLocalStorageToNuv() {
             let product = JSON.parse(localStorage.getItem(key));
 
             let NuvProduct = `<li>${product.descraption}</li>`;
-            productsContainer.innerHTML += NuvProduct; // הוסף את המוצר ל productsContainer
+            productsContainer.innerHTML += NuvProduct;
         }
     }
     document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
@@ -1349,7 +1349,7 @@ function createGallery(val_filter) {
     <br>שנטפל בזה </h3>`
     }
 
-    displayProductsFromLocalStorageToNuv()
+   
     document.getElementById("id_gallery").innerHTML = gallery;
 
 }
