@@ -1187,7 +1187,8 @@ const productsDB = {
             "id": "127",
             "image": "107",
             "descraption": "אקונומיקה מבושמת 4 ליטר",
-            "price": "12.0 "
+            "price": "12.0 ",
+            "category": "12"
         }
     ]
 }
@@ -1240,7 +1241,7 @@ function displayProductsFromLocalStorageToNuv() {
             productsContainer.innerHTML += NuvProduct; // הוסף את המוצר ל productsContainer
         }
     }
-    
+
 }
 document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
 function checkDataList() {
@@ -1256,7 +1257,7 @@ function checkDataList() {
 
     }
     else {
-        data_list ="";
+        data_list = "";
         document.getElementById("dtlist").innerHTML = data_list;
     }
 
@@ -1292,5 +1293,49 @@ function searchProducts() {
     }
 }
 
+function createGallery(val_filter){
+    var product_json = productsDB.products.filter(function(item){
+        if(val_filter== item.category){
+            return true;
+        }
+        else{
+            return false;
+        }
+    });
+    var gallery = "";
+    gallery += `
+    <p>בדף זה יש ${product_json.length} מוצרים</p><div class="row">`
+    product_json.forEach(element => {
+      gallery += `
+    <div class='col-md-3 product-container' id='${element.image}'>
+        <div class='thumbnail'>
+         <figure>
+            <img src='../image/${element.image || 2043}.WebP'  alt='${element.image}' style='height:250px; width: 100%;'>
+            <figcaption>
+              <div class='caption product-caption'>
+                <p class='text-center'>
+                    <b>${element.descraption}</b><br/>
+                    <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${element.id})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+    </div>`;
+  
+    });
+  
+    gallery += `</div> `
+  
+  
+    if (product_json.length < 1) {
+      gallery = `<h3 class='text-center' style='color:red;'>
+    אין מוצרים בדף זה 
+    <br/> עקב תקלה תכנית לא צפויה פנו אלינו בלשונית העזרה שבדף הראשי 
+    <br>שנטפל בזה </h3>`
+    }
+  
+    displayProductsFromLocalStorageToNuv()
+    document.getElementById("id_gallery").innerHTML = gallery;
 
-
+}
