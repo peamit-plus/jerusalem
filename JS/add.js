@@ -1325,8 +1325,7 @@ function createGallery(val_filter) {
 
     });
 
-    gallery += `</div> `
-    gallery += `
+    gallery += `</div> 
     <div id="sideMenu" class="side-menu collapse" dir="rtl">
     <!-- Menu items here -->
     <div class="panel panel-default panel-nuv">
