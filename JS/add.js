@@ -1231,11 +1231,11 @@ function displayProductsFromLocalStorageToNuv() {
         productsContainer = productCard;
     }
     else {
-        for (let i = 0; i < localStorage.length; i++) {
+        for (let i = 1; i < localStorage.length+1; i++) {
             let key = localStorage.key(i);
             let product = JSON.parse(localStorage.getItem(key));
 
-            let NuvProduct = `<li>${product.descraption(key)}</li>`;
+            let NuvProduct = `<li>${product.descraption}</li>`;
             productsContainer += NuvProduct;
         }
     }
