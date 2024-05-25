@@ -1225,8 +1225,8 @@ $(document).ready(function () {
 
 
 function displayProductsFromLocalStorageToNuv() {
-    const productsContainer = document.getElementById('productsContainerInNuv').value;
-    productsContainer.innerHTML=" ";
+    var productsContainer = document.getElementById('productsContainerInNuv').value;
+    
 
     if (localStorage.length < 1) {
         var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`;
