@@ -1225,13 +1225,13 @@ $(document).ready(function () {
 
 
 function displayProductsFromLocalStorageToNuv() {
-    var productsContainer = document.getElementById('productsContainerInNuv').value;
-    document.querySelector("#productsContainerInNuv").innerHTML="";
+    var productsContainer = ""; // התחלת משתנה למחרוזת ריקה
+    document.querySelector("#productsContainerInNuv").innerHTML = ""; // נקה את תוכן האלמנט
+
     if (localStorage.length < 1) {
-        var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`;
+        var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל</h4>`; // תקן את סגירת ה-h4
         productsContainer = productCard;
-    }
-    else {
+    } else {
         for (let i = 0; i < localStorage.length; i++) {
             let key = localStorage.key(i);
             let product = JSON.parse(localStorage.getItem(key));
@@ -1240,7 +1240,7 @@ function displayProductsFromLocalStorageToNuv() {
             productsContainer += NuvProduct;
         }
     }
-    document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
+    document.querySelector("#productsContainerInNuv").innerHTML = productsContainer;
 }
 
 function checkDataList() {
@@ -1330,7 +1330,8 @@ function createGallery(val_filter) {
     <div class="panel panel-default panel-nuv">
         <div class="panel-heading">המוצרים בסל</div>
         <div class="panel-body panel-body-nuv">
-            <span id="productsContainerInNuv"></span></div>
+            <span id="productsContainerInNuv"></span>
+            </div>
         <div class="panel-footer navbar-fixed-bottom">
           <button class="btn btn-link btn-block" onclick="resetLocalStorage()">איפוס הסל </button>
             <button class="btn btn-primary btn-block" data-toggle="collapse" data-target="#sideMenu">המשך הזמנה</button>
@@ -1348,7 +1349,7 @@ function createGallery(val_filter) {
     <br>שנטפל בזה </h3>`
     }
 
-   
+
     document.getElementById("id_gallery").innerHTML = gallery;
     displayProductsFromLocalStorageToNuv()
 }
