@@ -1230,7 +1230,7 @@ function displayProductsFromLocalStorageToNuv() {
 
     if (localStorage.length < 1) {
         var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`;
-        productsContainer.innerHTML = productCard;
+        productsContainer = productCard;
     }
     else {
         for (let i = 0; i < localStorage.length; i++) {
@@ -1238,7 +1238,7 @@ function displayProductsFromLocalStorageToNuv() {
             let product = JSON.parse(localStorage.getItem(key));
 
             let NuvProduct = `<li>${product.descraption}</li>`;
-            productsContainer.innerHTML += NuvProduct;
+            productsContainer += NuvProduct;
         }
     }
     document.querySelector("#productsContainerInNuv").innerHTML = productsContainer
@@ -1334,7 +1334,7 @@ function createGallery(val_filter) {
             <span id="productsContainerInNuv"></span></div>
         <div class="panel-footer navbar-fixed-bottom">
           <button class="btn btn-link btn-block" onclick="resetLocalStorage()">איפוס הסל </button>
-            <button class="btn btn-primary btn-block" id="BtnCloseNuv">המשך הזמנה</button>
+            <button class="btn btn-primary btn-block" data-toggle="collapse" data-target="#sideMenu">המשך הזמנה</button>
            <button class="btn btn-info btn-block" onclick="end()">לשלב הבא</button>
             
         </div>
