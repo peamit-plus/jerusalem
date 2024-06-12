@@ -149,7 +149,10 @@ p{
 /*to comuter*/
 @media only screen and (max-width: 769px) {
    .img-center{
-    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
    }
     #salebutton{
   position: fixed;

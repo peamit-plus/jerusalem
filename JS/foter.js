@@ -5,7 +5,7 @@ document.getElementById("footer").innerHTML=`
     <div class="container" style="background-color: #333;">
         <div class="row">
           <div class="col-md-3 img-center">
-          <img src="https://peamit-plus.github.io/jerusalem/image/rel.png"  style="width: 120px; align-items: center; background: rgba(255, 255, 255, 0);" class="" alt="Image"> />
+          <img src="https://peamit-plus.github.io/jerusalem/image/rel.png"  style="width: 120px;  background: rgba(255, 255, 255, 0);" class="" alt="Image"> />
           </div>
           <div class="col-md-3">
                 <h3>יצירת קשר</h3>
