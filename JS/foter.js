@@ -29,7 +29,7 @@ document.getElementById("footer").innerHTML=`
                   <a href="./help.html">עזרה</a>
           </div>
     </div>
-    <hr/>
+    <hr/ class="w-100">
   
     <p class="text-center"> ט.ל.ח © כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2024</p>
     </div>
