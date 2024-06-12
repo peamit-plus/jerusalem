@@ -146,14 +146,14 @@ p{
 }
 
 }
+.img-center{
+  display: flex;
+          justify-content: center;
+          align-items: center;
+}
 /*to comuter*/
 @media only screen and (min-width: 769px) {
-   .img-center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
-   }
     #salebutton{
   position: fixed;
   bottom: 50px;
