@@ -147,7 +147,7 @@ p{
 
 }
 /*to comuter*/
-@media only screen and (max-width: 769px) {
+@media only screen and (min-width: 769px) {
    .img-center{
     display: block;
     margin-left: auto;
