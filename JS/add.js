@@ -1353,3 +1353,14 @@ function createGallery(val_filter) {
     document.getElementById("id_gallery").innerHTML = gallery;
     displayProductsFromLocalStorageToNuv()
 }
+document.addEventListener('keydown', function(event) {
+    const searchInput = document.getElementById('searchInput');
+    // Check if the 'H' key is pressed
+    if (event.key === 'h' || event.key === 'ח') {
+        searchInput.focus();
+    }
+    // Check if the 'Escape' key is pressed
+    if (event.key === 'Escape') {
+        searchInput.blur();
+    }
+});
