@@ -1356,7 +1356,7 @@ function createGallery(val_filter) {
 document.addEventListener('keydown', function(event) {
     const searchInput = document.getElementById('searchInput');
     // Check if the 'H' key is pressed
-    if (event.key === 'h' || event.key === 'ח') {
+    if (event.key === 'j' || event.key === 'ח') {
         searchInput.focus();
     }
     // Check if the 'Escape' key is pressed
