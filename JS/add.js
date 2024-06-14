@@ -30,6 +30,13 @@ const productsDB = {
         },
         {
             "id": "4",
+            "image": "gavia",
+            "descraption": "מארז כוסות קידוש 10 י'ח",
+            "price": "10",
+            "category": "1"
+        },
+        {
+            "id": "4",
             "image": "4",
             "descraption": "כוס יהלום",
             "price": "8.5 ",
@@ -233,7 +240,7 @@ const productsDB = {
         },
         {
             "id": "1010",
-            "image": "2043",
+            "image": "mazleg",
             "descraption": "מזלג קרם קשיח",
             "price": "7.5 ",
             "category": "4"
@@ -737,8 +744,8 @@ const productsDB = {
         },
         {
             "id": "79",
-            "image": "65",
-            "descraption": "שקיות אשפה עם שרוך 52/65 (*60)",
+            "image": "sakiot",
+            "descraption": "אשפתון אשפה עם שרוך 52/65 (*60)",
             "price": "15.0 ",
             "category": "9"
         },
