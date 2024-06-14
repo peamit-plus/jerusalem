@@ -1349,7 +1349,7 @@ function createGallery(val_filter) {
     <br>שנטפל בזה </h3>`
     }
 
-
+    
     document.getElementById("id_gallery").innerHTML = gallery;
     displayProductsFromLocalStorageToNuv()
 }
