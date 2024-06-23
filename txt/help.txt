@@ -109,3 +109,10 @@ function createModule(){
 }
 
 
+
+    <form id="smsForm">
+        <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+        <button type="submit">לשלב הסופי</button>
+    </form>
+
+    <script src="sms.js"></script>
