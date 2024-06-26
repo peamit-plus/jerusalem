@@ -131,10 +131,8 @@ function copyUpdatedData() {
   let baseFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSccwkhhPQRdj6bafIT0JnKTkW6uS6xnTMEmnd9R05gny0pAqg/viewform";
   let completeURL = `${baseFormURL}?usp=pp_url&entry.1393372309=${encodeURIComponent(copiedData)}`;
   localStorage.clear();
-  document.getElementById("ID_Form").innerHTML=`<iframe 
-            src='${completeURL}'
-            width='auto' height='auto' frameborder='0' marginheight='0' marginwidth='0'>בטעינה…</iframe>'`
-  // window.location.href = completeURL;
+
+  window.location.href = completeURL;
 }
 
 
