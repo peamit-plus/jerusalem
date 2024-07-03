@@ -1,96 +1,116 @@
-html,body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  text-align:right ;
-  font-family:sans-serif;
+  text-align: right;
+  font-family: sans-serif;
   background: #fffafa;
   padding-top: 20px;
 }
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: #fff;
-    background-color: transparent;
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #fff;
+  background-color: transparent;
 }
+
 .BorderAbout {
-    border: 2px solid #333;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-.BorderAbout p {
-    margin: 15px 0;
-}
-p{
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 5px;
   text-align: center;
 }
-/* הסתרת הקישור למחשב במכשירים עם מסך קטן */
-        @media only screen and (max-width: 768px) {
-            .desktop-link {
-                display: none;
-            }
-        }
 
-        /* הסתרת הקישור לפלאפון במכשירים עם מסך גדול */
-        @media only screen and (min-width: 769px) {
-            .mobile-link {
-                display: none;
-            }
-        }
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+.BorderAbout p {
+  margin: 15px 0;
+}
+
+p {
+  text-align: center;
+}
+
+/* הסתרת הקישור למחשב במכשירים עם מסך קטן */
+@media only screen and (max-width: 768px) {
+  .desktop-link {
     display: none;
-    padding: 3px 6px;
-    font-size: 16px;
-    color: #fffafa;
-    background: #337ab7;
-    border-radius: 4px;
-    cursor: pointer;
-    z-index: 9999;
- }
+  }
+}
+
+/* הסתרת הקישור לפלאפון במכשירים עם מסך גדול */
+@media only screen and (min-width: 769px) {
+  .mobile-link {
+    display: none;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 3px 6px;
+  font-size: 16px;
+  color: #fffafa;
+  background: #337ab7;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
 .fade-in {
   animation-name: fadeIn;
   animation-duration: 1.5s;
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 .container {
   padding: 20px;
-  }
+}
+
 .rotating-image {
-    width: 200px; /* או כל רוחב אחר שאתה רוצה */
-    position: fixed;
-    bottom: 0;
-    animation: spin 10s infinite linear;
-    transform-origin: center;
-    mix-blend-mode: multiply;
+  width: 200px;
+  /* או כל רוחב אחר שאתה רוצה */
+  position: fixed;
+  bottom: 0;
+  animation: spin 10s infinite linear;
+  transform-origin: center;
+  mix-blend-mode: multiply;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 .bottom-center {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.txt-center{
+
+.txt-center {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
- /* ===== Scrollbar CSS ===== */
+
+/* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
   scrollbar-width: auto;
@@ -111,151 +131,135 @@ p{
   border-radius: 10px;
   border: 3px solid #ffffff;
 }
-p{
+
+p {
   text-align: center;
   align-items: center;
 }
+
 .product-image {
-    width: 100%;
-    height: 270px;
-}
-.product-caption {
-    height: 75px;
-}
-.custom-video {
-    width: 400px;
-    height: auto;
-    border: 2px solid #333;
-    border-radius: 10px;
-}
-@media only screen and (min-width: 769px) {
-   
-    #salebutton{
-  position: fixed;
-  bottom: 40px;
-  left: 5px;
-  width: 27.94px; /* אפשר להתאים לגודל שאתה רוצה */
-  height: 27.94px; /* אפשר להתאים לגודל שאתה רוצה */
-  border-radius: 50%;
-  background-color: #337ab7; /* צבע רקע */
-  color: #fff; /* צבע טקסט */
-  font-size: 20px;
-  text-align: center;
-  padding:3px 2px 3px 1px;
-  cursor: pointer;
+  width: 100%;
+  height: 270px;
 }
 
+.product-caption {
+  height: 75px;
 }
-.img-center{
+
+.custom-video {
+  width: 400px;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 769px) {
+
+  #salebutton {
+    position: fixed;
+    bottom: 40px;
+    left: 5px;
+    width: 27.94px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    height: 27.94px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    border-radius: 50%;
+    background-color: #337ab7;
+    /* צבע רקע */
+    color: #fff;
+    /* צבע טקסט */
+    font-size: 20px;
+    text-align: center;
+    padding: 3px 2px 3px 1px;
+    cursor: pointer;
+  }
+
+}
+
+.img-center {
   display: flex;
-          justify-content: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
+
 /*to comuter*/
 @media only screen and (min-width: 769px) {
 
-    #salebutton{
-  position: fixed;
-  bottom: 50px;
-  left: 2px;
-  width:40px; /* אפשר להתאים לגודל שאתה רוצה */
-  height:40px; /* אפשר להתאים לגודל שאתה רוצה */
-  border-radius: 50%;
-  background-color: #337ab7; /* צבע רקע */
-  color: #fff; /* צבע טקסט */
-  font-size: 20px;
-  text-align: center;
-  padding:6px 2px 3px 1px;
-  cursor: pointer;
+  #salebutton {
+    position: fixed;
+    bottom: 50px;
+    left: 2px;
+    width: 40px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    height: 40px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    border-radius: 50%;
+    background-color: #337ab7;
+    /* צבע רקע */
+    color: #fff;
+    /* צבע טקסט */
+    font-size: 20px;
+    text-align: center;
+    padding: 6px 2px 3px 1px;
+    cursor: pointer;
+  }
 }
-}
+
 #demotext {
-color: #444444;
-text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+  color: #444444;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
 }
-.textcarsola{
-  background-color: rgba(255, 255, 255, 0.5); /* צבע רקע עם שקיפות (כאן בצבע לבן ושקיפות של 50%) */
-  color:black;
-}
+
 
 .footer {
   margin-top: 100px;
   background-color: #333;
   padding: 20px 0;
   height: auto;
-  border-top:solid 4px #40c5f2 ;
+  border-top: solid 4px #40c5f2;
 }
+
 .footer h3 {
   color: #ece755;
   margin-top: 0;
 }
+
 .footer a {
   color: #40c5f2;
-  transition:0.5s;
+  transition: 0.5s;
   text-decoration: none;
 }
-.footer a:hover{
-   color: #ece755;
-   content: "-";
+
+.footer a:hover {
+  color: #ece755;
+  content: "-";
 }
-.footer a:hover::before{
-   color: #40c5f2;
-   content: "-";
+
+.footer a:hover::before {
+  color: #40c5f2;
+  content: "-";
 }
 
 .footer p {
- color:#ffffff;
-}
-hr{
- border: 1px solid #337ab7 ;
- width: 80%;
+  color: #ffffff;
 }
 
-
-@media (min-width: 768px) {
- #myCarousel {
-    width: 70%;
-    /* קביעת רוחב ספציפי לקרוסלה */
-    margin: auto;
-    /* להבטיח מרכוז הקרוסלה במחשב */
-  }
-  #myCarousel .carousel-inner .item img {
-    width: 100%;
-    /* קביעת רוחב כללי לתמונות בקרוסלה */
-    height: 400px;
-    /* קביעת גובה כללי לתמונות בקרוסלה */
-    object-fit: cover;
-    /* הבאת יתרונות של התמונה במסגרת נתונה */
-  }
+hr {
+  border: 1px solid #337ab7;
+  width: 80%;
 }
 
-@media (max-width: 768px) 
-{
-  #myCarousel {
-    width: 100%;
-    /* קביעת רוחב ספציפי לקרוסלה */
-    margin: auto;
-    /* להבטיח מרכוז הקרוסלה במחשב */
-  }
-
-  #myCarousel .carousel-inner .item img {
-    width: 100%;
-    /* קביעת רוחב כללי לתמונות בקרוסלה */
-    height: 200px;
-    /* קביעת גובה כללי לתמונות בקרוסלה */
-
-  }
-}
-.carsor{
+.carsor {
   cursor: pointer;
 }
 
-.main{
+.main {
   display: flex;
   max-width: 100%;
   background-color: #444444;
 }
-.main > .container-fluid{
+
+.main>.container-fluid {
   min-height: 200px;
   background-color: #444444;
   color: #EEEEEE;
@@ -267,116 +271,132 @@ hr{
 }
 
 
-  #addToCartBtn:hover .glyphicon 
-  {
-    transition: transform 0.5s ease-in-out;
+#addToCartBtn:hover .glyphicon {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.lds-ring-parent {
+  text-align: center;
+}
+
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  color: #63b0f3;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
     transform: rotate(360deg);
   }
+}
 
-  .lds-ring-parent {
-    text-align: center;
-  }
-      .lds-ring,
-      .lds-ring div {
-        box-sizing: border-box;
-        margin: 0 auto;
-        text-align: center;
-        align-items: center;
-      }
-      
-      .lds-ring {
-        display: inline-block;
-        position: relative;
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-        text-align: center;
-        align-items: center;
-      }
-      .lds-ring div {
-        box-sizing: border-box;
-        display: block;
-        position: absolute;
-        width: 64px;
-        height: 64px;
-        margin: 8px;
-        border: 8px solid currentColor;
-        border-radius: 50%;
-        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-        border-color: currentColor transparent transparent transparent;
-        margin: 0 auto;
-        text-align: center;
-        align-items: center;
-        color:#63b0f3;
-        }
-      .lds-ring div:nth-child(1) {
-        animation-delay: -0.45s;
-      }
-      .lds-ring div:nth-child(2) {
-        animation-delay: -0.3s;
-      }
-      .lds-ring div:nth-child(3) {
-        animation-delay: -0.15s;
-      }
-      @keyframes lds-ring {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .icon-large {
-        font-size: 2.5em;
-      }
+.icon-large {
+  font-size: 2.5em;
+}
 
-      
-      mt-25{
-        margin-top: 25px;
-      }
-      .shaow{
-        box-shadow: 2px 3px 26px 4px rgba(0,0,0,0.79);
-      }
-      .BorderContainer{
-        border-radius: 73px 73px 73px 73px;
-        -moz-border-radius: 73px 73px 73px 73px;
-        -webkit-border-radius: 73px 73px 73px 73px;
-        border: 0px solid #050505;
-        box-shadow: -1px 6px 36px -6px rgba(3,86,97,1);
-        padding-top: 40px;
-      }
-      .cover_defult{
-        display: block;
-        border-bottom: #337ab7 3px solid;
-      }
 
-   
-      img{
-        object-fit: contain;
-        background-color: #5bebfe44;
-      }
+mt-25 {
+  margin-top: 25px;
+}
+
+.shaow {
+  box-shadow: 2px 3px 26px 4px rgba(0, 0, 0, 0.79);
+}
+
+.BorderContainer {
+  border-radius: 73px 73px 73px 73px;
+  -moz-border-radius: 73px 73px 73px 73px;
+  -webkit-border-radius: 73px 73px 73px 73px;
+  border: 0px solid #050505;
+  box-shadow: -1px 6px 36px -6px rgba(3, 86, 97, 1);
+  padding-top: 40px;
+}
+
+.cover_defult {
+  display: block;
+  border-bottom: #337ab7 3px solid;
+}
+
+
+img {
+  object-fit: contain;
+  background-color: #5bebfe44;
+}
+
 .side-menu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px; /* רוחב התפריט במכשירי נייד */
+  width: 300px;
+  /* רוחב התפריט במכשירי נייד */
   height: 100%;
   background-color: #cfcfcf85;
   padding: 20px;
   padding-top: 60px;
-  z-index: 1000; /* כדי להבטיח שהתפריט יוצג מעל התוכן */
+  z-index: 1000;
+  /* כדי להבטיח שהתפריט יוצג מעל התוכן */
   direction: ltr;
   overflow-y: auto;
-  
+
 }
+
 @media (max-width: 768px) {
   .side-menu {
-    width: 100%; /* רוחב התפריט במכשירי נייד */
+    width: 100%;
+    /* רוחב התפריט במכשירי נייד */
     height: 100%;
     background-color: #cfcfcf85;
     padding: 20px;
     padding-top: 60px;
-    z-index: 1000; /* כדי להבטיח שהתפריט יוצג מעל התוכן */
+    z-index: 1000;
+    /* כדי להבטיח שהתפריט יוצג מעל התוכן */
   }
 }
 
@@ -387,13 +407,16 @@ hr{
   font-size: 16px;
   color: #333;
 }
-.nuvProduct{
-  list-style-type: none; /* להסתיר את סוג הרשימה */
-  padding-left: 0; /* להסיר רווח משמאל של הרשימה */ 
+
+.nuvProduct {
+  list-style-type: none;
+  /* להסתיר את סוג הרשימה */
+  padding-left: 0;
+  /* להסיר רווח משמאל של הרשימה */
 }
 
 .side-menu a:hover {
-  background-color:#ffffff97;
+  background-color: #ffffff97;
 }
 
 /* סגנון לכפתור פתיחת התפריט במכשירי נייד */
@@ -401,25 +424,31 @@ hr{
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 1001; /* מעל התפריט */
+  z-index: 1001;
+  /* מעל התפריט */
 }
-.pd-0{
+
+.pd-0 {
   padding: 0;
 }
-.panel-nuv{
+
+.panel-nuv {
   height: 100%;
-  
+
 }
-.panel-body-nuv{
- min-height: 60%;
- direction: rtl;
- 
+
+.panel-body-nuv {
+  min-height: 60%;
+  direction: rtl;
+
 }
-.panel-heading{
+
+.panel-heading {
   font-weight: bold;
   text-align: center;
 }
-.panel-footer{
+
+.panel-footer {
   position: sticky;
 }
 
@@ -436,8 +465,10 @@ hr{
 }
 
 .card img {
-  width: 100px; /* רוחב התמונה */
-  height: 100px; /* גובה מתאים */
+  width: 100px;
+  /* רוחב התמונה */
+  height: 100px;
+  /* גובה מתאים */
   object-fit: contain;
   background-color: #5bebfe44;
   margin-left: 30px;
@@ -454,6 +485,10 @@ hr{
 .card-content p {
   margin: 5px 0;
 }
-.w-100{
+
+.w-100 {
   width: 100%;
+}
+h1,h2,h3,h4{
+ color: #337ab7;
 }
