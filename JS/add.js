@@ -1297,7 +1297,7 @@ function searchProducts() {
         }
     }
     if (resultsContainer.innerHTML === '') {
-        resultsContainer.innerHTML = `<p>לא נמצאו תוצאות עבור  " <i>${searchTerm}"</i></p>`;
+        resultsContainer.innerHTML = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${searchTerm}"</i></p>`;
     }
 }
 

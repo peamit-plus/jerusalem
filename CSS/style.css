@@ -361,7 +361,7 @@ hr{
   left: 0;
   width: 300px; /* רוחב התפריט במכשירי נייד */
   height: 100%;
-  background-color: #cfcfcf;
+  background-color: #cfcfcf85;
   padding: 20px;
   padding-top: 60px;
   z-index: 1000; /* כדי להבטיח שהתפריט יוצג מעל התוכן */
@@ -373,7 +373,7 @@ hr{
   .side-menu {
     width: 100%; /* רוחב התפריט במכשירי נייד */
     height: 100%;
-    background-color: #cfcfcf;
+    background-color: #cfcfcf85;
     padding: 20px;
     padding-top: 60px;
     z-index: 1000; /* כדי להבטיח שהתפריט יוצג מעל התוכן */
