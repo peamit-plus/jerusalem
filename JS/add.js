@@ -1362,3 +1362,48 @@ function createGallery(val_filter) {
     document.getElementById("id_gallery").innerHTML = gallery;
     displayProductsFromLocalStorageToNuv()
 }
+
+
+function InputSearchInCategory(category) {
+    var val_input = document.getElementById("InputSearch").value;
+    document.getElementById("id_gallery").innerHTML=`<div class="lds-ring-parent"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>`
+    var newGallery = "";
+    if (val_input.length == 0) {
+        return createGallery(category)
+    }
+    var counter =0;
+    for (const product of productsDB.products) {
+        if (product.descraption.toLowerCase().includes(val_input) && product.category==category) 
+            {
+                counter++
+            }
+        }
+        
+ newGallery+="<p>"+"בדף זה יש "+counter +" מוצרים לאחר סינון"+"<p>"
+    for (const product of productsDB.products) {
+        if (product.descraption.toLowerCase().includes(val_input) && product.category==category) {
+            newGallery+=
+         `
+        <div class='col-md-3 product-container' id='${product.image}'>
+        <div class='thumbnail'>
+         <figure>
+            <img src='../image/${product.image || 2043}.WebP'  alt='${product.image}' style='height:250px; width: 100%;'>
+            <figcaption>
+              <div class='caption product-caption'>
+                <p class='text-center'>
+                    <b>₪${product.descraption} ${product.price}</b><br/>
+                    <button class='btn btn-info' id="addToCartBtn" onclick='addToLocalStorage(${product.id})'><span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל</button>
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+       </div>
+         `
+        }
+    }
+    if (newGallery === '') {
+        newGallery = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${val_input}"</i></p>`;
+    }
+    document.getElementById("id_gallery").innerHTML=newGallery
+}
