@@ -1402,6 +1402,22 @@ function InputSearchInCategory(category) {
          `
         }
     }
+    newGallery += `</div> 
+    <div id="sideMenu" class="side-menu collapse" dir="rtl">
+    <!-- Menu items here -->
+    <div class="panel panel-default panel-nuv">
+        <div class="panel-heading">המוצרים בסל</div>
+        <div class="panel-body panel-body-nuv">
+            <span id="productsContainerInNuv"></span>
+            </div>
+        <div class="panel-footer navbar-fixed-bottom">
+          <button class="btn btn-link btn-block" onclick="resetLocalStorage()">איפוס הסל </button>
+            <button class="btn btn-primary btn-block" data-toggle="collapse" data-target="#sideMenu">המשך הזמנה</button>
+           <button class="btn btn-info btn-block" onclick="end()">לשלב הבא</button>
+            
+        </div>
+      </div>
+</div>`
     if (newGallery === '') {
         newGallery = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${val_input}"</i></p>`;
     }
