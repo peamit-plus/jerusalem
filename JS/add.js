@@ -1303,6 +1303,7 @@ function searchProducts() {
 
 function createGallery(val_filter) {
     var product_json = productsDB.products.filter(function (item) {
+        
         if (val_filter == item.category) {
             return true;
         }
@@ -1360,6 +1361,7 @@ function createGallery(val_filter) {
 
     
     document.getElementById("id_gallery").innerHTML = gallery;
+    InputSearchInCategory(val_filter)
     displayProductsFromLocalStorageToNuv()
 }
 
@@ -1423,7 +1425,7 @@ function InputSearchInCategory(category) {
     }
     document.getElementById("id_gallery").innerHTML=newGallery
 }
-InputSearchInCategory(category)
+
 
 // קריאה לפרמטר המתאים מה-URL
 const urlParams = new URLSearchParams(window.location.search);
