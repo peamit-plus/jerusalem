@@ -1300,6 +1300,10 @@ function searchProducts() {
         resultsContainer.innerHTML = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${searchTerm}"</i></p>`;
     }
 }
+function initForCategory(val_filter){
+     InputSearchInCategory(val_filter)
+     createGallery(val_filter)
+}
 
 function createGallery(val_filter) {
     var product_json = productsDB.products.filter(function (item) {
@@ -1361,7 +1365,6 @@ function createGallery(val_filter) {
 
     
     document.getElementById("id_gallery").innerHTML = gallery;
-    InputSearchInCategory(val_filter)
     displayProductsFromLocalStorageToNuv()
 }
 
