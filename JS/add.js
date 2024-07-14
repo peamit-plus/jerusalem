@@ -1361,7 +1361,7 @@ function createGallery(val_filter) {
 
     
     document.getElementById("id_gallery").innerHTML = gallery;
-    // InputSearchInCategory(val_filter)
+    InputSearchInCategory(val_filter)
     displayProductsFromLocalStorageToNuv()
 }
 
