@@ -1423,7 +1423,7 @@ function InputSearchInCategory(category) {
     }
     document.getElementById("id_gallery").innerHTML=newGallery
 }
-
+InputSearchInCategory(category)
 
 // קריאה לפרמטר המתאים מה-URL
 const urlParams = new URLSearchParams(window.location.search);
