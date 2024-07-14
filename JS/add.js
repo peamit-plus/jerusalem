@@ -1423,3 +1423,17 @@ function InputSearchInCategory(category) {
     }
     document.getElementById("id_gallery").innerHTML=newGallery
 }
+
+
+// קריאה לפרמטר המתאים מה-URL
+const urlParams = new URLSearchParams(window.location.search);
+// בדיקה האם קיים פרמטר בשם 'searchInput'
+if (urlParams.has('InputSearch')) {
+  // אם קיים, משוך את הערך שלו
+  const InputSearchValue = urlParams.get('InputSearch');
+  // הצגת הנתון ב-DIV המתאים
+  document.getElementById('InputSearch').value = InputSearchValue;
+} else {
+  // אם הפרמטר לא קיים, הצגת הודעת שגיאה
+  document.getElementById('InputSearch').innerText = '';
+}
