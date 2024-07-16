@@ -4,19 +4,19 @@ function start() {
 
 <div class="container" style="background-color: #333;">
     <div class="row rtl">
-      <div class="col-md-3">
+      <div class="col-md-3" style="margin-top:5px;" >
         <h3>פעמית פלוס ירושלים</h3>
         <a href="../">דף הבית</a><br/>
         <a href="./about.html">אדותינו</a><br/>
         <a href="./help.html">עזרה</a>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" style="margin-top:5px;">
         <h3>המוצרים שלנו</h3>
         <a href="#category1">צפיה בקטלוג</a><br/>
         <a href="./search.html">חיפוש מוצר 👌</a><br/>
         <a href="../page/products/index1.html">התחלת קניה</a><br/>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" style="margin-top:5px;">
         <h3>יצירת קשר</h3>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSe12UgtnTNi8pcSFSZ09V3OCWxKMmXCTzOMylstH7djGJXPVQ/viewform" target="_blank">דיווח על תקלות </a><br/>
         <a href="tel:+972556610747">בפלאפון 0556610747</a><br/>
