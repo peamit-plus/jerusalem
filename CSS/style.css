@@ -495,3 +495,9 @@ h1,h2,h3,h4{
 .RowSearch{
   margin: 10px 15px;
 }
+.rtl {
+  direction: rtl;
+}
+.rtl .col-md-3 {
+  float: right;
+}
