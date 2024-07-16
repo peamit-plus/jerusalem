@@ -152,6 +152,24 @@ p {
   border: 2px solid #333;
   border-radius: 10px;
 }
+#salebutton {
+  position: fixed;
+  bottom: 40px;
+  left: 5px;
+  width: 27.94px;
+  /* אפשר להתאים לגודל שאתה רוצה */
+  height: 27.94px;
+  /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7;
+  /* צבע רקע */
+  color: #fff;
+  /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding: 3px 2px 3px 1px;
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 769px) {
 
