@@ -23,8 +23,8 @@ function start() {
         <a href="mailto:avizeev85@gmail.com">avizeev85@gmail.com</a><br/>
         <a href="https://g.page/r/CSWWTVep_ek9EBM/review" target="_blank">מתן ביקורת לפעמית פלוס + ⭐</a>
       </div>
-      <div class="col-md-3 img-center">
-        <img src="https://peamit-plus.github.io/jerusalem/image/rel.png" style="width: 120px; background: rgba(255, 255, 255, 0);" class="" alt="Image"/>
+      <div class="col-md-3 img-center" style="margin-top:10px;">
+        <img src="https://peamit-plus.github.io/jerusalem/image/rel.png" style="width: 120px; left:50%; background: rgba(255, 255, 255, 0);" class="" alt="Image"/>
       </div>
     </div>
     <hr class="w-100">
