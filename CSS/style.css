@@ -502,8 +502,8 @@ h1,h2,h3,h4{
   float: right;
 }
 .img-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
-.img-center img {
-  display: inline-block;
 }
