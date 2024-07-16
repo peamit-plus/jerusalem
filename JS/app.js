@@ -24,20 +24,7 @@ function searchProductForm() {
     alert("הכנס שם מוצר לחיפוש .")
   }
 }
-function share() {
-  if (navigator.share) {
-    navigator.share({
-      title: document.title,
-      url: window.location.href
 
-    })
-      .then(() => console.log('שותף בהצלחה'))
-      .catch(error => console.error('שגיאה בשיתוף', error));
-  } else {
-    alert('הדפדפן שלך אינו תומך בשיתוף.');
-  }
-}
-function printPage() { window.print(); } // פתח את דיאלוג ההדפסה של הדפדפן
 function notfound() { alert("אפשרות זאת לא פעילה בדף הנוכחי") }
 function search() { window.location.href = "../page/search.html" }
 function resetLocalStorage() {
