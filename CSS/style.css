@@ -501,6 +501,9 @@ h1,h2,h3,h4{
 .rtl .col-md-3 {
   float: right;
 }
-.rtl img {
-  margin: 0 auto;
+.img-center {
+  text-align: center;
+}
+.img-center img {
+  display: inline-block;
 }
