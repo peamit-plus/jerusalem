@@ -1495,3 +1495,9 @@ function checkForCatergory() {
         return false
     }
 }
+function adminAdd(){
+    const maxId = productsDB.products.reduce((max, item) => {
+        return item.id > max ? item.id : max;
+    }, 0);
+    document.querySelector("#idNewProduct").innerHTML=maxId+1;
+}
