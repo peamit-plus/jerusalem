@@ -1433,14 +1433,23 @@ function checkForAddProduct() {
     var x;
     var res = true
     x = checkID() && res;
-    x = checkForsource() && res;
+    // x = checkForsource() && res;
     x = checkFordescraption() && res;
     x = checkForprice() && res;
     x = checkForCatergory() && res;
 
 
     if (x == true) {
-        return x
+        const newProduct = {
+            "id": document.getElementById("idNewProduct").value,
+            "image": document.getElementById("sourceNewProduct").value,
+            "descraption":document.getElementById("desNewProduct").value,
+            "price": document.getElementById("priceNewProduct").value,
+            "category":document.getElementById("ctgNewProduct").value,
+        };
+        
+        // הוספת המוצר החדש למערך
+        addPro(newProduct);
     }
     else {
         alert("invalid opration")
@@ -1459,18 +1468,18 @@ function checkID() {
         return false
     }
 }
-function checkForsource() {
-    var sourceNewProduct = document.querySelector("#sourceNewProduct").value;
-    if (sourceNewProduct.length>0) {
-        return true
-    }
-    else {
-        return false
-    }
-}
+// function checkForsource() {
+//     var sourceNewProduct = document.querySelector("#sourceNewProduct").value;
+//     if (sourceNewProduct.length>0) {
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
 function checkFordescraption() {
     var desNewProduct = document.querySelector("#desNewProduct").value;
-    if (desNewProduct.length > 0) {
+    if (desNewProduct.length > 5) {
         return true
     }
     else {
@@ -1496,8 +1505,39 @@ function checkForCatergory() {
     }
 }
 function adminAdd(){
+
     const maxId = productsDB.products.reduce((max, item) => {
-        return item.id > max ? item.id : max;
+        const itemId = Number(item.id);
+        return itemId > max ? itemId : max;
     }, 0);
-    document.querySelector("#idNewProduct").innerHTML=maxId+1;
+    console.log(maxId)
+    document.querySelector("#idNewProduct").value=maxId+1;
 }
+function addPro(newProduct) {
+    productsDB.products.push(newProduct);
+    var JSON_Show="";
+    productsDB.products.forEach(element => {
+        JSON_Show+=`
+        {
+            "id": ""${element.id},<br/>
+            "image": "${element.image}",<br/>
+            "descraption": "${element.descraption}",<br/>
+            "price":  "${element.price}",<br/>
+            "category": "${element.category}"<br/>
+        },<br/>
+        `
+    });
+    document.getElementById("wellId").innerHTML=JSON_Show
+}
+
+
+ function copyToClipboard() {
+    var COPY = document.getElementById("wellId").innerText;
+    console.log(COPY)
+    try {
+       navigator.clipboard.writeText(COPY);
+      alert('Text copied to clipboard');
+    } catch (err) {
+      alert.error('Failed to copy text: ', err);
+    }
+  }
