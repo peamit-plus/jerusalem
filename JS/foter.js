@@ -1,6 +1,6 @@
 
 function start() {
-    document.getElementById("footer").innerHTML = `
+  document.getElementById("footer").innerHTML = `
 
 <div class="container" style="background-color: #333;">
     <div class="row rtl">
@@ -32,23 +32,3 @@ function start() {
   </div>
 `}
 start()
-
-// function footer() {
-//     var footer = `
-//         <div class="container">
-//             <row>
-//                 <div class="col-md-3>
-//                     <h3>col 1</h3>
-//                     <a hre></a>
-//                 </div>
-//                 <div class="col-md-3>
-//                     <h3>col 2</h3>
-//                 </div>
-//                 <div class="col-md-3>
-//                      <h3>col 3</h3>
-//                 </div>
-//             </row>
-//         </div>
-//  `
-// }
-// footer()
