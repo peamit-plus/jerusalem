@@ -420,7 +420,7 @@ const productsDB = {
         {
             "id": "60",
             "image": "t3",
-            "descraption": "תבניות בינוני A4 ארוז",
+            "descraption": "תבניות ארוז בינוני A4",
             "price": "7",
             "category": "6"
         },
@@ -462,7 +462,7 @@ const productsDB = {
        
         {
             "id": "65",
-            "image": "2043",
+            "image": "",
             "descraption": "מכסה לתבניות קטנות עמוקת בתפזורת",
             "price": "0.9 ",
             "category": "6"
@@ -498,42 +498,42 @@ const productsDB = {
         {
             "id": "70",
             "image": "m1",
-            "descraption": "מנג'ט לבן 1.5",
+            "descraption": "מנג'ט לבן 1.5-",
             "price": "3.5",
             "category": "6"
         },
         {
             "id": "71",
             "image": "m2",
-            "descraption": "מנג'ט לבן 2",
+            "descraption": "מנג'ט לבן 2-",
             "price": "4",
             "category": "6"
         },
         {
             "id": "72",
             "image": "m3",
-            "descraption": "מנג'ט לבן 3",
+            "descraption": "מנג'ט לבן 3-",
             "price": "4.5",
             "category": "6"
         },
         {
             "id": "73",
             "image": "m1c",
-            "descraption": "מנג'ט מעוטר 1.5",
+            "descraption": "מנג'ט מעוטר 1.5-",
             "price": "4",
             "category": "6"
         },
         {
             "id": "74",
             "image": "m2c",
-            "descraption": "מנג'ט מעוטר 2",
+            "descraption": "מנג'ט מעוטר 2-",
             "price": "4.5",
             "category": "6"
         },
         {
             "id": "75",
             "image": "m3c",
-            "descraption": "מנג'ט מעוטר 3",
+            "descraption": "מנג'ט מעוטר 3-",
             "price": "5",
             "category": "6"
         },
