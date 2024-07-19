@@ -446,19 +446,20 @@ const productsDB = {
             "category": "6"
         },
         {
-            "id": "63",
-            "image": "tp1",
-            "descraption": "תבניות אינגליש בתפזורת",
-            "price": "0.7 ",
-            "category": "6"
-        },
-        {
             "id": "64",
             "image": "tp5",
             "descraption": "תבניות קטנות עמוקת בתפזורת",
             "price": "0.9 ",
             "category": "6"
         },
+        {
+            "id": "63",
+            "image": "tp1",
+            "descraption": "תבניות אינגליש בתפזורת",
+            "price": "0.7 ",
+            "category": "6"
+        },
+       
         {
             "id": "65",
             "image": "2043",
