@@ -434,7 +434,7 @@ const productsDB = {
         {
             "id": "59",
             "image": "",
-            "descraption": "תבנית ענק לתנור ארוז ",
+            "descraption": "תבניות ענק לתנור ארוז ",
             "price": "7",
             "category": "6"
         },
