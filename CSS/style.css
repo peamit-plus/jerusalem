@@ -175,11 +175,11 @@ p {
 
   #salebutton {
     position: fixed;
-    bottom: 80px;
+    bottom: 100px;
     left: 5px;
-    width: 27.94px;
+    width: 35px;
     /* אפשר להתאים לגודל שאתה רוצה */
-    height: 27.94px;
+    height: 35px;
     /* אפשר להתאים לגודל שאתה רוצה */
     border-radius: 50%;
     background-color: #337ab7;

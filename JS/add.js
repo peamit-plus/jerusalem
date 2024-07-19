@@ -420,7 +420,7 @@ const productsDB = {
         {
             "id": "60",
             "image": "t3",
-            "descraption": "תבניות ארוז בינוני A4",
+            "descraption": "תבניות ארוז A4 בינוני ",
             "price": "7",
             "category": "6"
         },
