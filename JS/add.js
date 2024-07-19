@@ -395,12 +395,20 @@ const productsDB = {
             "category": "6"
         },
         {
+            "id": "172",
+            "image": "",
+            "descraption": "תבניות אינגליש ארוך ארוז",
+            "price": "7",
+            "category": "6"
+        },
+        {
             "id": "57",
             "image": "t1",
             "descraption": "תבניות קטן ארוז",
             "price": "7 ",
             "category": "6"
         },
+       
         {
             "id": "58",
             "image": "t2",
@@ -408,13 +416,7 @@ const productsDB = {
             "price": "7 ",
             "category": "6"
         },
-        {
-            "id": "59",
-            "image": "",
-            "descraption": "תבנית ענק לתנור ארוז 7₪",
-            "price": "7",
-            "category": "6"
-        },
+       
         {
             "id": "60",
             "image": "t3",
@@ -427,6 +429,13 @@ const productsDB = {
             "image": "t4",
             "descraption": "תבניות גדול ארוז",
             "price": "7 ",
+            "category": "6"
+        },
+        {
+            "id": "59",
+            "image": "",
+            "descraption": "תבנית ענק לתנור ארוז ",
+            "price": "7",
             "category": "6"
         },
         {
