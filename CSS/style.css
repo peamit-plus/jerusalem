@@ -364,7 +364,7 @@ mt-25 {
   margin-top: 25px;
 }
 
-.shaow :hover{
+.shaow{
   box-shadow: 2px 3px 26px 4px rgba(0, 0, 0, 0.79);
   transform: calc(0.1);
   transition: 2s;
