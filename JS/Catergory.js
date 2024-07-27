@@ -11,6 +11,7 @@ function createCategory(json) {
             <button class='btn btn-primary' onclick='index${element.image}()'>&laquo; לקטגוריה לחץ</button> </p>
       </div>
     </div>
+    </div>
 
     `
   });
