@@ -2,14 +2,16 @@ function createCategory(json) {
   var gallery = "";
   json.forEach(element => {
     gallery += `
-    <div class='col-md-3 shaow' id='category${element.image}'>
-    <div class='thumbnail '>
-    <img src='../imgctg/${element.image}.WebP' alt='${element.p}' style='width:100%;height:270px;' class='carsor' onclick='index${element.image}()'>
-    <div class='caption'>
-    <p class='text-primary'>${element.p}<br/>
-    <button class='btn btn-primary' onclick='index${element.image}()'>&laquo; לקטגוריה לחץ</button> </p>
-    </div></div></div></div>
-    </div></div>
+    <div class="shaow">
+    <div class='col-md-3 ' id='category${element.image}'>
+     <div class='thumbnail '>
+       <img src='../imgctg/${element.image}.WebP' alt='${element.p}' style='width:100%;height:270px;' class='carsor' onclick='index${element.image}()'>
+         <div class='caption'>
+            <p class='text-primary'>${element.p}<br/>
+            <button class='btn btn-primary' onclick='index${element.image}()'>&laquo; לקטגוריה לחץ</button> </p>
+      </div>
+    </div>
+    </div>
     `
   });
 
