@@ -9,6 +9,7 @@ function createCategory(json) {
     <p class='text-primary'>${element.p}<br/>
     <button class='btn btn-primary' onclick='index${element.image}()'>&laquo; לקטגוריה לחץ</button> </p>
     </div></div></div></div>
+    </div>
     `
   });
 
