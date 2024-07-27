@@ -364,8 +364,13 @@ mt-25 {
   margin-top: 25px;
 }
 
-.shaow {
+.shaow :hover{
   box-shadow: 2px 3px 26px 4px rgba(0, 0, 0, 0.79);
+  transition: 2s;
+  transform: calc(0.1);
+}
+.shaow > .btn{
+  opacity: 0.5;
 }
 
 .BorderContainer {

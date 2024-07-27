@@ -148,8 +148,8 @@
                 <div class="card-body" dir="rtl">
                   <h3>יצירת קשר</h3>
                   <h4 class="card-title">תוכל ליצור עמנו קשר ב WhatsApp <br> או בטלפון:055-6610747, אברהם.</h4>
-                  <a href="tel:+972556610747" class="btn btn-primary">חייג עכשיו</a>
-                  <a href="https://wa.me/message/FPMCD6SI27YMG1" class="btn btn-primary">WhatsApp</a>
+                  <a href="tel:+972556610747" class="btn btn-info">חייג עכשיו</a>
+                  <a href="https://wa.me/message/FPMCD6SI27YMG1" class="btn btn-info">WhatsApp</a>
                 </div>
               </div>
             </div>
@@ -171,20 +171,11 @@
   </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-      document.addEventListener('keydown', function(event) {
-          const searchInput = document.getElementById('searchInput');
-          console.log('Key pressed: ', event.key);  // Debugging line
-          // Check if the 'H' key is pressed
-          if (event.key === 'h' || event.key === 'ח') {
-              searchInput.focus();
-          }
-          // Check if the 'Escape' key is pressed
-          if (event.key === 'Escape') {
-              searchInput.blur();
-          }
-      });
-  });
+$(document).ready(function(){
+  $(".btn-primary").click(function(){
+    $(this).button('loading');
+  });   
+});
 </script>
 
 
