@@ -1462,4 +1462,4 @@ function InputSearchInCategory(category) {
     document.getElementById("id_gallery").innerHTML = newGallery
 }
 
-
+}
