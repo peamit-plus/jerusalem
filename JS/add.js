@@ -1231,15 +1231,6 @@ function showMessage(message) {
     $('#customModal').modal('show');
 }
 
-$(document).ready(function () {
-    $("#openButton").click(function () {
-        $("#sideMenu").collapse('toggle');
-    });
-
-    $("#BtnCloseNuv").click(function () {
-        $("#sideMenu").collapse('hide');
-    });
-});
 
 function addSampleProducts() {
     var productList = $('#productList');
@@ -1251,7 +1242,7 @@ function addSampleProducts() {
         productList.append(
             '<div class="product-item">' +
             '<strong>' + product.descraption + '</strong>' +
-            '<p style="text-align:center;">מחיר: ₪' + product.price + '</p>' +
+            '<p style="text-align:center;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
             '</div>'
         );
     }
@@ -1338,13 +1329,14 @@ function createGallery(val_filter) {
         </div>
         <div class="sidebar-content">
             <div id="productList">
-                <!-- כאן יתווספו המוצרים דינמית -->
+            <h4 style="color:red;">אין מוצרים בסל הקניות </h4>   
+            <!-- כאן יתווספו המוצרים דינמית -->
             </div>
         </div>
         <div class="fixed-buttons">
-            <button class="btn btn-primary btn-block" onclick="resetLocalStorage()">רוקן סל</button>
+            <button class="btn btn-link btn-block" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
-            <button class="btn btn-default btn-block" id="sidebarCollapse">המשך בקנייה</button>
+            <button class="btn btn-default btn-block" id="continueShopping">המשך בקנייה</button>
         </div>
     </div>`;
 
@@ -1402,13 +1394,14 @@ function InputSearchInCategory(category) {
         </div>
         <div class="sidebar-content">
             <div id="productList">
-                <!-- כאן יתווספו המוצרים דינמית -->
+            <h4 style="color:red;">אין מוצרים בסל הקניות </h4>   
+            <!-- כאן יתווספו המוצרים דינמית -->
             </div>
         </div>
         <div class="fixed-buttons">
-            <button class="btn btn-primary btn-block" onclick="resetLocalStorage()">רוקן סל</button>
+            <button class="btn btn-link btn-block" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
-            <button class="btn btn-default btn-block" id="sidebarCollapse">המשך בקנייה</button>
+            <button class="btn btn-default btn-block" id="continueShopping">המשך בקנייה</button>
         </div>
     </div>`;
     if (newGallery === '') {
