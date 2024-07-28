@@ -1359,15 +1359,7 @@ function createGallery(val_filter) {
     displayProductsFromLocalStorageToNuv();
 }
 
-$(document).ready(function () {
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar, #content').toggleClass('active');
-    });
 
-    $('#continueShopping').on('click', function () {
-        $('#sidebar, #content').removeClass('active');
-    });
-});
 
 function InputSearchInCategory(category) {
     var val_input = document.getElementById("InputSearch").value.toLowerCase();

@@ -130,6 +130,15 @@
         $('html, body').animate({ scrollTop: 0 }, 800);
       });
     });
+    $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+    });
+
+    $('#continueShopping').on('click', function () {
+        $('#sidebar, #content').removeClass('active');
+    });
+});
   </script>
 
 </html>
