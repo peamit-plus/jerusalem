@@ -1325,7 +1325,7 @@ function createGallery(val_filter) {
 
     gallery += `<div id="sidebar">
         <div class="sidebar-header">
-            <h3>סל קניות</h3>
+            <h3 class="text-center">סל קניות</h3>
         </div>
         <div class="sidebar-content">
             <div id="productList">
@@ -1390,7 +1390,7 @@ function InputSearchInCategory(category) {
     }
     newGallery += `<div id="sidebar">
         <div class="sidebar-header">
-            <h3>סל קניות</h3>
+            <h3 class="text-center">סל קניות</h3>
         </div>
         <div class="sidebar-content">
             <div id="productList">
