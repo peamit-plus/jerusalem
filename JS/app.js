@@ -35,30 +35,27 @@ function resetLocalStorage() {
   if (confirmation) {
     // הפעולה לאישור
     localStorage.clear();
-    displayProductsFromLocalStorageToNuv()
+    addSampleProducts()
   }
   else {
     return
   }
 }
 
-function displayProductsFromLocalStorageToNuv() {
-  const productsContainer = document.getElementById('productsContainerInNuv');
-  productsContainer.innerHTML = ""; // רוקן את התוכן של productsContainer
-
-  if (localStorage.length < 1) {
-    var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`;
-    productsContainer.innerHTML = productCard;
-  } else {
-    for (let i = 0; i < localStorage.length; i++) {
+function addSampleProducts() {
+  var productList = $('#productList');
+  productList.empty(); // לוודא שאין פריטים כפולים
+  for (var i = 0; i < localStorage.length; i++) {
       let key = localStorage.key(i);
       let product = JSON.parse(localStorage.getItem(key));
 
-      let NuvProduct = `<li>${product.descraption}</li>`;
-      productsContainer.innerHTML += NuvProduct; // הוסף את המוצר ל productsContainer
-    }
+      productList.append(
+          '<div class="product-item">' +
+          '<strong>' + product.descraption + '</strong>' +
+          '<p style="text-align:center;">מחיר: ₪' + product.price + '</p>' +
+          '</div>'
+      );
   }
-  querySelector("#productsContainerInNuv").innerHTML = productsContainer
 }
 
 
