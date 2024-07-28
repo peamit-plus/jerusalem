@@ -1251,7 +1251,7 @@ function addSampleProducts() {
         productList.append(
             '<div class="product-item">' +
             '<strong>' + product.descraption + '</strong>' +
-            '<p>מחיר: ₪' + product.price + '</p>' +
+            '<p style="text-align:center;">מחיר: ₪' + product.price + '</p>' +
             '</div>'
         );
     }
