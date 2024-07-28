@@ -1242,7 +1242,7 @@ function addSampleProducts() {
         productList.append(
             '<div class="product-item">' +
             '<strong>' + product.descraption + '</strong>' +
-            '<p style="text-align:center;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
+            '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
             '</div>'
         );
     }
