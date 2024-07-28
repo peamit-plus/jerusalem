@@ -24,7 +24,9 @@ function searchProductForm() {
     alert("הכנס שם מוצר לחיפוש .")
   }
 }
-
+function closess(){
+  $('#sidebar, #content').removeClass('active');
+}
 function notfound() { alert("אפשרות זאת לא פעילה בדף הנוכחי") }
 function search() { window.location.href = "../page/search.html" }
 function resetLocalStorage() {
