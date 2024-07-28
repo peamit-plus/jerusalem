@@ -1344,7 +1344,7 @@ function createGallery(val_filter) {
         <div class="fixed-buttons">
             <button class="btn btn-primary btn-block" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
-            <button class="btn btn-default btn-block" id="continueShopping">המשך בקנייה</button>
+            <button class="btn btn-default btn-block" id="sidebarCollapse">המשך בקנייה</button>
         </div>
     </div>`;
 
@@ -1408,7 +1408,7 @@ function InputSearchInCategory(category) {
         <div class="fixed-buttons">
             <button class="btn btn-primary btn-block" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
-            <button class="btn btn-default btn-block" id="continueShopping">המשך בקנייה</button>
+            <button class="btn btn-default btn-block" id="sidebarCollapse">המשך בקנייה</button>
         </div>
     </div>`;
     if (newGallery === '') {
