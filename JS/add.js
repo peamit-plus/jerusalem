@@ -408,7 +408,7 @@ const productsDB = {
             "price": "7 ",
             "category": "6"
         },
-       
+
         {
             "id": "58",
             "image": "t2",
@@ -416,7 +416,7 @@ const productsDB = {
             "price": "7 ",
             "category": "6"
         },
-       
+
         {
             "id": "60",
             "image": "t3",
@@ -459,7 +459,7 @@ const productsDB = {
             "price": "0.7 ",
             "category": "6"
         },
-       
+
         {
             "id": "65",
             "image": "",
@@ -1246,68 +1246,68 @@ function addSampleProducts() {
     for (var i = 1; i <= localStorage.length; i++) {
         let key = localStorage.key(i);
         let product = JSON.parse(localStorage.getItem(key));
-        
+
         productList.append(
             '<div class="product-item">' +
             '<strong> $:{product.descraption}</strong>' +
-            '<p>מחיר: ₪' +product.price+ '</p>' +
+            '<p>מחיר: ₪' + product.price + '</p>' +
             '</div>'
         );
     }
 
 
-// function displayProductsFromLocalStorageToNuv() {
-//     var productsContainer = ""; // התחלת משתנה למחרוזת ריקה
-//     document.querySelector("#productsContainerInNuv").innerHTML = ""; // נקה את תוכן האלמנט
+    // function displayProductsFromLocalStorageToNuv() {
+    //     var productsContainer = ""; // התחלת משתנה למחרוזת ריקה
+    //     document.querySelector("#productsContainerInNuv").innerHTML = ""; // נקה את תוכן האלמנט
 
-//     if (localStorage.length < 1) {
-//         var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל</h4>`; // תקן את סגירת ה-h4
-//         productsContainer = productCard;
-//     } else {
-//         for (let i = 0; i < localStorage.length; i++) {
-//             let key = localStorage.key(i);
-//             let product = JSON.parse(localStorage.getItem(key));
+    //     if (localStorage.length < 1) {
+    //         var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל</h4>`; // תקן את סגירת ה-h4
+    //         productsContainer = productCard;
+    //     } else {
+    //         for (let i = 0; i < localStorage.length; i++) {
+    //             let key = localStorage.key(i);
+    //             let product = JSON.parse(localStorage.getItem(key));
 
-//             let NuvProduct = `<li>${product.descraption}</li>`;
-//             productsContainer += NuvProduct;
-//         }
-//     }
-//     document.querySelector("#productsContainerInNuv").innerHTML = productsContainer;
-// }
+    //             let NuvProduct = `<li>${product.descraption}</li>`;
+    //             productsContainer += NuvProduct;
+    //         }
+    //     }
+    //     document.querySelector("#productsContainerInNuv").innerHTML = productsContainer;
+    // }
 
-function checkDataList() {
-    var searchInput = document.getElementById("searchInput").value;
-    var data_list = "";
+    function checkDataList() {
+        var searchInput = document.getElementById("searchInput").value;
+        var data_list = "";
 
-    if (searchInput.length > 1) {
-        productsDB.products.forEach(element => {
-            data_list += `<option>${element.descraption}</option>`;
-        });
+        if (searchInput.length > 1) {
+            productsDB.products.forEach(element => {
+                data_list += `<option>${element.descraption}</option>`;
+            });
 
-        document.getElementById("dtlist").innerHTML = data_list;
+            document.getElementById("dtlist").innerHTML = data_list;
+
+        }
+        else {
+            data_list = "";
+            document.getElementById("dtlist").innerHTML = data_list;
+        }
 
     }
-    else {
-        data_list = "";
-        document.getElementById("dtlist").innerHTML = data_list;
-    }
-
-}
 
 
-function searchProducts() {
-    checkDataList()
-    const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-    const resultsContainer = document.getElementById('resultsContainer');
-    resultsContainer.innerHTML = "";
-    if (searchTerm === '') {
-        resultsContainer.innerHTML = '<p>אנא הזן מונח חיפוש</p>';
-        return; // יוצא מהפונקציה ואין המשך לבדוק ולהציג תוצאות
-    }
-    for (const product of productsDB.products) {
-        if (product.descraption.toLowerCase().includes(searchTerm)) {
-            resultsContainer.innerHTML +=
-                `
+    function searchProducts() {
+        checkDataList()
+        const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+        const resultsContainer = document.getElementById('resultsContainer');
+        resultsContainer.innerHTML = "";
+        if (searchTerm === '') {
+            resultsContainer.innerHTML = '<p>אנא הזן מונח חיפוש</p>';
+            return; // יוצא מהפונקציה ואין המשך לבדוק ולהציג תוצאות
+        }
+        for (const product of productsDB.products) {
+            if (product.descraption.toLowerCase().includes(searchTerm)) {
+                resultsContainer.innerHTML +=
+                    `
 <div class="card col-md-4 col-xs-12">
   <img src="../image/${product.image}.WebP" alt="${product.descraption}"/>
   <div class="card-content">
@@ -1317,32 +1317,33 @@ function searchProducts() {
   </div>
 </div>
         `;
+            }
+        }
+        if (resultsContainer.innerHTML === '') {
+            resultsContainer.innerHTML = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${searchTerm}"</i></p>`;
         }
     }
-    if (resultsContainer.innerHTML === '') {
-        resultsContainer.innerHTML = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${searchTerm}"</i></p>`;
+    function initForCategory(val_filter) {
+        InputSearchInCategory(val_filter)
+        createGallery(val_filter)
+        addSampleProducts()
     }
-}
-function initForCategory(val_filter) {
-    InputSearchInCategory(val_filter)
-    createGallery(val_filter)
-}
 
-function createGallery(val_filter) {
-    var product_json = productsDB.products.filter(function (item) {
+    function createGallery(val_filter) {
+        var product_json = productsDB.products.filter(function (item) {
 
-        if (val_filter == item.category) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    });
-    var gallery = "";
-    gallery += `
-    <p>בדף זה יש ${product_json.length} מוצרים</p><div class="row">`
-    product_json.forEach(element => {
+            if (val_filter == item.category) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        var gallery = "";
         gallery += `
+    <p>בדף זה יש ${product_json.length} מוצרים</p><div class="row">`
+        product_json.forEach(element => {
+            gallery += `
     <div class='col-md-3 product-container' id='${element.image}'>
         <div class='thumbnail'>
          <figure>
@@ -1359,9 +1360,9 @@ function createGallery(val_filter) {
         </div>
     </div>`;
 
-    });
+        });
 
-    gallery += `<div id="sidebar">
+        gallery += `<div id="sidebar">
             <div class="sidebar-header">
                 <h3>סל קניות</h3>
             </div>
@@ -1378,51 +1379,51 @@ function createGallery(val_filter) {
         </div>`
 
 
-    if (product_json.length < 1) {
-        gallery = `<h3 class='text-center' style='color:red;'>
+        if (product_json.length < 1) {
+            gallery = `<h3 class='text-center' style='color:red;'>
     אין מוצרים בדף זה 
     <br/> עקב תקלה תכנית לא צפויה פנו אלינו בלשונית העזרה שבדף הראשי 
     <br>שנטפל בזה </h3>`
-    }
-
-
-    document.getElementById("id_gallery").innerHTML = gallery;
-    displayProductsFromLocalStorageToNuv()
-}
-
-$(document).ready(function () {
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar, #content').toggleClass('active');
-    });
-
-    $('#continueShopping').on('click', function () {
-        $('#sidebar, #content').removeClass('active');
-    });
-
-  
-    }
-
-);
-
-function InputSearchInCategory(category) {
-    var val_input = document.getElementById("InputSearch").value;
-    document.getElementById("id_gallery").innerHTML = `<div class="lds-ring-parent"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>`
-    var newGallery = "";
-    if (val_input.length == 0) {
-        return createGallery(category)
-    }
-    var counter = 0;
-    for (const product of productsDB.products) {
-        if (product.descraption.toLowerCase().includes(val_input) && product.category == category) {
-            counter++
         }
+
+
+        document.getElementById("id_gallery").innerHTML = gallery;
+        displayProductsFromLocalStorageToNuv()
     }
 
-    newGallery += "<p>" + "בדף זה יש " + counter + " מוצרים לאחר סינון" + "<p>"
-    for (const product of productsDB.products) {
-        if (product.descraption.toLowerCase().includes(val_input) && product.category == category) {
-            newGallery +=
-                `
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+        });
+
+        $('#continueShopping').on('click', function () {
+            $('#sidebar, #content').removeClass('active');
+        });
+
+
+    }
+
+    );
+
+    function InputSearchInCategory(category) {
+        var val_input = document.getElementById("InputSearch").value;
+        document.getElementById("id_gallery").innerHTML = `<div class="lds-ring-parent"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>`
+        var newGallery = "";
+        if (val_input.length == 0) {
+            return createGallery(category)
+        }
+        var counter = 0;
+        for (const product of productsDB.products) {
+            if (product.descraption.toLowerCase().includes(val_input) && product.category == category) {
+                counter++
+            }
+        }
+
+        newGallery += "<p>" + "בדף זה יש " + counter + " מוצרים לאחר סינון" + "<p>"
+        for (const product of productsDB.products) {
+            if (product.descraption.toLowerCase().includes(val_input) && product.category == category) {
+                newGallery +=
+                    `
         <div class='col-md-3 product-container' id='${product.image}'>
         <div class='thumbnail'>
          <figure>
@@ -1439,9 +1440,9 @@ function InputSearchInCategory(category) {
         </div>
        </div>
          `
+            }
         }
-    }
-    newGallery += `<div id="sidebar">
+        newGallery += `<div id="sidebar">
             <div class="sidebar-header">
                 <h3>סל קניות</h3>
             </div>
@@ -1456,10 +1457,10 @@ function InputSearchInCategory(category) {
                 <button class="btn btn-default btn-block" id="continueShopping">המשך בקנייה</button>
             </div>
         </div>`
-    if (newGallery === '') {
-        newGallery = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${val_input}"</i></p>`;
+        if (newGallery === '') {
+            newGallery = `<p>לא נמצאו תוצאות עבור  " <i class="text-muted">${val_input}"</i></p>`;
+        }
+        document.getElementById("id_gallery").innerHTML = newGallery
     }
-    document.getElementById("id_gallery").innerHTML = newGallery
-}
 
 }
