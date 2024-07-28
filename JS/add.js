@@ -1356,7 +1356,7 @@ function createGallery(val_filter) {
     }
 
     document.getElementById("id_gallery").innerHTML = gallery;
-    displayProductsFromLocalStorageToNuv();
+    addSampleProducts();
 }
 
 
