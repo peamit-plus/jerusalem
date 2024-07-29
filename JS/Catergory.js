@@ -8,7 +8,8 @@ function createCategory(json) {
        <img src='../imgctg/${element.image}.WebP' alt='${element.p}' style='width:100%;height:270px;' class='carsor' onclick='index${element.image}()'>
          <div class='caption'>
             <p class='text-primary'>${element.p}<br/>
-            <button class='btn btn-primary' onclick='index${element.image}()'>&laquo; לקטגוריה לחץ</button> </p>
+            <a class="btn btn-primary" href="../products/index${element.image}.html">&laquo; לקטגוריה לחץ</a> </p>
+    
       </div>
     </div>
     </div>
