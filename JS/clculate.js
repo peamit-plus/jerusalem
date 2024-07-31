@@ -5,10 +5,6 @@ window.onload = () => {
 
 function displayProductsFromLocalStorage() {
   const productsContainer = document.getElementById('productsContainer');
-  if (localStorage.length < 1) {
-    var productCard = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
-    productsContainer.innerHTML = productCard;
-  }
   for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
     let product = JSON.parse(localStorage.getItem(key));
@@ -47,7 +43,7 @@ function displayProductsFromLocalStorage() {
   }
 }
 function calculateTotalPrice() {
-  let totalPrice = 0;
+  var totalPrice = 0;
 
   for (let i = 0; i < localStorage.length; i++) {
     let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
