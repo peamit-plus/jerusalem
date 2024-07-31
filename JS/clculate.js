@@ -53,8 +53,14 @@ function calculateTotalPrice() {
     let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
     totalPrice += (product.price * (product.quantity || 1));
   }
+  if(totalPrice==0){
+    totalPrice=`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
+  }
+  else{
+    totalPrice=`סה"כ: ${totalPrice}₪`
+  }
 
-  document.getElementById('totalPrice').innerText = totalPrice;
+  document.getElementById('totalPrice').innerHTML = totalPrice;
 }
 
 function updateQuantity(key, amount) {
