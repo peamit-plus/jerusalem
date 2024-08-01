@@ -542,7 +542,8 @@ h1,h2,h3,h4{
   text-align: right;
 }
 .delete-product {
-  margin-left: 10px;
+  margin-right: 10px;
+  left: 3px;
 }
 @media (max-width: 768px) {
   #sidebar {
