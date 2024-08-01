@@ -1286,6 +1286,7 @@ function removeFromLocalStorage(productId) {
 }
 
 function updateCartDisplay() {
+    addSampleProducts()
     // כאן תוכל להוסיף עדכונים נוספים לתצוגת הסל, אם נדרש
     // למשל, עדכון מספר הפריטים או המחיר הכולל
 }
