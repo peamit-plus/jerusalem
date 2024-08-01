@@ -1235,25 +1235,31 @@ function showMessage(message) {
 function addSampleProducts() {
     var productList = $('#productList');
     productList.empty(); // לוודא שאין פריטים כפולים
-    for (var i = 0; i < localStorage.length; i++) {
-        let key = localStorage.key(i);
-        if (key.startsWith('product_')) { // וידוא שזהו מפתח של מוצר
-            let product = JSON.parse(localStorage.getItem(key));
+    if (localStorage.length > 0) {
+        for (var i = 0; i < localStorage.length; i++) {
+            let key = localStorage.key(i);
+            if (key.startsWith('product_')) { // וידוא שזהו מפתח של מוצר
+                let product = JSON.parse(localStorage.getItem(key));
 
-            productList.append(
-                '<div class="product-item " data-product-id="' + product.id + '">' +
-                '<div class="btn-group-vertical" style="height:100%;">'+
-                '<button class="btn delete-product" title="מחק מוצר">' +
-                '<span class="glyphicon glyphicon-trash"></span>' +
-                '</button>' +
-                '</div>'+
-                '<div class="product-info">' +
-                '<strong>' + product.descraption + '</strong>' +
-                '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
-                '</div>' +
+                productList.append(
+                    '<div class="product-item " data-product-id="' + product.id + '">' +
+                    '<div class="btn-group-vertical" style="height:100%;">' +
+                    '<button class="btn delete-product" title="מחק מוצר">' +
+                    '<span class="glyphicon glyphicon-trash"></span>' +
+                    '</button>' +
+                    '</div>' +
+                    '<div class="product-info">' +
+                    '<strong>' + product.descraption + '</strong>' +
+                    '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
+                    '</div>' +
 
-                '</div>'
-            );
+                    '</div>'
+                );
+            }
+        }
+    }
+        else{
+            productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`)
         }
     }
 
@@ -1269,7 +1275,7 @@ function addSampleProducts() {
         else {
             return
         }
-        
+
         productItem.remove();
         updateCartDisplay();
     });
@@ -1448,14 +1454,14 @@ function InputSearchInCategory(category) {
 function resetLocalStorage() {
     // הצגת חלון אישור עם אופציות לביטול ואישור
     var confirmation = confirm("אתה בטוח שברצוך למחוק את כל המוצרים בסל הקניות ?");
-  
+
     // בדיקה אם המשתמש אישר את הפעולה
     if (confirmation) {
-      // הפעולה לאישור
-      localStorage.clear();
-      addSampleProducts()
+        // הפעולה לאישור
+        localStorage.clear();
+        addSampleProducts()
     }
     else {
-      return
+        return
     }
-  }
+}
