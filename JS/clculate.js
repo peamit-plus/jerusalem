@@ -52,7 +52,7 @@ function calculateTotalPrice() {
   }
   for (let i = 0; i < localStorage.length; i++) {
     let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    totalProduct += ((product.quantity||1)+totalProduct);
+    totalProduct += ((product.quantity || 1));
     
   }
 
