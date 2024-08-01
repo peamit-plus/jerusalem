@@ -1365,7 +1365,22 @@ function createGallery(val_filter) {
     </div>`;
     });
 
-    gallery += createSlider();
+    gallery += `<div id="sidebar">
+        <div class="sidebar-header">
+            <h3 class="text-center">סל קניות</h3>
+        </div>
+        <div class="sidebar-content">
+            <div id="productList">
+            <h4 style="color:red;">אין מוצרים בסל הקניות </h4>   
+            <!-- כאן יתווספו המוצרים דינמית -->
+            </div>
+        </div>
+        <div class="fixed-buttons">
+            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
+            <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
+            <button class="btn btn-default btn-block" id="continueShopping" onclick="closess()">המשך בקנייה</button>
+        </div>
+    </div>`;
 
     if (product_json.length < 1) {
         gallery = `<h3 class='text-center' style='color:red;'>
@@ -1415,7 +1430,22 @@ function InputSearchInCategory(category) {
        </div>`;
         }
     }
-    newGallery += createSlider();
+    newGallery += `<div id="sidebar">
+        <div class="sidebar-header">
+            <h3 class="text-center">סל קניות</h3>
+        </div>
+        <div class="sidebar-content">
+            <div id="productList">
+            <h4 style="color:red;">אין מוצרים בסל הקניות </h4>   
+            <!-- כאן יתווספו המוצרים דינמית -->
+            </div>
+        </div>
+        <div class="fixed-buttons">
+            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
+            <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
+            <button class="btn btn-default btn-block" id="continueShopping" onclick="closess()">המשך בקנייה</button>
+        </div>
+    </div>`;
     if (newGallery === '') {
         newGallery = `<p>לא נמצאו תוצאות עבור  "<i class="text-muted">${val_input}</i>"</p>`;
     }
@@ -1435,38 +1465,4 @@ function resetLocalStorage() {
     else {
         return
     }
-}
-function createSlider(){
-    return `<div id="sidebar">
-        <div class="sidebar-header">
-            <h3 class="text-center">סל קניות</h3>
-        </div>
-        <div class="sidebar-content">
-            <div id="productList">
-            <h4 style="color:red;">אין מוצרים בסל הקניות </h4>   
-            <!-- כאן יתווספו המוצרים דינמית -->
-            </div>
-        </div>
-        <div class="fixed-buttons">
-            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
-            <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
-            <button class="btn btn-default btn-block" id="continueShopping" onclick="closess()">המשך בקנייה</button>
-        </div>
-    </div>
-<div id="sidebar">
-        <div class="sidebar-header">
-            <h3 class="text-center">סל קניות</h3>
-        </div>
-        <div class="sidebar-content">
-            <div id="productList">
-            <h4 style="color:red;">אין מוצרים בסל הקניות </h4>   
-            <!-- כאן יתווספו המוצרים דינמית -->
-            </div>
-        </div>
-        <div class="fixed-buttons">
-            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
-            <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
-            <button class="btn btn-default btn-block" id="continueShopping" onclick="closess()">המשך בקנייה</button>
-        </div>
-    </div>`
 }
