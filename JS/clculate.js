@@ -52,9 +52,10 @@ function calculateTotalPrice() {
   }
   for (let i = 0; i < localStorage.length; i++) {
     let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    totalProduct += (product.quantity+totalProduct);
-    console.log(totalProduct)
+    totalProduct += ((product.quantity||1)+totalProduct);
+    
   }
+  console.log(totalProduct)
   var total;
   if (totalPrice == 0) {
     total = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
