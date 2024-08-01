@@ -44,17 +44,23 @@ function displayProductsFromLocalStorage() {
 }
 function calculateTotalPrice() {
   var totalPrice = 0;
+  var totalProduct = 0;
 
   for (let i = 0; i < localStorage.length; i++) {
     let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
     totalPrice += (product.price * (product.quantity || 1));
   }
-  var total;
-  if(totalPrice==0){
-    total=`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
+  for (let i = 0; i < localStorage.length; i++) {
+    let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    totalProduct += (product.quantity+totalProduct);
+    console.log(totalProduct)
   }
-  else{
-    total=`סה"כ: ${totalPrice}₪`
+  var total;
+  if (totalPrice == 0) {
+    total = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
+  }
+  else {
+    total = `סה"כ: ${totalPrice}₪`
   }
 
   document.getElementById('totalPrice').innerHTML = total;
