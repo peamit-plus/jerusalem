@@ -55,13 +55,13 @@ function calculateTotalPrice() {
     totalProduct += ((product.quantity||1)+totalProduct);
     
   }
-  console.log(totalProduct)
+
   var total;
   if (totalPrice == 0) {
     total = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
   }
   else {
-    total = `סה"כ: ${totalPrice}₪`
+    total = `סה"כ: ${totalPrice}₪ <br/> סה"כ מוצרים בסל : ${totalProduct}`
   }
 
   document.getElementById('totalPrice').innerHTML = total;
