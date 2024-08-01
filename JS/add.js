@@ -1261,7 +1261,7 @@ function addSampleProducts() {
         else{
             productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`)
         }
-    }
+    
 
     // הוספת מאזין אירועים לכפתורי המחיקה
     $('.delete-product').on('click', function () {
