@@ -1242,7 +1242,7 @@ function addSampleProducts() {
 
             productList.append(
                 '<div class="product-item " data-product-id="' + product.id + '">' +
-                '<div class="btn-group-vertical">'+
+                '<div class="btn-group-vertical" style="height:100%;">'+
                 '<button class="btn delete-product" title="מחק מוצר">' +
                 '<span class="glyphicon glyphicon-trash"></span>' +
                 '</button>' +
