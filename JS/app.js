@@ -30,35 +30,8 @@ function closess() {
 }
 function notfound() { alert("אפשרות זאת לא פעילה בדף הנוכחי") }
 function search() { window.location.href = "../page/search.html" }
-function resetLocalStorage() {
-  // הצגת חלון אישור עם אופציות לביטול ואישור
-  var confirmation = confirm("אתה בטוח שברצוך למחוק את כל המוצרים בסל הקניות ?");
 
-  // בדיקה אם המשתמש אישר את הפעולה
-  if (confirmation) {
-    // הפעולה לאישור
-    localStorage.clear();
-    addSampleProducts()
-  }
-  else {
-    return
-  }
-}
 
-function addSampleProducts() {
-  var productList = $('#productList');
-  productList.empty(); // לוודא שאין פריטים כפולים
-  for (var i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    let product = JSON.parse(localStorage.getItem(key));
 
-    productList.append(
-      '<div class="product-item">' +
-      '<strong>' + product.descraption + '</strong>' +
-      '<p style="text-align:center;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
-      '</div>'
-    );
-  }
-}
 
 

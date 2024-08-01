@@ -1367,7 +1367,7 @@ function createGallery(val_filter) {
             </div>
         </div>
         <div class="fixed-buttons">
-            <button class="btn btn-link btn-block" onclick="resetLocalStorage()">רוקן סל</button>
+            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
             <button class="btn btn-default btn-block" id="continueShopping" onclick="closess()">המשך בקנייה</button>
         </div>
@@ -1432,7 +1432,7 @@ function InputSearchInCategory(category) {
             </div>
         </div>
         <div class="fixed-buttons">
-            <button class="btn btn-link btn-block" onclick="resetLocalStorage()">רוקן סל</button>
+            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-info btn-block" onclick="end()">לסיכום ושליחה</button>
             <button class="btn btn-default btn-block" id="continueShopping" onclick="closess()">המשך בקנייה</button>
         </div>
@@ -1442,3 +1442,18 @@ function InputSearchInCategory(category) {
     }
     document.getElementById("id_gallery").innerHTML = newGallery;
 }
+
+function resetLocalStorage() {
+    // הצגת חלון אישור עם אופציות לביטול ואישור
+    var confirmation = confirm("אתה בטוח שברצוך למחוק את כל המוצרים בסל הקניות ?");
+  
+    // בדיקה אם המשתמש אישר את הפעולה
+    if (confirmation) {
+      // הפעולה לאישור
+      localStorage.clear();
+      addSampleProducts()
+    }
+    else {
+      return
+    }
+  }
