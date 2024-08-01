@@ -1239,7 +1239,7 @@ function addSampleProducts() {
         let key = localStorage.key(i);
         if (key.startsWith('product_')) { // וידוא שזהו מפתח של מוצר
             let product = JSON.parse(localStorage.getItem(key));
-s
+
             productList.append(
                 '<div class="product-item" data-product-id="' + product.id + '">' +
                     '<div class="product-info">' +
