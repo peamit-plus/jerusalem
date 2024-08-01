@@ -532,7 +532,7 @@ h1,h2,h3,h4{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding: 10px;
+  /* padding: 0px 0px 0px 10px; */
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 4px;
@@ -540,6 +540,7 @@ h1,h2,h3,h4{
 .product-info {
   flex-grow: 1;
   text-align: right;
+  padding: 10px;
 }
 .delete-product {
   
@@ -549,7 +550,7 @@ h1,h2,h3,h4{
   color: red;
 }
 .delete-product:hover{
-  background-color: rgba(255, 0, 0, 0.404);
+  background-color: red;
   color:white;
 }
 @media (max-width: 768px) {
