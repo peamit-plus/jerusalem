@@ -1245,21 +1245,29 @@ function addSampleProducts() {
                 '<button class="btn delete-product" title="מחק מוצר">' +
                 '<span class="glyphicon glyphicon-trash"></span>' +
                 '</button>' +
-                    '<div class="product-info">' +
-                      '<strong>' + product.descraption + '</strong>' +
-                      '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
-                    '</div>' +
-                   
+                '<div class="product-info">' +
+                '<strong>' + product.descraption + '</strong>' +
+                '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
+                '</div>' +
+
                 '</div>'
             );
         }
     }
 
     // הוספת מאזין אירועים לכפתורי המחיקה
-    $('.delete-product').on('click', function() {
+    $('.delete-product').on('click', function () {
         var productItem = $(this).closest('.product-item');
         var productId = productItem.data('product-id');
-        removeFromLocalStorage(productId);
+        var confirmation = confirm("האם אתה בטוח שברצונך למחוק מוצר זה מסל הקניות ?");
+        // בדיקה אם המשתמש אישר את הפעולה
+        if (confirmation) {// הפעולה לאישור
+            removeFromLocalStorage(productId);
+        }
+        else {
+            return
+        }
+        
         productItem.remove();
         updateCartDisplay();
     });
@@ -1334,7 +1342,7 @@ function createGallery(val_filter) {
     <div class='col-md-3 product-container' id='${element.image}'>
         <div class='thumbnail'>
          <figure>
-            <img src='../image/${element.image||2043}.WebP'  alt='${element.image}' style='height:250px; width: 100%;'>
+            <img src='../image/${element.image || 2043}.WebP'  alt='${element.image}' style='height:250px; width: 100%;'>
             <figcaption>
               <div class='caption product-caption'>
                 <p class='text-center'>
