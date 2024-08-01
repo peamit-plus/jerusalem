@@ -1241,7 +1241,7 @@ function addSampleProducts() {
             let product = JSON.parse(localStorage.getItem(key));
 
             productList.append(
-                '<div class="product-item fade" data-product-id="' + product.id + '">' +
+                '<div class="product-item " data-product-id="' + product.id + '">' +
                 '<button class="btn btn-danger btn-sm delete-product" title="מחק מוצר">' +
                 '<span class="glyphicon glyphicon-trash"></span>' +
                 '</button>' +
