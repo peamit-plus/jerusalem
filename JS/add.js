@@ -1237,17 +1237,41 @@ function addSampleProducts() {
     productList.empty(); // לוודא שאין פריטים כפולים
     for (var i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
-        let product = JSON.parse(localStorage.getItem(key));
+        if (key.startsWith('product_')) { // וידוא שזהו מפתח של מוצר
+            let product = JSON.parse(localStorage.getItem(key));
 
-        productList.append(
-            '<div class="product-item">' +
-            '<strong>' + product.descraption + '</strong>' +
-            '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
-            '</div>'
-        );
+            productList.append(
+                '<div class="product-item" data-product-id="' + product.id + '">' +
+                '<div class="product-info">' +
+                '<strong>' + product.descraption + '</strong>' +
+                '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
+                '</div>' +
+                '<button class="btn btn-danger btn-sm delete-product" title="מחק מוצר">' +
+                '<span class="glyphicon glyphicon-trash"></span>' +
+                '</button>' +
+                '</div>'
+            );
+        }
     }
+
+    // הוספת מאזין אירועים לכפתורי המחיקה
+    $('.delete-product').on('click', function() {
+        var productItem = $(this).closest('.product-item');
+        var productId = productItem.data('product-id');
+        removeFromLocalStorage(productId);
+        productItem.remove();
+        updateCartDisplay();
+    });
 }
 
+function removeFromLocalStorage(productId) {
+    localStorage.removeItem('product_' + productId);
+}
+
+function updateCartDisplay() {
+    // כאן תוכל להוסיף עדכונים נוספים לתצוגת הסל, אם נדרש
+    // למשל, עדכון מספר הפריטים או המחיר הכולל
+}
 function checkDataList() {
     var searchInput = document.getElementById("searchInput").value;
     var data_list = "";
