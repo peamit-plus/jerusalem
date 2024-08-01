@@ -1309,7 +1309,7 @@ function createGallery(val_filter) {
     <div class='col-md-3 product-container' id='${element.image}'>
         <div class='thumbnail'>
          <figure>
-            <img src='../image/${element.image}.WebP'  alt='${element.image}' style='height:250px; width: 100%;'>
+            <img src='../image/${element.image||2043}.WebP'  alt='${element.image}' style='height:250px; width: 100%;'>
             <figcaption>
               <div class='caption product-caption'>
                 <p class='text-center'>

@@ -15,7 +15,8 @@ function btnhome() { window.location.href = "../page/main.html" }
 function btnsale() { window.location.href = "../page/sale.html" }
 function help() { window.location.href = "../page/help.html" }
 function whatsapp() { window.location.assign("https://wa.me/0556610747") }
-function searchProductForm() {
+function searchProductForm() 
+{
   var word = document.getElementById("searchInput").value;
   if (word.length > 0) {
     window.location.href = `https://peamit-plus.github.io/jerusalem/page/search.html?searchInput=${word}`
@@ -24,7 +25,7 @@ function searchProductForm() {
     alert("הכנס שם מוצר לחיפוש .")
   }
 }
-function closess(){
+function closess() {
   $('#sidebar, #content').removeClass('active');
 }
 function notfound() { alert("אפשרות זאת לא פעילה בדף הנוכחי") }
@@ -48,15 +49,15 @@ function addSampleProducts() {
   var productList = $('#productList');
   productList.empty(); // לוודא שאין פריטים כפולים
   for (var i = 0; i < localStorage.length; i++) {
-      let key = localStorage.key(i);
-      let product = JSON.parse(localStorage.getItem(key));
+    let key = localStorage.key(i);
+    let product = JSON.parse(localStorage.getItem(key));
 
-      productList.append(
-          '<div class="product-item">' +
-          '<strong>' + product.descraption + '</strong>' +
-          '<p style="text-align:center;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
-          '</div>'
-      );
+    productList.append(
+      '<div class="product-item">' +
+      '<strong>' + product.descraption + '</strong>' +
+      '<p style="text-align:center;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
+      '</div>'
+    );
   }
 }
 
