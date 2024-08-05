@@ -1466,3 +1466,10 @@ function resetLocalStorage() {
         return
     }
 }
+
+$(document).ready(function(){
+    $("#addToCartBtn").click(function(){
+      $("#sidebar").modal({backdrop: true});
+    });
+   
+  });
