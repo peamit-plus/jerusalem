@@ -1221,6 +1221,7 @@ function addToLocalStorage(productId) {
         localStorage.setItem(`product_${numOfProduct}`, JSON.stringify(product));
         showMessage("<div style='font-size:20px;'><span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:45px;'></span><br/> המוצר " + "<span class='text-primary'><b>" + product.descraption + "</b></span>" + " נוסף לסל הקניות <br/> בסיום ההזמנה יהיה ניתן לשנות כמויות וצבע</div>");
         addSampleProducts();
+
     } else {
         showMessage("<span class='glyphicon glyphicon-remove-circle text-danger' style='font-size:35px;'></span><br/> מצטערים, אירעה בעיה בהוספת המוצר.");
     }
@@ -1240,7 +1241,8 @@ function addSampleProducts() {
             let key = localStorage.key(i);
             if (key.startsWith('product_')) { // וידוא שזהו מפתח של מוצר
                 let product = JSON.parse(localStorage.getItem(key));
-
+                var myitem = localStorage.getItem((localStorage.length))
+                console.log(myitem);
                 productList.append(
                     '<div class="product-item " data-product-id="' + product.id + '">' +
                     '<div class="btn-group-vertical" style="height:100%;">' +
@@ -1258,10 +1260,10 @@ function addSampleProducts() {
             }
         }
     }
-        else{
-            productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`)
-        }
-    
+    else {
+        productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`)
+    }
+
 
     // הוספת מאזין אירועים לכפתורי המחיקה
     $('.delete-product').on('click', function () {
@@ -1467,9 +1469,9 @@ function resetLocalStorage() {
     }
 }
 
-$(document).ready(function(){
-    $("#addToCartBtn").click(function(){
-      $("#sidebar").modal({backdrop: true});
+$(document).ready(function () {
+    $("#addToCartBtn").click(function () {
+        $("#sidebar").modal({ backdrop: true });
     });
-   
-  });
+
+});
