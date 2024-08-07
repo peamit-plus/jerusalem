@@ -17,7 +17,6 @@ function displayProductsFromLocalStorage() {
             <h3>${product.descraption}</h3>
         </div>
         <div class="panel-body text-center">
-            <img src="${product.image || 'default-image.jpg'}" alt="${product.descraption}" class="img-responsive center-block" style="max-height: 150px; margin-bottom: 15px;">
             <h4 id="productPrice-${key}">${totalProductPrice}₪</h4>
             <div class="btn-group" style="margin-bottom: 10px;">
                 <button type="button" class="btn btn-default" onclick="updateQuantity('${key}', -1)">-</button>
@@ -95,6 +94,7 @@ function deleteProduct(key) {
   // בדיקה אם המשתמש אישר את הפעולה
   if (confirmation) {// הפעולה לאישור
     confirmDeleteProduct(`${key}`)
+    calculateTotalPrice();
   }
   else {
     return
@@ -114,7 +114,7 @@ function confirmDeleteProduct(key) {
   setTimeout(() => {
     localStorage.removeItem(key);
     productCard.remove();
-    calculateTotalPrice();
+    
   }, 500); // Adjust the time based on your animation duration
 }
 
