@@ -70,19 +70,20 @@ function calculateTotalPrice() {
 }
 
 function updateQuantity(key, amount) {
+  console.log("1")
   let product = JSON.parse(localStorage.getItem(key));
   let newQuantity = (product.quantity || 1) + amount;
-
+  console.log("2")
   // בדיקה שהכמות איננה שלילית
   if (newQuantity < 1) {
     return;
   }
-
+  console.log("3")
   product.quantity = newQuantity;
 
   let totalProductPrice = product.price * product.quantity;
   document.getElementById(`productPrice-${key}`).innerText = `${totalProductPrice}₪`;
-
+  console.log("4")
   localStorage.setItem(key, JSON.stringify(product));
   document.getElementById(`quantity-${key}`).innerText = product.quantity;
   console.log("n")
