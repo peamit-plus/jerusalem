@@ -36,10 +36,10 @@ function displayProductsFromLocalStorage() {
 </div>
 `;
 
-    productsContainer.innerHTML += productCard;
-
+    productsContainer.insertAdjacentHTML('beforeend', productCard);
   }
 }
+
 function calculateTotalPrice() {
   var totalPrice = 0;
   var totalProduct = 0;
@@ -51,15 +51,13 @@ function calculateTotalPrice() {
   for (let i = 0; i < localStorage.length; i++) {
     let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
     totalProduct += ((product.quantity || 1));
-    
   }
 
   var total;
   if (totalPrice == 0) {
     total = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
-  }
-  else {
-    total = `סה"כ: ${totalPrice}₪ <br/> סה"כ מוצרים בסל : ${totalProduct}`
+  } else {
+    total = `סה"כ: ${totalPrice}₪ <br/> סה"כ מוצרים בסל : ${totalProduct}`;
   }
 
   document.getElementById('totalPrice').innerHTML = total;
@@ -92,32 +90,27 @@ function deleteProduct(key) {
   var confirmation = confirm("האם אתה בטוח שברצונך למחוק מוצר זה מסל הקניות ?");
 
   // בדיקה אם המשתמש אישר את הפעולה
-  if (confirmation) {// הפעולה לאישור
-    confirmDeleteProduct(`${key}`)
+  if (confirmation) {
+    confirmDeleteProduct(key);
     calculateTotalPrice();
   }
-  else {
-    return
-  }
-
 }
+
 function closeM() {
   const modal = document.querySelector('.modal');
   modal.remove();
 }
 
 function confirmDeleteProduct(key) {
-  console.log("B", key)
+  console.log("Deleting product with key:", key);
   let productCard = document.getElementById(`product-${key}`);
   productCard.classList.add('fade-out');
 
   setTimeout(() => {
     localStorage.removeItem(key);
     productCard.remove();
-    
   }, 500); // Adjust the time based on your animation duration
 }
-
 
 function copyUpdatedData() {
   if (!confirm(" לידיעתך ! \n אם אתה ממשיך לשלב הבא לא תוכל לחזור שוב ולעדכן את ההזמנה בדוק את עצמך שוב \nהאם אתה רוצה להמשיך לשלב הבא ?")) {
@@ -143,5 +136,3 @@ function copyUpdatedData() {
 
   window.location.href = completeURL;
 }
-
-
