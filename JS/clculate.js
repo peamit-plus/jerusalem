@@ -17,16 +17,14 @@ function displayProductsFromLocalStorage() {
             <h3>${product.descraption}</h3>
         </div>
         <div class="panel-body">
-            <div class="text-center">
-                <img src="https://peamit-plus.github.io/jerusalem/image/${product.image || '2043'}.WebP" alt="${product.descraption}" class="img-responsive center-block" style="max-height: 200px; margin-bottom: 10px;">
-            </div>
+            
             <div class="text-center" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+            <h4 id="productPrice-${key}" style="margin: 0;">${totalProductPrice}₪</h4>
                 <div class="btn-group">
                     <button type="button" class="btn btn-default" onclick="updateQuantity('${key}', -1)">-</button>
-                    <button type="button" class="btn btn-info"><span id="quantity-${key}">${product.quantity || 1}</span></button>
+                    <button type="button" class="btn btn-primary"><span id="quantity-${key}">${product.quantity || 1}</span></button>
                     <button type="button" class="btn btn-default" onclick="updateQuantity('${key}', 1)">+</button>
                 </div>
-                <h4 id="productPrice-${key}" style="margin: 0;">${totalProductPrice}₪</h4>
             </div>
             <div class="text-center" style="margin-top: 10px;">
                 <input type="text" dir="rtl" class="form-control" value="${product.color || 'צבע ברירת מחדל (מה שקיים במלאי) '}" onchange="updateColor('${key}', this)">
