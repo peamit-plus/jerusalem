@@ -17,13 +17,13 @@ function displayProductsFromLocalStorage() {
                     <div class="panel-heading text-center">
                         <h3>${product.descraption}</h3>
                     </div>
-                    <div class="panel-body text-center">
-      <div class="btn-group">
-    <button type="button" class="btn btn-danger" onclick="updateQuantity('${key}', -1)">-</button>
-    <button type="button" class="btn "><span id="quantity-${key}">${product.quantity || 1}</span></button>
-    <button type="button" class="btn btn-success" onclick="updateQuantity('${key}', 1)">+</button>
-  </div>
-      </div>
+                  <div class="panel-body text-center">
+                     <div class="btn-group">
+                      <button type="button" class="btn btn-default" onclick="updateQuantity('${key}', -1)">-</button>
+                      <button type="button" class="btn btn-info"><span id="quantity-${key}">${product.quantity || 1}</span></button>
+                      <button type="button" class="btn btn-default" onclick="updateQuantity('${key}', 1)">+</button>
+                    </div>
+                  </div>
                     <div class="panel-body text-center">
                         <input type="text" dir="rtl" class="form-control" value="${product.color || 'צבע ברירת מחדל (מה שקיים במלאי) '}" onchange="updateColor('${key}', this)">
                     </div>
