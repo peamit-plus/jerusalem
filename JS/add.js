@@ -1231,25 +1231,6 @@ function showMessage(message) {
     $('#customModal').modal('show');
 }
 
-function updateQuantity(key, amount) {
-    let product = JSON.parse(localStorage.getItem(key));
-    let newQuantity = (product.quantity || 0) + amount;
-  
-    // בדיקה שהכמות איננה שלילית
-    if (newQuantity < 1) {
-      return;
-    }
-  
-    product.quantity = newQuantity;
-  
-    let totalProductPrice = product.price * product.quantity;
-    document.getElementById(`productPrice-${key}`).innerText = `${totalProductPrice}₪`;
-  
-    localStorage.setItem(key, JSON.stringify(product));
-    document.getElementById(`quantity-${key}`).innerText = product.quantity;
-  
-    addSampleProducts();
-  }
 
 function addSampleProducts() {
     var productList = $('#productList');
