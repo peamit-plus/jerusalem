@@ -566,4 +566,8 @@ h1,h2,h3,h4{
 }
 .deleteProductInEnd{
   border: 1px solid red;
+  color: black;
+}
+.deleteProductInEnd:hover{
+  color: red;
 }

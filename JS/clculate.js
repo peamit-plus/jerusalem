@@ -28,9 +28,9 @@ function displayProductsFromLocalStorage() {
                         <input type="text" dir="rtl" class="form-control" value="${product.color || 'צבע ברירת מחדל (מה שקיים במלאי) '}" onchange="updateColor('${key}', this)">
                     </div>
 
-                    <div class=" text-center">
-                        <h4 id="productPrice-${key}">${totalProductPrice}₪</h4>
-                        <button class="deleteProductInEnd btn btn-defult" onclick="deleteProduct('${key}')">
+                    <div class="text-center">
+                        <h4 class="text-primary" id="productPrice-${key}">${totalProductPrice}₪</h4>
+                        <button class=" btn btn-defult deleteProductInEnd" onclick="deleteProduct('${key}')">
                         <span class="glyphicon glyphicon-trash"></span>
                         </button>
                     </div>
