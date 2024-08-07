@@ -67,7 +67,7 @@ function calculateTotalPrice() {
 
 function updateQuantity(key, amount) {
   let product = JSON.parse(localStorage.getItem(key));
-  let newQuantity = (product.quantity || 0) + amount;
+  let newQuantity = (product.quantity || 1) + amount;
 
   // בדיקה שהכמות איננה שלילית
   if (newQuantity < 1) {
@@ -81,7 +81,7 @@ function updateQuantity(key, amount) {
 
   localStorage.setItem(key, JSON.stringify(product));
   document.getElementById(`quantity-${key}`).innerText = product.quantity;
-
+  
   calculateTotalPrice();
 }
 
