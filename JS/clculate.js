@@ -1,6 +1,6 @@
 window.onload = () => {
   displayProductsFromLocalStorage();
-  calculateTotalPrice();
+ 
 }
 
 function displayProductsFromLocalStorage() {
@@ -39,7 +39,7 @@ function displayProductsFromLocalStorage() {
         `;
 
     productsContainer.innerHTML += productCard;
-
+    calculateTotalPrice();
   }
 }
 function calculateTotalPrice() {
@@ -69,7 +69,7 @@ function calculateTotalPrice() {
 
 function updateQuantity(key, amount) {
   let product = JSON.parse(localStorage.getItem(key));
-  let newQuantity = (product.quantity || 0) + amount;
+  let newQuantity = (product.quantity || 1) + amount;
 
   // בדיקה שהכמות איננה שלילית
   if (newQuantity < 1) {
@@ -84,7 +84,28 @@ function updateQuantity(key, amount) {
   localStorage.setItem(key, JSON.stringify(product));
   document.getElementById(`quantity-${key}`).innerText = product.quantity;
 
-  calculateTotalPrice();
+  var totalPrice = 0;
+  var totalProduct = 0;
+
+  for (let i = 0; i < localStorage.length; i++) {
+    let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    totalPrice += (product.price * (product.quantity || 1));
+  }
+  for (let i = 0; i < localStorage.length; i++) {
+    let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    totalProduct += ((product.quantity || 1));
+    
+  }
+
+  var total;
+  if (totalPrice == 0) {
+    total = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
+  }
+  else {
+    total = `סה"כ: ${totalPrice}₪ <br/> סה"כ מוצרים בסל : ${totalProduct}`
+  }
+
+  document.getElementById('totalPrice').innerHTML = total;
 }
 
 function deleteProduct(key) {
