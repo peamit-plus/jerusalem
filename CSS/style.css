@@ -567,7 +567,7 @@ h1,h2,h3,h4{
 .deleteProductInEnd{
   border: 1px solid red;
   border-radius: 10px;
-  padding:  15px 20px 15px 20px;
+  padding:  10px 20px 10px 20px;
   background-color: #fffcfc;
   color: black;
 }
