@@ -13,14 +13,14 @@ function displayProductsFromLocalStorage() {
 
     let productCard = `
             <div class="col-md-4 product-card" id="product-${key}">
-                <div class="panel panel-primery">
+                <div class="panel panel-primary">
                     <div class="panel-heading text-center">
                         <h3>${product.descraption}</h3>
                     </div>
                     <div class="panel-body text-center">
       <div class="btn-group">
     <button type="button" class="btn btn-default" onclick="updateQuantity('${key}', -1)">-</button>
-    <button type="button" class="btn btn-primery"><span id="quantity-${key}">${product.quantity || 1}</span></button>
+    <button type="button" class="btn btn-primary"><span id="quantity-${key}">${product.quantity || 1}</span></button>
     <button type="button" class="btn btn-default" onclick="updateQuantity('${key}', 1)">+</button>
   </div>
       </div>
