@@ -1242,18 +1242,15 @@ function addSampleProducts() {
                 let product = JSON.parse(localStorage.getItem(key));
 
                 productList.append(
-                    '<div class="product-item " data-product-id="' + product.id + '">' +
-                    '<div class="btn-group-vertical" style="height:100%;">' +
-                    '<button class="btn delete-product" title="מחק מוצר">' +
-                    '<span class="glyphicon glyphicon-trash"></span>' +
-                    '</button>' +
-                    '</div>' +
-                    '<div class="product-info">' +
-                    '<strong>' + product.descraption + '</strong>' +
-                    '<p style="text-align:right;" dir="rtl">מחיר: ₪' + product.price + '</p>' +
-                    '</div>' +
-
-                    '</div>'
+                    `<div class="product-item " data-product-id="${product.id}">
+                    <div class="btn-group-vertical" style="height:100%;">
+                    <button class="btn delete-product" title="מחק מוצר"><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                    <div class="product-info">
+                    <strong>${product.descraption}</strong>
+                    <p style="text-align:right;" dir="rtl">מחיר: ₪${product.price}</p>
+                    </div>
+                    </div>`
                 );
             }
         }
