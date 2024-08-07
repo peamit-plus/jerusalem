@@ -564,7 +564,7 @@ h1,h2,h3,h4{
       margin-left: 0;
   }
 }
-.deleteProductInEnd{
+/* .deleteProductInEnd{
   border: 1px solid red;
   border-radius: 10px;
   padding:  10px 20px 10px 20px;
@@ -575,4 +575,4 @@ h1,h2,h3,h4{
   color: #fffafa;
   background-color:red;
 
-}
+} */

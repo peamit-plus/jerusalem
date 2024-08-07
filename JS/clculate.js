@@ -30,7 +30,7 @@ function displayProductsFromLocalStorage() {
 
                     <div class="text-center">
                         <h4 class="text-primary" id="productPrice-${key}">${totalProductPrice}₪</h4>
-                        <button class="deleteProductInEnd" onclick="deleteProduct('${key}')">
+                        <button class="btn btn-danger deleteProductInEnd" onclick="deleteProduct('${key}')">
                         <span class="glyphicon glyphicon-trash"></span>
                         </button>
                     </div>
