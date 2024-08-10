@@ -109,7 +109,7 @@
 
   <!-- External JS -->
   <script src="https://peamit-plus.github.io/jerusalem/JS/app.js"></script>
-  <script src="https://peamit-plus.github.io/jerusalem/JS/Catergory.js"></script>
+  <script src="https://peamit-plus.github.io/jerusalem/JS/add.js"></script>
   <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
   <script defer src="https://peamit-plus.github.io/jerusalem/JS/foter.js"></script>
   <div class="footer" dir="rtl" id="footer"></div>
@@ -117,22 +117,8 @@
   <script>
     AOS.init();
   </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.addEventListener('keydown', function(event) {
-            const searchInput = document.getElementById('searchInput');
-            console.log('Key pressed: ', event.key);  // Debugging line
-            // Check if the 'H' key is pressed
-            if (event.key === 'h' || event.key === 'ח') {
-                searchInput.focus();
-            }
-            // Check if the 'Escape' key is pressed
-            if (event.key === 'Escape') {
-                searchInput.blur();
-            }
-        });
-    });
-</script>
+
+
 </body>
 
 </html>
