@@ -1238,7 +1238,7 @@ const productsDB = {
              -->
          <h4 style='text-align: center;'><u>? איך משתמשים באתר</u></h2>
          <p><button class='btn btn-info fade-in text-center loading' onclick='help()'>לצפיה במדריך שימוש באתר</button><br/><br/>  <u><a href='https://forms.gle/UKXF6d81jejVEg4X6' class="btn btn-warning btn-sm loading">לשאלות / הערות / תקלות באתר <br/>פנו אלינו</a></u></p>
-         <hr/>
+        
             <!--<h4 style='text-align:center;'><u>שליחת הזמנה</u></h4>
            <p>שדרגנו את המערכת ועכשיו ניתן לשלוח הזמנה באופן נוח ויעיל יותר<br/> נסו עכשיו והכנסו לקטגוריה המבוקשת עבורכם בדף הבית</p><hr/>-->
 
