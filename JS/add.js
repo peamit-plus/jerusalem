@@ -1506,7 +1506,7 @@ function createCategory() {
     productsDB.category.forEach(element => {
       gallery += `
   
-      <div class='col-md-3 shaow' style="padding:0px;" id='category${element.image}'>
+      <div class='col-md-3 shaow'  id='category${element.image}'>
        <div class='thumbnail '>
          <img src='../imgctg/${element.image}.WebP' alt='${element.p}' style='width:100%;height:270px;' class='carsor' onclick='index${element.image}()'>
            <div class='caption'>
