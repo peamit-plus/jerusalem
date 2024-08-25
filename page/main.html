@@ -39,7 +39,7 @@
 </head>
 
 <body onload="main()">
-  <nav class="navbar navbar-inverse navbar-fixed-top bg-info" >
+  <nav class="navbar navbar-inverse navbar-fixed-top bg-info">
     <div class="container-fluid">
       <div class="navbar-header navbar-right">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -59,7 +59,8 @@
         </ul>
         <div class="navbar-form navbar-left">
           <div class="input-group">
-            <input list="dtlist" type="search" oninput="checkDataList()" class="form-control" id="searchInput" placeholder="חיפוש מוצר" name="search"  dir="rtl">
+            <input list="dtlist" type="search" oninput="checkDataList()" class="form-control" id="searchInput"
+              placeholder="חיפוש מוצר" name="search" dir="rtl">
             <datalist id="dtlist"></datalist>
             <div class="input-group-btn">
               <button class="btn btn-default" onclick="searchProductForm()">
@@ -69,7 +70,8 @@
           </div>
         </div>
 
-        <button class="btn btn-info navbar-btn fade-in navbar-left" data-toggle="modal" data-target="#myModal">למידע ללקוח לחץ
+        <button class="btn btn-info navbar-btn fade-in navbar-left" data-toggle="modal" data-target="#myModal">למידע
+          ללקוח לחץ
           כאן</button>
       </div>
     </div>
@@ -95,7 +97,7 @@
       <!-- <div class="alert alert-info" style="text-align: right; padding: 1px; font-size: 17px;">
         <strong>הודעה ! </strong>יש מוצרים חדשים <span class="text-muted text-left small">03/05/2024</span>
       </div> -->
-      <div class="row" ><span id="id_category">
+      <div class="row"><span id="id_category">
           <div class="lds-ring-parent">
             <div class="lds-ring">
               <div></div>
@@ -162,7 +164,7 @@
   </div>
   <div class="footer" dir="rtl" id="footer" style="width: 100%;"></div>
   <div id="salebutton" onclick="end()"><span class="glyphicon glyphicon-shopping-cart"></span></div>
-<script src="../JS/add.js"></script>
+  <script src="../JS/add.js"></script>
   <div id="id_Module"></div>
   <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -170,13 +172,13 @@
     AOS.init();
   </script>
 
-<script defer>
-$(document).ready(function(){
-  $(".btn-primary").click(function(){
-    $(this).button('loading');
-  });   
-});
-</script>
+  <script defer>
+    $(document).ready(function () {
+      $(".btn-primary").click(function () {
+        $(this).button('loading');
+      });
+    });
+  </script>
 
 
 
