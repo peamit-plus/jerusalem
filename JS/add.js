@@ -213,6 +213,24 @@ const productsDB = {
             "category": "4"
         },
         {
+
+
+            "id": "173",
+            "image": "mazlegKlasi",
+            "descraption": "מזלג קלאסי קשיח מאוד (10)",
+            "price": "6",
+            "category": "4"
+        },
+        {
+
+
+            "id": "174",
+            "image": "CafKlasi",
+            "descraption": "כף קלאסי קשיח מאוד (10)" ,
+            "price": "6",
+            "category": "4"
+        },
+        {
             "id": "31",
             "image": "ck1",
             "descraption": "מזלג שקוף קשיח",
