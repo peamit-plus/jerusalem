@@ -912,20 +912,7 @@ const productsDB = {
             "price": "11 ",
             "category": "10"
         },
-        {
-            "id": "127",
-            "image": "85",
-            "descraption": "כף אשפה עם ידית",
-            "price": "15 ",
-            "category": "10"
-        },
-        {
-            "id": "128",
-            "image": "me3",
-            "descraption": "מטאטא",
-            "price": "10 ",
-            "category": "10"
-        },
+        
         {
             "id": "178",
             "image": "MetateTreilor",
@@ -945,6 +932,20 @@ const productsDB = {
             "image": "CafTerilor",
             "descraption": "כף אשפה טירולר",
             "price": "75",
+            "category": "10"
+        },
+        {
+            "id": "127",
+            "image": "85",
+            "descraption": "כף אשפה עם ידית",
+            "price": "15 ",
+            "category": "10"
+        },
+        {
+            "id": "128",
+            "image": "me3",
+            "descraption": "מטאטא",
+            "price": "10 ",
             "category": "10"
         },
         {
