@@ -226,7 +226,7 @@ const productsDB = {
 
             "id": "174",
             "image": "CafKlasi",
-            "descraption": "כף קלאסי קשיח מאוד (10)" ,
+            "descraption": "כף קלאסי קשיח מאוד (10)",
             "price": "6",
             "category": "4"
         },
@@ -927,6 +927,27 @@ const productsDB = {
             "category": "10"
         },
         {
+            "id": "178",
+            "image": "MetateTreilor",
+            "descraption": "מטאטא טירולר",
+            "price": "80",
+            "category": "10"
+        },
+        {
+            "id": "177",
+            "image": "MagavTreilor",
+            "descraption": "מגב טירולר",
+            "price": "80",
+            "category": "10"
+        },
+        {
+            "id": "176",
+            "image": "CafTerilor",
+            "descraption": "כף אשפה טירולר",
+            "price": "75",
+            "category": "10"
+        },
+        {
             "id": "129",
             "image": "me1",
             "descraption": "מגב",
@@ -1228,7 +1249,7 @@ const productsDB = {
             "category": "12"
         }
     ],
-    category:[
+    category: [
         { "image": "1", "p": "כוסות" },
         { "image": "2", "p": "צלחות לבן / מארזי חיסכון" },
         { "image": "3", "p": "צלחת צבעוני" },
@@ -1242,7 +1263,7 @@ const productsDB = {
         { "image": "11", "p": "היגיינה וטיפוח" },
         { "image": "12", "p": "שונות - חומרי ניקוי" },
     ],
-    modal:`
+    modal: `
     <div class='modal fade' id='myModal' role='dialog'>
         <div class='modal-dialog modal-lg'>
           <div class='modal-content'>
@@ -1311,10 +1332,10 @@ function addSampleProducts() {
             }
         }
     }
-        else{
-            productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`)
-        }
-    
+    else {
+        productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`)
+    }
+
 
     // הוספת מאזין אירועים לכפתורי המחיקה
     $('.delete-product').on('click', function () {
@@ -1522,7 +1543,7 @@ function resetLocalStorage() {
 function createCategory() {
     var gallery = "";
     productsDB.category.forEach(element => {
-      gallery += `
+        gallery += `
   
       <div class='col-md-3 shaow'   id='category${element.image}'>
        <div class='thumbnail '>
@@ -1537,20 +1558,19 @@ function createCategory() {
   
       `
     });
-  
-  
-    document.getElementById("id_category").innerHTML = gallery;
-   
-  }
-  function createModal(){
-    document.getElementById("id_Module").innerHTML = productsDB.modal;
-  }
 
-function main(){
+
+    document.getElementById("id_category").innerHTML = gallery;
+
+}
+function createModal() {
+    document.getElementById("id_Module").innerHTML = productsDB.modal;
+}
+
+function main() {
     createCategory()
     createModal()
 }
-    
-  
-  
-  
+
+
+
