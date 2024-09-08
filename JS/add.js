@@ -804,7 +804,7 @@ const productsDB = {
             "id": "111",
             "image": "69",
             "descraption": "שלישיית סקוטש ברייט",
-            "price": "8 ",
+            "price": "9",
             "category": "10"
         },
         {
@@ -867,7 +867,7 @@ const productsDB = {
             "id": "120",
             "image": "79",
             "descraption": "כפפות ניטריל ללא אבקה (100)",
-            "price": "24",
+            "price": "20",
             "category": "10"
         },
         {
@@ -948,13 +948,13 @@ const productsDB = {
             "price": "10 ",
             "category": "10"
         },
-        {
-            "id": "129",
-            "image": "me1",
-            "descraption": "מגב",
-            "price": "10 ",
-            "category": "10"
-        },
+        // {
+        //     "id": "129",
+        //     "image": "me1",
+        //     "descraption": "מגב",
+        //     "price": "10 ",
+        //     "category": "10"
+        // },
         {
             "id": "130",
             "image": "me4",
