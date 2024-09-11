@@ -867,7 +867,7 @@ const productsDB = {
             "id": "120",
             "image": "79",
             "descraption": "כפפות ניטריל ללא אבקה (100)",
-            "price": "20",
+            "price": "18",
             "category": "10"
         },
         {
