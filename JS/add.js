@@ -790,14 +790,14 @@ const productsDB = {
             "id": "109",
             "image": "67",
             "descraption": "רביעיית כריות יפני",
-            "price": "8 ",
+            "price": "9 ",
             "category": "10"
         },
         {
             "id": "110",
             "image": "68",
             "descraption": "רביעיית ננס מתכת",
-            "price": "8 ",
+            "price": "9 ",
             "category": "10"
         },
         {
@@ -811,7 +811,7 @@ const productsDB = {
             "id": "112",
             "image": "70",
             "descraption": "זוג ספוג קלין שבת",
-            "price": "8 ",
+            "price": "8",
             "category": "10"
         },
         {
@@ -828,13 +828,13 @@ const productsDB = {
             "price": "4 ",
             "category": "10"
         },
-        {
-            "id": "115",
-            "image": "73",
-            "descraption": "מטליות לניקוי כללי (9)",
-            "price": "10 ",
-            "category": "10"
-        },
+        // {
+        //     "id": "115",
+        //     "image": "73",
+        //     "descraption": "מטליות לניקוי כללי (9)",
+        //     "price": "10 ",
+        //     "category": "10"
+        // },
         {
             "id": "116",
             "image": "74",
@@ -853,7 +853,7 @@ const productsDB = {
             "id": "118",
             "image": "76",
             "descraption": "זוג סחבות לרצפה (גדולות)",
-            "price": "9 ",
+            "price": "10",
             "category": "10"
         },
         {
@@ -874,42 +874,42 @@ const productsDB = {
             "id": "121",
             "image": "81",
             "descraption": "מגב שיש/חלון",
-            "price": "8 ",
+            "price": "8",
             "category": "10"
         },
         {
             "id": "122",
             "image": "82",
             "descraption": "דלי גדול כ 12 ליטר",
-            "price": "16 ",
+            "price": "17",
             "category": "10"
         },
         {
             "id": "123",
             "image": "p1",
             "descraption": "פח 50 ל'",
-            "price": "60 ",
+            "price": "60",
             "category": "10"
         },
         {
             "id": "124",
             "image": "p1",
             "descraption": "פח 25 ל'",
-            "price": "46 ",
+            "price": "46",
             "category": "10"
         },
         {
             "id": "125",
             "image": "p1",
             "descraption": "פח שובך 10 ל'",
-            "price": "37 ",
+            "price": "37",
             "category": "10"
         },
         {
             "id": "126",
             "image": "84",
-            "descraption": "מברשת לאסלה+מתקן",
-            "price": "11 ",
+            "descraption": "מברשת לאסלה + מתקן",
+            "price": "11",
             "category": "10"
         },
         
@@ -938,7 +938,7 @@ const productsDB = {
             "id": "127",
             "image": "85",
             "descraption": "כף אשפה עם ידית",
-            "price": "15 ",
+            "price": "16",
             "category": "10"
         },
         {
@@ -952,35 +952,35 @@ const productsDB = {
         //     "id": "129",
         //     "image": "me1",
         //     "descraption": "מגב",
-        //     "price": "10 ",
+        //     "price": "10",
         //     "category": "10"
         // },
         {
             "id": "130",
             "image": "me4",
             "descraption": "מברשת מטאטא איכותי",
-            "price": "15 ",
+            "price": "15",
             "category": "10"
         },
         {
             "id": "131",
             "image": "me2",
             "descraption": "מגב מתכת איכותי 40 סמ'",
-            "price": "15 ",
+            "price": "15",
             "category": "10"
         },
         {
             "id": "132",
             "image": "88",
             "descraption": "מברשת מטאטא כביש (סיבים חזקים)",
-            "price": "17 ",
+            "price": "17",
             "category": "10"
         },
         {
             "id": "133",
             "image": "200",
             "descraption": "מקל עץ 1.5 מטר למגב/מטאטא",
-            "price": "8 ",
+            "price": "8",
             "category": "10"
         },
         {
