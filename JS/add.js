@@ -18,14 +18,14 @@ const productsDB = {
             "id": "3",
             "image": "c1",
             "descraption": "כוס קרטון גדול 300 מל",
-            "price": "11 ",
+            "price": "9.5",
             "category": "1"
         },
         {
             "id": "4",
             "image": "c2",
             "descraption": "כוס קרטון רגיל 220 מ\"ל ",
-            "price": "5 ",
+            "price": "4.8",
             "category": "1"
         },
         {
@@ -39,7 +39,7 @@ const productsDB = {
             "id": "6",
             "image": "4",
             "descraption": "כוס יהלום",
-            "price": "8.5 ",
+            "price": "7.5",
             "category": "1"
         },
         {
@@ -49,6 +49,10 @@ const productsDB = {
             "price": "8.5 ",
             "category": "1"
         },
+
+
+
+
         {
             "id": "8",
             "image": "6",
@@ -67,56 +71,56 @@ const productsDB = {
             "id": "10",
             "image": "8",
             "descraption": "לפתן פשוט(*25)",
-            "price": "2.2 ",
+            "price": "2.1",
             "category": "2"
         },
         {
             "id": "11",
             "image": "9",
             "descraption": "אובלי לסלט פשוט (*25)",
-            "price": "3 ",
+            "price": "2.9",
             "category": "2"
         },
         {
             "id": "12",
             "image": "10",
             "descraption": "מרקיות פשוטות(*25)",
-            "price": "4.5 ",
+            "price": "4.3",
             "category": "2"
         },
         {
             "id": "13",
             "image": "11",
             "descraption": "צלחות קטנות פשוטות(*50)",
-            "price": "5.5 ",
+            "price": "5.2",
             "category": "2"
         },
         {
             "id": "14",
             "image": "12",
             "descraption": "צלחות גדולות פשוטות(*50)",
-            "price": "7.5 ",
+            "price": "7.2",
             "category": "2"
         },
         {
             "id": "15",
             "image": "13",
             "descraption": "צלחת מרק קשיח(*100)",
-            "price": "18 ",
+            "price": "18",
             "category": "2"
         },
         {
             "id": "16",
             "image": "14",
             "descraption": "צלחת קטן קשיח(*100)",
-            "price": "18 ",
+            "price": "18",
             "category": "2"
         },
         {
             "id": "17",
             "image": "15",
             "descraption": "צלחת גדול קשיח (*100)",
-            "price": "20",
+            "price": "18",
             "category": "2"
         },
         {
@@ -126,32 +130,36 @@ const productsDB = {
             "price": "24 ",
             "category": "2"
         },
+
+
+
+
         {
             "id": "19",
             "image": "17",
             "descraption": "לפתן צבעוני ",
-            "price": "2.5 ",
+            "price": "2.4",
             "category": "3"
         },
         {
             "id": "20",
             "image": "18",
             "descraption": "אובליות צבעוני לסלט ",
-            "price": "3.5 ",
+            "price": "3.2",
             "category": "3"
         },
         {
             "id": "21",
             "image": "19",
             "descraption": "צלחת מרק צבעוני ",
-            "price": "5 ",
+            "price": "4.6",
             "category": "3"
         },
         {
             "id": "22",
             "image": "20",
             "descraption": "צלחת קטן צבעוני ",
-            "price": "5 ",
+            "price": "4.6",
             "category": "3"
         },
         {
@@ -189,6 +197,9 @@ const productsDB = {
             "price": "9",
             "category": "3"
         },
+
+
+
         {
             "id": "28",
             "image": "m100",
@@ -213,8 +224,6 @@ const productsDB = {
             "category": "4"
         },
         {
-
-
             "id": "173",
             "image": "mazlegKlasi",
             "descraption": "מזלג קלאסי קשיח מאוד (10)",
@@ -664,70 +673,70 @@ const productsDB = {
             "id": "91",
             "image": "49",
             "descraption": "מפיות אירוח (*80)",
-            "price": "4 ",
+            "price": "3.9",
             "category": "8"
         },
         {
             "id": "92",
             "image": "50",
             "descraption": "מפיות אירוח מנוקדות(*80)",
-            "price": "5 ",
+            "price": "4.9",
             "category": "8"
         },
         {
             "id": "93",
             "image": "51",
             "descraption": "טישו חמישיה (*500)",
-            "price": "9 ",
+            "price": "10",
             "category": "8"
         },
-        {
-            "id": "94",
-            "image": "52",
-            "descraption": "נייר טואלט חתוך(*800)",
-            "price": "12 ",
-            "category": "8"
-        },
+        // {
+        //     "id": "94",
+        //     "image": "52",
+        //     "descraption": "נייר טואלט חתוך(*800)",
+        //     "price": "12",
+        //     "category": "8"
+        // },
         {
             "id": "95",
             "image": "53",
             "descraption": "נייר סופג (*6)",
-            "price": "11 ",
+            "price": "11",
             "category": "8"
         },
         {
             "id": "96",
             "image": "54",
             "descraption": "סופר מגבת כ-800 גר'",
-            "price": "20 ",
+            "price": "20",
             "category": "8"
         },
         {
             "id": "97",
             "image": "55",
             "descraption": "שישית גללי נייר ניגוב (600 מטר)",
-            "price": "47 ",
+            "price": "50",
             "category": "8"
         },
         {
             "id": "98",
             "image": "56",
             "descraption": "נייר טואלט טישו (32 גלילים)",
-            "price": "30 ",
+            "price": "30",
             "category": "8"
         },
         {
             "id": "99",
             "image": "57",
             "descraption": "נייר טואלט חתוך (*9000)",
-            "price": "80 ",
+            "price": "80",
             "category": "8"
         },
         {
             "id": "100",
             "image": "58",
             "descraption": "נייר ניגוב צץ רץ (*4000)",
-            "price": "65 ",
+            "price": "67",
             "category": "8"
         },
         {
@@ -790,21 +799,21 @@ const productsDB = {
             "id": "109",
             "image": "67",
             "descraption": "רביעיית כריות יפני",
-            "price": "9 ",
+            "price": "10",
             "category": "10"
         },
         {
             "id": "110",
             "image": "68",
             "descraption": "רביעיית ננס מתכת",
-            "price": "9 ",
+            "price": "10",
             "category": "10"
         },
         {
             "id": "111",
             "image": "69",
             "descraption": "שלישיית סקוטש ברייט",
-            "price": "9",
+            "price": "10",
             "category": "10"
         },
         {
@@ -853,7 +862,7 @@ const productsDB = {
             "id": "118",
             "image": "76",
             "descraption": "זוג סחבות לרצפה (גדולות)",
-            "price": "10",
+            "price": "12",
             "category": "10"
         },
         {
@@ -874,35 +883,35 @@ const productsDB = {
             "id": "121",
             "image": "81",
             "descraption": "מגב שיש/חלון",
-            "price": "8",
+            "price": "10",
             "category": "10"
         },
         {
             "id": "122",
             "image": "82",
             "descraption": "דלי גדול כ 12 ליטר",
-            "price": "17",
+            "price": "18",
             "category": "10"
         },
         {
             "id": "123",
             "image": "p1",
             "descraption": "פח 50 ל'",
-            "price": "60",
+            "price": "65",
             "category": "10"
         },
         {
             "id": "124",
             "image": "p1",
             "descraption": "פח 25 ל'",
-            "price": "46",
+            "price": "50",
             "category": "10"
         },
         {
             "id": "125",
             "image": "p1",
             "descraption": "פח שובך 10 ל'",
-            "price": "37",
+            "price": "40",
             "category": "10"
         },
         {
@@ -938,7 +947,7 @@ const productsDB = {
             "id": "127",
             "image": "85",
             "descraption": "כף אשפה עם ידית",
-            "price": "16",
+            "price": "17",
             "category": "10"
         },
         {
@@ -973,7 +982,7 @@ const productsDB = {
             "id": "132",
             "image": "88",
             "descraption": "מברשת מטאטא כביש (סיבים חזקים)",
-            "price": "17",
+            "price": "18",
             "category": "10"
         },
         {
