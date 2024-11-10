@@ -102,14 +102,14 @@ const productsDB = {
             "id": "15",
             "image": "13",
             "descraption": "צלחת מרק קשיח(*100)",
-            "price": "18",
+            "price": "16",
             "category": "2"
         },
         {
             "id": "16",
             "image": "14",
             "descraption": "צלחת קטן קשיח(*100)",
-            "price": "18",
+            "price": "16",
             "category": "2"
         },
         {
