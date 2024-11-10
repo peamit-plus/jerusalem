@@ -49,11 +49,7 @@ const productsDB = {
             "price": "8.5 ",
             "category": "1"
         },
-
-
-
-
-        {
+{
             "id": "8",
             "image": "6",
             "descraption": "צלחת גדול עבה (*50)",
@@ -131,10 +127,7 @@ const productsDB = {
             "category": "2"
         },
 
-
-
-
-        {
+{
             "id": "19",
             "image": "17",
             "descraption": "לפתן צבעוני ",
@@ -376,21 +369,21 @@ const productsDB = {
             "id": "50",
             "image": "nc1",
             "descraption": "נייר כסף זוג ארוך (15מ')",
-            "price": "10 ",
+            "price": "11",
             "category": "6"
         },
         {
             "id": "51",
             "image": "nc2",
             "descraption": "נייר כסף זוג קצר (15מ')",
-            "price": "9 ",
+            "price": "10",
             "category": "6"
         },
         {
             "id": "52",
             "image": "nc3",
             "descraption": "נייר כסף קצר עבה (60 מ')",
-            "price": "27 ",
+            "price": "28",
             "category": "6"
         },
         {
@@ -729,7 +722,7 @@ const productsDB = {
             "id": "99",
             "image": "57",
             "descraption": "נייר טואלט חתוך (*9000)",
-            "price": "80",
+            "price": "85",
             "category": "8"
         },
         {
@@ -743,14 +736,14 @@ const productsDB = {
             "id": "101",
             "image": "59",
             "descraption": "שקיות נשיאה קטן(*100)",
-            "price": "10 ",
+            "price": "11",
             "category": "9"
         },
         {
             "id": "102",
             "image": "60",
             "descraption": "שקיות נשיאה גדול (*100)",
-            "price": "13 ",
+            "price": "14",
             "category": "9"
         },
         {
@@ -1017,7 +1010,7 @@ const productsDB = {
             "id": "137",
             "image": "92",
             "descraption": "קיסמי שינים מלחיה (300)",
-            "price": "4 ",
+            "price": "5",
             "category": "11"
         },
         {
@@ -1045,7 +1038,7 @@ const productsDB = {
             "id": "141",
             "image": "96",
             "descraption": "ספוג רחצה",
-            "price": "8 ",
+            "price": "10",
             "category": "11"
         },
         {
@@ -1054,6 +1047,13 @@ const productsDB = {
             "descraption": "צמר גפן (100 גר')",
             "price": "5 ",
             "category": "11"
+        },
+        {
+            "id": "158",
+            "image": "",
+            "descraption": "סבון נוזלי 4 ל'",
+            "price": "25",
+            "category": "12"
         },
         {
             "id": "143",
@@ -1143,7 +1143,7 @@ const productsDB = {
             "id": "155",
             "image": "98",
             "descraption": "קשים לשתיה (200)",
-            "price": "6.5 ",
+            "price": "8",
             "category": "12"
         },
         {
@@ -1160,13 +1160,7 @@ const productsDB = {
             "price": "11 ",
             "category": "12"
         },
-        {
-            "id": "158",
-            "image": "",
-            "descraption": "סבון נוזלי 4 ל'",
-            "price": "25",
-            "category": "12"
-        },
+        
         {
             "id": "159",
             "image": "102",
