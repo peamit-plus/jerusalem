@@ -28,13 +28,7 @@ const productsDB = {
             "price": "4.8",
             "category": "1"
         },
-        {
-            "id": "5",
-            "image": "gavia",
-            "descraption": "מארז כוסות קידוש 10 י'ח",
-            "price": "10",
-            "category": "1"
-        },
+
         {
             "id": "6",
             "image": "4",
@@ -1249,7 +1243,7 @@ const productsDB = {
             "id": "171",
             "image": "107",
             "descraption": "אקונומיקה מבושמת 4 ליטר",
-            "price": "12 ",
+            "price": "10",
             "category": "12"
         }
     ],
