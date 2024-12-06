@@ -1042,18 +1042,26 @@ const productsDB = {
             "price": "5 ",
             "category": "11"
         },
-        {
-            "id": "158",
-            "image": "",
-            "descraption": "סבון נוזלי 4 ל'",
-            "price": "25",
-            "category": "12"
-        },
-        {
+       {
             "id": "143",
             "image": "sano",
             "descraption": "שלישיית סבון ידים כיף",
             "price": "22 ",
+            "category": "11"
+        },
+        {
+            "id": "190",
+            "image": "Sabon_masheva",
+            "descraption": "סבון נוזלי ליטר משאבה",
+            "price": "10",
+            "category": "11"
+        },
+
+        {
+            "id": "158",
+            "image": "Sabon_Nozli",
+            "descraption": "סבון נוזלי 4 ל'",
+            "price": "25",
             "category": "11"
         },
         {
@@ -1183,13 +1191,13 @@ const productsDB = {
             "price": "18",
             "category": "12"
         },
-        {
-            "id": "163",
-            "image": "104",
-            "descraption": "מסיר שומנים סנט מוריץ",
-            "price": "15 ",
-            "category": "12"
-        },
+        // {
+        //     "id": "163",
+        //     "image": "104",
+        //     "descraption": "מסיר שומנים סנט מוריץ",
+        //     "price": "15 ",
+        //     "category": "12"
+        // },
         {
             "id": "164",
             "image": "112",
