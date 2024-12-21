@@ -559,6 +559,13 @@ const productsDB = {
             "category": "6"
         },
         {
+            "id": "183",
+            "image": "kinuchit",
+            "descraption": "קינוחיות שקופות (*20)",
+            "price": "10",
+            "category": "6"
+        },
+        {
             "id": "77",
             "image": "ga1",
             "descraption": "מארז 4 גביע אמריקאי 1 ל'",
