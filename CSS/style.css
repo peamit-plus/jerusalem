@@ -153,7 +153,7 @@ p {
   border-radius: 10px;
 }
 
-#salebutton {
+.salebutton {
   position: fixed;
   bottom: 40px;
   left: 5px;
