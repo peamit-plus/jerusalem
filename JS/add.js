@@ -1432,7 +1432,7 @@ function createGallery(val_filter) {
     var product_json = productsDB.products.filter(function (item) {
         return val_filter == item.category;
     });
-    var gallery = `<p>בדף זה יש ${product_json.length} מוצרים<br/><span class="text-muted">התמונות להמחשה בלבד</span></p><div class="row">`;
+    var gallery = `<p>בדף זה יש ${product_json.length} מוצרים<br/><span class="text-muted text-center">התמונות להמחשה בלבד</span></p><div class="row">`;
     product_json.forEach(element => {
         gallery += `
     <div class='col-md-3 product-container' id='${element.image}'>
@@ -1496,7 +1496,7 @@ function InputSearchInCategory(category) {
         }
     }
 
-    newGallery += "<p>בדף זה יש " + counter + " מוצרים לאחר סינון<br/><span class='text-muted'>התמונות להמחשה בלבד</span></p></p>";
+    newGallery += "<p>בדף זה יש " + counter + " מוצרים לאחר סינון<br/><span class='text-muted text-center'>התמונות להמחשה בלבד</span></p></p>";
     for (const product of productsDB.products) {
         if (product.descraption.toLowerCase().includes(val_input) && product.category == category) {
             newGallery += `
