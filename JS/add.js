@@ -213,7 +213,7 @@ const productsDB = {
         {
             "id": "173",
             "image": "mazlegKlasi",
-            "descraption": "מזלג קלאסי קשיח מאוד (10)",
+            "descraption": "מזלג קלאסי עבה מאוד (10)",
             "price": "6",
             "category": "4"
         },
@@ -222,7 +222,7 @@ const productsDB = {
 
             "id": "174",
             "image": "CafKlasi",
-            "descraption": "כף קלאסי קשיח מאוד (10)",
+            "descraption": "כף קלאסי עבה מאוד (10)",
             "price": "6",
             "category": "4"
         },
@@ -237,7 +237,7 @@ const productsDB = {
             "id": "32",
             "image": "ck2",
             "descraption": "כף שקוף קשיח",
-            "price": "7.5 ",
+            "price": "6.9",
             "category": "4"
         },
         {
@@ -265,7 +265,7 @@ const productsDB = {
             "id": "36",
             "image": "ck6",
             "descraption": "כף קרם קשיח",
-            "price": "7.5 ",
+            "price": "6.9",
             "category": "4"
         },
         {
@@ -1432,7 +1432,7 @@ function createGallery(val_filter) {
     var product_json = productsDB.products.filter(function (item) {
         return val_filter == item.category;
     });
-    var gallery = `<p>בדף זה יש ${product_json.length} מוצרים</p><div class="row">`;
+    var gallery = `<p>בדף זה יש ${product_json.length} מוצרים</p><br/><span class="text-muted">התמונות להמחשה בלבד</span><div class="row">`;
     product_json.forEach(element => {
         gallery += `
     <div class='col-md-3 product-container' id='${element.image}'>

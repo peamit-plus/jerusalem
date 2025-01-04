@@ -60,7 +60,10 @@ function calculateTotalPrice() {
 
   var total;
   if (totalPrice == 0) {
-    total = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`
+    total = `<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>
+              <br/>
+              <button class="btn btn-primary" onclick="btnhome()">חזרה לדף הבית</button>
+    `
   }
   else {
     total = `סה"כ: ${totalPrice}₪ <br/> סה"כ מוצרים בסל : ${totalProduct}`
