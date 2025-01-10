@@ -1188,14 +1188,14 @@ const productsDB = {
             "id": "161",
             "image": "103",
             "descraption": "חלונית מתז 1 ליטר",
-            "price": "8 ",
+            "price": "7.5",
             "category": "12"
         },
         {
             "id": "162",
             "image": "109",
             "descraption": "סנו ז'אוול מרסס",
-            "price": "18",
+            "price": "16",
             "category": "12"
         },
         // {
@@ -1209,49 +1209,49 @@ const productsDB = {
             "id": "164",
             "image": "112",
             "descraption": "מסיר שומנים סנו פורטה",
-            "price": "17 ",
+            "price": "16",
             "category": "12"
         },
         {
             "id": "165",
             "image": "rases",
             "descraption": "רסס ונגב סנו",
-            "price": "17 ",
+            "price": "14",
             "category": "12"
         },
         {
             "id": "166",
             "image": "hitoi",
             "descraption": "תרסיס חיטוי משטחים סנו",
-            "price": "16 ",
+            "price": "14",
             "category": "12"
         },
         {
             "id": "167",
             "image": "113",
             "descraption": "מגבוני דלי",
-            "price": "22 ",
+            "price": "20",
             "category": "12"
         },
         {
             "id": "168",
             "image": "106",
             "descraption": "נוזל רצפות סנו פרש 4 ליטר",
-            "price": "28 ",
+            "price": "23",
             "category": "12"
         },
         {
             "id": "169",
             "image": "sion",
             "descraption": "נוזל רצפות שיאון 4 ל'",
-            "price": "18 ",
+            "price": "13",
             "category": "12"
         },
         {
             "id": "170",
             "image": "114",
             "descraption": "ריצפז 2 ליטר",
-            "price": "23 ",
+            "price": "20",
             "category": "12"
         },
         {
