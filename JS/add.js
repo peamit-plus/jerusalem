@@ -184,9 +184,6 @@ const productsDB = {
             "price": "9",
             "category": "3"
         },
-
-
-
         {
             "id": "28",
             "image": "m100",
@@ -708,7 +705,7 @@ const productsDB = {
         {
             "id": "97",
             "image": "55",
-            "descraption": "שישית גללי נייר ניגוב (600 מטר)",
+            "descraption": "שישית גלילי נייר ניגוב (600 מטר)",
             "price": "50",
             "category": "8"
         },
