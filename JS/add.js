@@ -185,6 +185,13 @@ const productsDB = {
             "category": "3"
         },
         {
+            "id": "192",
+            "image": "25",
+            "descraption": "מגש מלבני מעוטר ארוז (16.6*44.5)",
+            "price": "7.5",
+            "category": "3"
+        },
+        {
             "id": "28",
             "image": "m100",
             "descraption": "מזלג לבן ",
@@ -713,7 +720,7 @@ const productsDB = {
             "id": "98",
             "image": "56",
             "descraption": "נייר טואלט טישו (32 גלילים)",
-            "price": "30",
+            "price": "32",
             "category": "8"
         },
         {
