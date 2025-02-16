@@ -187,7 +187,7 @@ const productsDB = {
         {
             "id": "192",
             "image": "magashMeutar",
-            "descraption": "<br/>מגש מלבני מעוטר ארוז (16.6*44.5)",
+            "descraption": "מגש מלבני מעוטר ארוז (16.6*44.5)<br/>",
             "price": "7.5",
             "category": "3"
         },
