@@ -28,7 +28,7 @@ function start() {
       </div>
     </div>
     <hr class="w-100">
-    <p class="text-center"> ט.ל.ח © כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2024</p>
+    <p class="text-center"> ט.ל.ח © כל הזכויות שמורות לפעמית פלוס ירושלים 2023-2025</p>
     </div>
   `}
 start()
