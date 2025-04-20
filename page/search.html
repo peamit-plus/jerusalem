@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <title>פעמית פלוס + ירושלים | חיפוש מוצר </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=" פעמית פלוס +| כלים ומוצרים חד פעמיים| חיפוש מוצר ">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://peamit-plus.github.io/jerusalem/CSS/style.css" type="text/css" />
+  <script src="../JS/Catergory.js"></script>
+  <script src="../JS/app.js"></script>
+  <script defer src="../JS/foter.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="../image/rel.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV8E525X7H"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XV8E525X7H');
+  </script>
+</head>
+
+<body onload="searchProducts()" style=" padding-top: 100px;">
+  <nav class="navbar navbar-inverse navbar-fixed-top bg-info">
+    <div class="container-fluid">
+      <div class="navbar-header navbar-right">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand " href="https://peamit-plus.github.io/jerusalem/"
+          style="margin-left: 20px; text-align:right;">+ פעמית
+          פלוס</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="help.html">עזרה</a></li>
+          <li><a href="about.html">אודות</a></li>
+          <li><a href="main.html">בית</a></li>
+        </ul>
+        <!-- <div class="navbar-form navbar-left">
+          <div class="input-group">
+            <input type="search" class="form-control" id="inputForm" placeholder="חיפוש מוצר" name="search" dir="rtl">
+            <div class="input-group-btn">
+              <button class="btn btn-default" onclick="searchProductForm()">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <button class="btn btn-info navbar-btn fade-in navbar-left" data-toggle="modal" data-target="#myModal">למידע
+          ללקוח לחץ
+          כאן</button>
+      </div>
+    </div>
+  </nav>
+  <div class="container" dir="rtl">
+    <h1 id="demotext" class="text-center">חיפוש מוצרים</h1>
+    <div class="well">
+      <form>
+        <div class="input-group col-xs-12 col-md-4" dir="ltr">
+          <label for="searchInput"></label>
+          <input type="search" list="dtlist" class="form-control" name="searchInput" id="searchInput"
+            oninput="searchProducts()" placeholder=" הכנס את שם המוצר ." style="text-align:right;" dir="rtl">
+          <datalist id="dtlist"></datalist>
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <div id="resultsContainer" class="card-container">
+      <!-- תוצאות יופיעו כאן דרך ג'אווהסקריפט -->
+    </div>
+
+    </span>
+  </div>
+  <script src="../JS/add.js"></script>
+  <div class="footer" dir="rtl" id="footer"></div>
+
+  <script>
+    // קריאה לפרמטר המתאים מה-URL
+    const urlParams = new URLSearchParams(window.location.search);
+    // בדיקה האם קיים פרמטר בשם 'searchInput'
+    if (urlParams.has('searchInput')) {
+      // אם קיים, משוך את הערך שלו
+      const searchInputValue = urlParams.get('searchInput');
+      // הצגת הנתון ב-DIV המתאים
+      document.getElementById('searchInput').value = searchInputValue;
+    } else {
+      // אם הפרמטר לא קיים, הצגת הודעת שגיאה
+      document.getElementById('searchInput').innerText = '';
+    }
+  </script>
+
+
+
+  <script defer src="https://peamit-plus.github.io/jerusalem/JS/foter.js"></script>
+  <script src="https://peamit-plus.github.io/jerusalem/JS/app.js"></script>
+  <!-- <script src="https://peamit-plus.github.io/jerusalem/JS/Catergory.js"></script> -->
+  <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>  פעמית פלוס + ירושלים</title>
+  <html lang="he">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="פעמית פלוס + כלים ומוצרים חד פעמיים ">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV8E525X7H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XV8E525X7H');
+    </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="icon" type="image/x-icon" href="../image/rel.png">
+     <script src="JS/app.js"></script>
+     
+    <link href="https://peamit-plus.github.io/jerusalem/CSS/style.css" rel="stylesheet" type="text/css" />
+    <style>
+      img {
+    width: 240px;
+    height: auto; /* שמירה על יחסי הגבהים */
+}
+
+/* כאשר המסך הוא של טלפון נייד (נניח, פחות מ- 600px רוחב), התמונה תוצג ברוחב המסך המלא (100%) */
+@media only screen and (max-width: 600px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+      #myProgress {
+  width: 80%;
+  background-color: #ddd;
+  margin: auto;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #6495ED;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+  .slideshow-image {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+   }
+ .slideshow-image {
+
+            margin-top: 50%;
+            width: 20%;
+            height: 20%;
+            margin: auto;
+        }
+</style>
+<script>$(document).ready(function(){
+    // המשך רק אם אתה רוצה שהאנימציה תתרחש רק פעם אחת
+    var animationCompleted = false;
+
+    function updateProgressBar() {
+        var progressBar = $("#myProgressBar");
+        var currentValue = progressBar.attr("aria-valuenow");
+
+        if (currentValue < 100) {
+            // עדכן את ערך ה-Progress Bar
+            var newValue = parseInt(currentValue) + 1;
+            progressBar.attr("aria-valuenow", newValue);
+            progressBar.css("width", newValue + "%");
+            progressBar.text(newValue + "%");
+
+            // חזור לפונקציה עצמה כל שנייה
+            setTimeout(updateProgressBar, 10);
+        } else if (!animationCompleted) {
+            // אם הגענו ל-100%, ועדיין לא הושלמה האנימציה, עשה משהו
+            animationCompleted = true;
+            console.log("Animation completed!");
+        }
+    }
+
+   
+    updateProgressBar();
+
+});
+  setTimeout(function() {
+      window.location.href = "https://peamit-plus.github.io/jerusalem/page/main.html";
+  }, 2000);
+</script>
+</head>
+<!--  -->
+<body onload="move()">
+  <br/>
+  <br/>
+  <br/>
+ 
+  <div class="container ">
+     <h1 style="text-align: center; font-family:Guttman Yad-Brush;">+ פעמית פלוס</h1>
+  <div class="row">
+  <div class="col-md-4 "></div>
+  <div class="col-md-4">
+  <div class="thumbnail">
+  <img src="image/logo.jpg" alt="Lights" class="logo-image">
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4"></div>
+  <br/>
+  <br/>
+    <div class="progress">
+      <div id="myProgressBar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Progress">
+        0%
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
+    <!-- try add pull-push -->
+</body>
+</html>

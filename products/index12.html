@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <title>פעמית פלוס + שונות וחומרי ניקוי</title>
+  <meta charset="utf-8">
+      <meta name="description" content=" פעמית פלוס +| כלים חד פעמיים| היגיינה וטיפוח ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://peamit-plus.github.io/jerusalem/CSS/style.css" rel="stylesheet" type="text/css" />
+   <link href="https://peamit-plus.github.io/jerusalem/CSS/styleproduct.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="image/rel.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV8E525X7H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XV8E525X7H');
+  </script>
+</head>
+<body onload="initForCategory(12)">
+  <div class="container BorderContainer mt-5" style="margin-top:25px">
+    <div class="header">
+        <div class="row">
+          <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" disabled>הבא</button>
+         </div>
+         <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" onclick="search()">חיפוש מוצר</button>
+         </div>
+         <div class="col-xs-12 col-md-4">
+          <button  class="btn btn-info btn-block" id="sidebarCollapse">סיים הזמנה</button>
+        </div>
+          <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" onclick="btnhome()">דף הבית</button>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <button class="btn btn-primary btn-block" onclick="index11()">הקודם</button>
+        </div>
+        </div>
+
+   <h1 class="text-center">פעמית פלוס - שונות וחומרי ניקוי </h1>
+   <div class="row RowSearch">
+    <div class="col-md-1">
+    </div>
+    <div class="input-group col-md-10">
+      <input type="search" id="InputSearch" name="InputSearch" oninput="InputSearchInCategory(12)" class="form-control"
+        placeholder="הכנס שם מוצר לחיפוש בקטגוריה זו ." dir="rtl">
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+
+  </div>
+   <span id="id_gallery"><div class="lds-ring-parent">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div>
+    </div>
+  </div></span>
+   <div class="row text-center">
+     <div class="col-xs-12">
+       <div class="btn-group">
+         <button type="button" class="btn btn-default" disabled><i class="fa fa-chevron-left"></i> הבא </button>
+         <button  type="button" class="btn btn-default" id="sidebarCollapse">סל הקניות</button>
+         <button type="button" class="btn btn-default" onclick="index11()"> הקודם <i class="fa fa-chevron-right"></i></button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+   <a href="#" class="back-to-top" style="display: none;"><span class="glyphicon glyphicon-chevron-up"></span></a>
+   <script src="https://peamit-plus.github.io/jerusalem/JS/app.js"></script>
+<script src="https://peamit-plus.github.io/jerusalem/JS/product.js"></script>
+<script src="https://peamit-plus.github.io/jerusalem/JS/add.js"></script>
+  <div class="modal fade" id="customModal" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p id="modalMessage">הודעה</p>
+        </div>
+        <div class="center text-center">
+         
+           
+            
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="salebutton" id="sidebarCollapse"><span class="glyphicon glyphicon-shopping-cart"></span></div>
+  <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
+   <script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) { // אם הגלילה היא מעל 100 פיקסל
+                $('.back-to-top').fadeIn();
+            } else {
+                $('.back-to-top').fadeOut();
+            }
+        });
+
+        $('.back-to-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 800);
+        });
+    });
+    $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+            });
+
+            $('#continueShopping').on('click', function () {
+                $('#sidebar, #content').removeClass('active');
+            });
+
+        });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <title>פעמית פלוס + ירושלים | אודות</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="פעמית פלוס +| כלים ומוצרים חד פעמיים| אודותינו">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://peamit-plus.github.io/jerusalem/CSS/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://peamit-plus.github.io/jerusalem/CSS/style2.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="../image/rel.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV8E525X7H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XV8E525X7H');
+  </script>
+</head>
+
+<body onload="createModal()" style=" padding-top: 100px;"> <!--  class="fade-in" -->
+  <nav class="navbar navbar-inverse navbar-fixed-top bg-info" >
+    <div class="container-fluid">
+      <div class="navbar-header navbar-right">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand " href="https://peamit-plus.github.io/jerusalem/"
+          style="margin-left: 20px; text-align:right;">+ פעמית
+          פלוס</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="help.html">עזרה</a></li>
+          <li class="active"><a href="#">אודות</a></li>
+          <li ><a href="./main.html">בית</a></li>
+        </ul>
+        <div class="navbar-form navbar-left">
+          <div class="input-group">
+            <input type="search" class="form-control" id="inputForm" placeholder="חיפוש מוצר" name="search" dir="rtl">
+            <div class="input-group-btn">
+              <button class="btn btn-default" onclick="searchProductForm()">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-info navbar-btn fade-in navbar-left" data-toggle="modal" data-target="#myModal">למידע ללקוח לחץ
+          כאן</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h2 style="text-align:center;" id="demotext">אודותינו</h2>
+    </div>
+    <div class="BorderAbout" data-aos="zoom-in" data-aos-duration="2000">
+      <p style="font-size: 30px; font-family: Arial;">
+        שיווק כלים ומוצרים חד פעמיים
+        <br> עזרי ניקיון למטבח ולבית
+        <br> מוצרי נייר וניילון
+        <br> מוצרי אפיה חד פעמיים
+        <br> ...ועוד
+        <br> למוסדות ופרטיים
+        <br><br> כולל שירות משלוחים בירושלים
+        <br> שירות איכות ואמינות
+      </p>
+      <p><b><a style="text-decoration: underline;" href="tel:+972-055-6610747">055-6610747</a> אברהם</b>
+        <br />
+        <a style="text-decoration: underline;" href="mailto:avizeev85@gmail.com" class="mobile-link"
+          target="_blank">avizeev85@gmail.com</a>
+        <a style="text-decoration: underline;"
+          href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=avizeev85@gmail.com&hl=iw" class="desktop-link"
+          target="_blank">avizeev85@gmail.com</a>
+      </p>
+      <br>
+      <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>שתפו איתנו
+      ביקורת על האתר / השרות בקישור הבא
+      <br>
+      <a style="text-decoration: underline;" href="https://g.page/r/CSWWTVep_ek9EBM/review" target="_blank">מתן ביקורת
+        לפעמית פלוס</a>
+      <br />
+      <br>
+      <a style="text-decoration: underline;" href="mailto:a0503436201@gmail.com" class="mobile-link" target="_blank">👉
+        a0503436201@gmail.com להערות שלחו לנו</a>
+      <a style="text-decoration: underline;"
+        href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=a0503436201@gmail.com&hl=iw" class="desktop-link"
+        target="_blank">👉 a0503436201@gmail.com להערות שלחו לנו</a>
+      </p>
+    </div>
+    <div id="id_Module"></div>
+    <br />
+  </div>
+
+  <!-- External JS -->
+  <script src="https://peamit-plus.github.io/jerusalem/JS/app.js"></script>
+  <script src="https://peamit-plus.github.io/jerusalem/JS/add.js"></script>
+  <script src="https://cdn.enable.co.il/licenses/enable-L2321921mrl47gf0-1223-52938/init.js"></script>
+  <script defer src="https://peamit-plus.github.io/jerusalem/JS/foter.js"></script>
+  <div class="footer" dir="rtl" id="footer"></div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+</body>
+
+</html>

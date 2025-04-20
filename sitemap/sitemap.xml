@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- דף Main -->
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/page/main.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/page/send.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <!-- דף About -->
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/page/about.html</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- דף Sale -->
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/page/sale.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/page/searchproduct.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- דפי המוצרים index1 עד index12 -->
+    <!-- (אני משנה את ה-priority בהתאם לדפים, אך זה רק דוגמה. תוכל להתאים לפי הצורך) -->
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index1</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index2</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index3</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index4</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index5</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index6</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index7</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index8</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index9</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index10</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index11</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- ... -->
+    <url>
+        <loc>https://peamit-plus.github.io/jerusalem/products/index12</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
