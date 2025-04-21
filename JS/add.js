@@ -1315,6 +1315,7 @@ function addToLocalStorage(productId) {
         showMessage("<div style='font-size:20px;'><span class='glyphicon glyphicon-info-sign text-warning' style='font-size:45px;'></span><br/> המוצר " + "<span class='text-warning'><b>" + productsDB.products.find(p => p.id == numOfProduct).descraption + "</b></span>" + " כבר קיים בסל הקניות.</div>");
         return;
     }
+    else{
 
     const product = productsDB.products.find(p => p.id == numOfProduct);
     if (product) {
@@ -1347,6 +1348,7 @@ function addToLocalStorage(productId) {
     } else {
         showMessage("<span class='glyphicon glyphicon-remove-circle text-danger' style='font-size:35px;'></span><br/> מצטערים, אירעה בעיה בהוספת המוצר.");
     }
+}
 }
 
 function showMessage(message) {
