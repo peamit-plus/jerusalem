@@ -1318,8 +1318,31 @@ function addToLocalStorage(productId) {
 
     const product = productsDB.products.find(p => p.id == numOfProduct);
     if (product) {
+        product.quantity = 1; // הוספת מאפיין כמות עם הערך 1
         localStorage.setItem(`product_${numOfProduct}`, JSON.stringify(product));
-        showMessage("<div style='font-size:20px;'><span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:45px;'></span><br/> המוצר " + "<span class='text-primary'><b>" + product.descraption + "</b></span>" + " נוסף לסל הקניות <br/> בסיום ההזמנה יהיה ניתן לשנות כמויות וצבע</div>");
+        function updateQuantityInM(productId, change) {
+            const productKey = `product_${productId}`;
+            const product = JSON.parse(localStorage.getItem(productKey));
+
+            if (product) {
+                product.quantity += change;
+
+                if (product.quantity <= 0) {
+                    const confirmation = confirm("האם אתה בטוח שברצונך להסיר מוצר זה מהסל?");
+                    if (confirmation) {
+                        localStorage.removeItem(productKey);
+                        addSampleProducts();
+                        return;
+                    } else {
+                        product.quantity = 1; // שמירה על כמות מינימלית
+                    }
+                }
+
+                localStorage.setItem(productKey, JSON.stringify(product));
+                document.getElementById(`quantity-${productId}`).innerText = product.quantity;
+                addSampleProducts();
+            }
+        }
         addSampleProducts();
     } else {
         showMessage("<span class='glyphicon glyphicon-remove-circle text-danger' style='font-size:35px;'></span><br/> מצטערים, אירעה בעיה בהוספת המוצר.");
