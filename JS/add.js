@@ -1310,6 +1310,12 @@ const productsDB = {
 function addToLocalStorage(productId) {
     var numOfProduct = parseInt(productId);
 
+    // בדיקה אם המוצר כבר קיים בלוקלסטורג'
+    if (localStorage.getItem(`product_${numOfProduct}`)) {
+        showMessage("<div style='font-size:20px;'><span class='glyphicon glyphicon-info-sign text-warning' style='font-size:45px;'></span><br/> המוצר " + "<span class='text-warning'><b>" + productsDB.products.find(p => p.id == numOfProduct).descraption + "</b></span>" + " כבר קיים בסל הקניות.</div>");
+        return;
+    }
+
     const product = productsDB.products.find(p => p.id == numOfProduct);
     if (product) {
         localStorage.setItem(`product_${numOfProduct}`, JSON.stringify(product));
@@ -1350,7 +1356,7 @@ function addSampleProducts() {
         }
     }
     else {
-        productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/>`)
+        productList.append(`<h4 class="text-center" style="color:red;">אין מוצרים בסל<h4/><br/><p class='text-muted'>הוסף את המוצר הראשון שלך לעגלה</p>`)
     }
 
 
