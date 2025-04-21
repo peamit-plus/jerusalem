@@ -64,6 +64,7 @@ function calculateTotalPrice() {
               <br/>
               <button class="btn btn-primary" onclick="btnhome()">חזרה לדף הבית</button>
     `
+    displayProductsFromLocalStorage();
   }
   else {
     total = `סה"כ: ${roundToOneDecimal(totalPrice)}₪ <br/> סה"כ מוצרים בסל : ${totalProduct}`
