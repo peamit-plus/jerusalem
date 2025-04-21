@@ -1320,33 +1320,7 @@ function addToLocalStorage(productId) {
     if (product) {
         product.quantity = 1; // הוספת מאפיין כמות עם הערך 1
         localStorage.setItem(`product_${numOfProduct}`, JSON.stringify(product));
-        showMessage(`<div style='font-size:20px;'><span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:45px;'></span><br/> המוצר <span class='text-primary'><b>${product.descraption}</b></span> נוסף לסל הקניות.
-            <div class="btn-group">
-                <button type="button" class="btn btn-default" onclick="updateQuantityInM(${numOfProduct}, -1)">-</button>
-                <button type="button" class="btn btn-primary"><span id="quantity-${numOfProduct}">${product.quantity}</span></button>
-                <button type="button" class="btn btn-default" onclick="updateQuantityInM(${numOfProduct}, 1)">+</button>
-            </div>
-        </div>`);
-    function updateQuantityInM(productId, change) {
-        const productKey = `product_${productId}`;
-        const product = JSON.parse(localStorage.getItem(productKey));
-
-        if (product) {
-            product.quantity += change;
-
-            if (product.quantity <= 0) {
-                // אם הכמות יורדת לאפס או פחות, הסר את המוצר מהלוקלסטורג'
-                removeFromLocalStorage(productId);
-                document.querySelector(`[data-product-id="${productId}"]`).remove();
-            } else {
-                // עדכון הכמות בלוקלסטורג'
-                localStorage.setItem(productKey, JSON.stringify(product));
-                // עדכון הכמות בתצוגה
-                document.getElementById(`quantity-${productId}`).innerText = product.quantity;
-            }
-        }
-        updateCartDisplay();
-    }
+        showMessage("<div style='font-size:20px;'><span class='glyphicon glyphicon-ok-circle text-primary' style='font-size:45px;'></span><br/> המוצר " + "<span class='text-primary'><b>" + product.descraption + "</b></span>" + " נוסף לסל הקניות <br/> בסיום ההזמנה יהיה ניתן לשנות כמויות וצבע</div>");
         addSampleProducts();
     } else {
         showMessage("<span class='glyphicon glyphicon-remove-circle text-danger' style='font-size:35px;'></span><br/> מצטערים, אירעה בעיה בהוספת המוצר.");
