@@ -668,6 +668,13 @@ const productsDB = {
             "category": "7"
         },
         {
+            "id": "200",
+            "image": "mapiotdouble",
+            "descraption": "מפיות אירוח( *150)",
+            "price": "7.5",
+            "category": "8"
+        },
+        {
             "id": "91",
             "image": "49",
             "descraption": "מפיות אירוח (*80)",
