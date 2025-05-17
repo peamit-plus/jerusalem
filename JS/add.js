@@ -401,7 +401,7 @@ const productsDB = {
         {
             "id": "55",
             "image": "118",
-            "descraption": "שקיות צליה (12)",
+            "descraption": "שקיות צליה (10)",
             "price": "5.5 ",
             "category": "6"
         },
@@ -990,13 +990,13 @@ const productsDB = {
             "price": "18",
             "category": "10"
         },
-        {
-            "id": "133",
-            "image": "200",
-            "descraption": "מקל עץ 1.5 מטר למגב/מטאטא",
-            "price": "8",
-            "category": "10"
-        },
+        // {
+        //     "id": "133",
+        //     "image": "200",
+        //     "descraption": "מקל עץ 1.5 מטר למגב/מטאטא",
+        //     "price": "8",
+        //     "category": "10"
+        // },
         {
             "id": "134",
             "image": "89",
