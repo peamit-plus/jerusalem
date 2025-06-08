@@ -214,22 +214,22 @@ const productsDB = {
             "price": "4.5 ",
             "category": "4"
         },
-        {
-            "id": "173",
-            "image": "mazlegKlasi",
-            "descraption": "מזלג קלאסי עבה מאוד (10)",
-            "price": "6",
-            "category": "4"
-        },
-        {
+        // {
+        //     "id": "173",
+        //     "image": "mazlegKlasi",
+        //     "descraption": "מזלג קלאסי עבה מאוד (10)",
+        //     "price": "6",
+        //     "category": "4"
+        // },
+        // {
 
 
-            "id": "174",
-            "image": "CafKlasi",
-            "descraption": "כף קלאסי עבה מאוד (10)",
-            "price": "6",
-            "category": "4"
-        },
+        //     "id": "174",
+        //     "image": "CafKlasi",
+        //     "descraption": "כף קלאסי עבה מאוד (10)",
+        //     "price": "6",
+        //     "category": "4"
+        // },
         {
             "id": "31",
             "image": "ck1",
