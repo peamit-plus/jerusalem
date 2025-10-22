@@ -321,13 +321,13 @@ const productsDB = {
             "price": "7 ",
             "category": "5"
         },
-        {
-            "id": "44",
-            "image": "35",
-            "descraption": "מפת שלחן בגליל עבה 45 מטר",
-            "price": "22 ",
-            "category": "5"
-        },
+        // {
+        //     "id": "44",
+        //     "image": "35",
+        //     "descraption": "מפת שלחן בגליל עבה 45 מטר",
+        //     "price": "22 ",
+        //     "category": "5"
+        // },
         {
             "id": "45",
             "image": "36",
