@@ -195,14 +195,14 @@ const productsDB = {
             "id": "28",
             "image": "m100",
             "descraption": "מזלג לבן ",
-            "price": "6 ",
+            "price": "5",
             "category": "4"
         },
         {
             "id": "29",
             "image": "cb100",
             "descraption": "כף לבן ",
-            "price": "6 ",
+            "price": "5",
             "category": "4"
         },
         {
@@ -307,13 +307,13 @@ const productsDB = {
             "price": "4 ",
             "category": "4"
         },
-        {
-            "id": "42",
-            "image": "33",
-            "descraption": "מפת שלחן שמיניה 2.4 מטר",
-            "price": "4 ",
-            "category": "5"
-        },
+        // {
+        //     "id": "42",
+        //     "image": "33",
+        //     "descraption": "מפת שלחן שמיניה 2.4 מטר",
+        //     "price": "4 ",
+        //     "category": "5"
+        // },
         {
             "id": "43",
             "image": "34",
@@ -328,13 +328,13 @@ const productsDB = {
         //     "price": "22 ",
         //     "category": "5"
         // },
-        {
-            "id": "45",
-            "image": "36",
-            "descraption": "מפת אל בד גליל (*25 מ')",
-            "price": "35 ",
-            "category": "5"
-        },
+        // {
+        //     "id": "45",
+        //     "image": "36",
+        //     "descraption": "מפת אל בד גליל (*25 מ')",
+        //     "price": "35 ",
+        //     "category": "5"
+        // },
         {
             "id": "46",
             "image": "37",
@@ -852,7 +852,7 @@ const productsDB = {
         {
             "id": "116",
             "image": "74",
-            "descraption": "שישיית מטליות מיקרופייבר",
+            "descraption": "חמישית מטליות מיקרופייבר",
             "price": "12 ",
             "category": "10"
         },
@@ -1082,13 +1082,13 @@ const productsDB = {
             "price": "25",
             "category": "11"
         },
-        {
-            "id": "144",
-            "image": "110",
-            "descraption": "מטהר אויר",
-            "price": "8 ",
-            "category": "11"
-        },
+        // {
+        //     "id": "144",
+        //     "image": "110",
+        //     "descraption": "מטהר אויר",
+        //     "price": "8 ",
+        //     "category": "11"
+        // },
         {
             "id": "145",
             "image": "111",
@@ -1096,69 +1096,69 @@ const productsDB = {
             "price": "14 ",
             "category": "11"
         },
-        {
-            "id": "146",
-            "image": "metaer_1",
-            "descraption": "מבשם לבית סנו - מאסק מעודן ",
-            "price": "12",
-            "category": "11"
-        },
-        {
-            "id": "147",
-            "image": "metaer_2",
-            "descraption": "מבשם לבית סנו -סבון מפנק  ",
-            "price": "12",
-            "category": "11"
-        },
-        {
-            "id": "148",
-            "image": "metaer_3",
-            "descraption": "מבשם לבית סנו - וניל וקוקוס ",
-            "price": "12",
-            "category": "11"
-        },
-        {
-            "id": "149",
-            "image": "tahliv_1",
-            "descraption": "תחליב - פינוק קלאסי",
-            "price": "11",
-            "category": "11"
-        },
-        {
-            "id": "150",
-            "image": "tahliv_2",
-            "descraption": "תחליב- שיק תפוח ותות",
-            "price": "11",
-            "category": "11"
-        },
-        {
-            "id": "151",
-            "image": "tahliv_3",
-            "descraption": "תחליב- שיק אפרסק ומנגו",
-            "price": "11",
-            "category": "11"
-        },
-        {
-            "id": "152",
-            "image": "tahliv_4",
-            "descraption": "תחליב -שמן קוקוס",
-            "price": "11",
-            "category": "11"
-        },
-        {
-            "id": "153",
-            "image": "tahliv_5",
-            "descraption": "תחליב - שיק פירות יער",
-            "price": "11",
-            "category": "11"
-        },
-        {
-            "id": "154",
-            "image": "shampo_1",
-            "descraption": "שמפו 2 ב-1 ",
-            "price": "12",
-            "category": "11"
-        },
+        // {
+        //     "id": "146",
+        //     "image": "metaer_1",
+        //     "descraption": "מבשם לבית סנו - מאסק מעודן ",
+        //     "price": "12",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "147",
+        //     "image": "metaer_2",
+        //     "descraption": "מבשם לבית סנו -סבון מפנק  ",
+        //     "price": "12",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "148",
+        //     "image": "metaer_3",
+        //     "descraption": "מבשם לבית סנו - וניל וקוקוס ",
+        //     "price": "12",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "149",
+        //     "image": "tahliv_1",
+        //     "descraption": "תחליב - פינוק קלאסי",
+        //     "price": "11",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "150",
+        //     "image": "tahliv_2",
+        //     "descraption": "תחליב- שיק תפוח ותות",
+        //     "price": "11",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "151",
+        //     "image": "tahliv_3",
+        //     "descraption": "תחליב- שיק אפרסק ומנגו",
+        //     "price": "11",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "152",
+        //     "image": "tahliv_4",
+        //     "descraption": "תחליב -שמן קוקוס",
+        //     "price": "11",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "153",
+        //     "image": "tahliv_5",
+        //     "descraption": "תחליב - שיק פירות יער",
+        //     "price": "11",
+        //     "category": "11"
+        // },
+        // {
+        //     "id": "154",
+        //     "image": "shampo_1",
+        //     "descraption": "שמפו 2 ב-1 ",
+        //     "price": "12",
+        //     "category": "11"
+        // },
         {
             "id": "155",
             "image": "98",
@@ -1188,13 +1188,13 @@ const productsDB = {
             "price": "12 ",
             "category": "12"
         },
-        {
-            "id": "160",
-            "image": "108",
-            "descraption": "סנו 00 לניקוי אסלות",
-            "price": "10",
-            "category": "12"
-        },
+        // {
+        //     "id": "160",
+        //     "image": "108",
+        //     "descraption": "סנו 00 לניקוי אסלות",
+        //     "price": "10",
+        //     "category": "12"
+        // },
         {
             "id": "161",
             "image": "103",
