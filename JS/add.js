@@ -111,7 +111,7 @@ const productsDB = {
         { "id": "110", "image": "68", "descraption": "רבעיית ננס מתכת", "price": "10", "category": "10" },
         { "id": "111", "image": "69", "descraption": "שלישיית סקוטש ברייט", "price": "10", "category": "10" },
         { "id": "112", "image": "70", "descraption": "זוג ספוג קלין שבת", "price": "8", "category": "10" },
-        { "id": "113", "image": "71", "descraption": "צמר פלדה", "price": "4 ", "category": "10" },
+        { "id": "113", "price": "4", "category": "10", "image": "71", "descraption": "צמר פלדה" },
         { "id": "114", "image": "72", "descraption": "ספוג הפלא בלוק", "price": "4 ", "category": "10" },
         { "id": "116", "image": "74", "descraption": "חמישית מטליות מיקרופייבר", "price": "12 ", "category": "10" },
         { "id": "117", "image": "75", "descraption": "שלישיית סחבות מיקרופייבר לרצפה", "price": "18 ", "category": "10" },
@@ -173,57 +173,75 @@ const productsDB = {
         { "image": "10", "p": "עזרי ניקיון" },
         { "image": "11", "p": "היגיינה וטיפוח" },
         { "image": "12", "p": "שונות - חומרי ניקוי" }
-    ]
+    ],
+    "modal": `
+    <div class='modal fade' id='myModal' role='dialog'>
+        <div class='modal-dialog modal-lg'>
+          <div class='modal-content'>
+          <div class='modal-header'>
+          <button type='button' class='close' data-dismiss='modal' style='text-align: left; margin-left: 10px;'>&times;</button>
+          <h4 class='modal-title text-center'>מידע - יצירת קשר</h4>
+          </div><div class='modal-body' style='text-align:right;'>
+         <h4 style='text-align: center;'><u>? איך משתמשים באתר</u></h2>
+         <p><button class='btn btn-info' onclick='help()'>לצפיה במדריך שימוש באתר</button><br/><br/>  <u><a href='https://forms.gle/UKXF6d81jejVEg4X6' class="btn btn-warning btn-sm">לשאלות / הערות / תקלות באתר <br/>פנו אלינו</a></u></p>
+        <h4 class='text-center'><u>דרכים נוספות ליצירת קשר</u> </h4>
+        <p><span><a href='tel:+972556610747'>0556610747</a></span> או במייל avizeev85@gmail.com</p>
+        </div>
+        <div class='modal-footer'>
+        <button type='button' class='btn btn-default' data-dismiss='modal'>סגור</button>
+        </div></div></div></div>`
 };
 
-// פונקציית העזר לטעינת דף קטגוריה - קריטי להשארת השם הזה!
-function initForCategory(categoryID) {
-    createGallery(categoryID);
+// פונקציה לבניית כרטיס מוצר קבוע
+function getProductHTML(product) {
+    return `
+    <div class='col-md-3 col-sm-6 col-xs-6' style="margin-bottom:20px;">
+        <div class='thumbnail' style="border-radius:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <img src='../image/${product.image || 2043}.WebP' alt='${product.descraption}' style='height:180px; width: 100%; object-fit: contain; padding:10px;'>
+            <div class='caption text-center'>
+                <h5 style="height:35px; overflow:hidden;"><b>${product.descraption}</b></h5>
+                <p><b style="font-size:16px;">₪${product.price}</b></p>
+                <button class='btn btn-info btn-block' onclick='openPicker(${product.id})'>
+                    <span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל
+                </button>
+            </div>
+        </div>
+    </div>`;
+}
+
+// פונקציית טעינת קטגוריה - שם הפונקציה המקורי שלך!
+function initForCategory(val_filter) {
+    createGallery(val_filter);
     addSampleProducts();
 }
 
 function createGallery(val_filter) {
     var product_json = productsDB.products.filter(item => val_filter == item.category);
     var gallery = `<p class="text-center">נמצאו ${product_json.length} מוצרים בקטגוריה</p><div class="row">`;
-    
-    product_json.forEach(p => {
-        gallery += `
-        <div class='col-md-3 col-xs-6' style="margin-bottom:20px;">
-            <div class='thumbnail' style="border-radius:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <img src='../image/${p.image || 2043}.WebP' style='height:180px; width: 100%; object-fit: contain; padding:10px;'>
-                <div class='caption text-center'>
-                    <h5 style="height:40px; overflow:hidden;"><b>${p.descraption}</b></h5>
-                    <p><b style="font-size:16px;">₪${p.price}</b></p>
-                    <button class='btn btn-info btn-block' onclick='openPicker(${p.id})'>
-                        <span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל
-                    </button>
-                </div>
-            </div>
-        </div>`;
-    });
-    gallery += `</div>`;
-    
-    // הוספת ה-sidebar בתוך id_gallery אם הוא חסר
-    gallery += `
+    product_json.forEach(p => { gallery += getProductHTML(p); });
+    gallery += `</div>` + getSidebarHTML();
+    document.getElementById("id_gallery").innerHTML = gallery;
+}
+
+// מחזיר את ה-HTML של ה-sidebar (סל הקניות הצדדי)
+function getSidebarHTML() {
+    return `
     <div id="sidebar">
         <div class="sidebar-header"><h3 class="text-center">סל קניות</h3></div>
         <div class="sidebar-content"><div id="productList"></div></div>
         <div class="fixed-buttons">
+            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-primary btn-block" onclick="end()">לסיכום ושליחה</button>
             <button class="btn btn-default btn-block" onclick="closess()">המשך בקנייה</button>
         </div>
     </div>`;
-
-    document.getElementById("id_gallery").innerHTML = gallery;
 }
 
-// פונקציה חדשה: פותחת מודאל לבחירת כמות וצבע
+// מנגנון בחירת כמות וצבע
 let modalQty = 1;
 function openPicker(productId) {
     const p = productsDB.products.find(item => item.id == productId);
     modalQty = 1;
-    
-    // השתמש במודאל הקיים ב-Bootstrap 3
     const modalHTML = `
     <div class="modal fade" id="pickerModal" role="dialog">
       <div class="modal-dialog modal-sm">
@@ -233,7 +251,7 @@ function openPicker(productId) {
             <h4 class="modal-title">${p.descraption}</h4>
           </div>
           <div class="modal-body text-center">
-            <label>כמות:</label><br/>
+            <label>בחר כמות:</label><br/>
             <div class="btn-group">
                 <button class="btn btn-default" onclick="changeModalQty(-1)">-</button>
                 <button class="btn btn-link" disabled><b id="mQty">1</b></button>
@@ -251,7 +269,6 @@ function openPicker(productId) {
         </div>
       </div>
     </div>`;
-    
     $('#pickerModal').remove();
     $('body').append(modalHTML);
     $('#pickerModal').modal('show');
@@ -266,21 +283,22 @@ function finalAdd(pid) {
     const p = {...productsDB.products.find(i => i.id == pid)};
     p.quantity = modalQty;
     p.color = document.getElementById('mColor').value || "מה שקיים במלאי";
-    
     localStorage.setItem(`product_${pid}`, JSON.stringify(p));
     $('#pickerModal').modal('hide');
     addSampleProducts();
     $('#sidebar').addClass('active');
 }
 
+// עדכון רשימת המוצרים בסל הצדדי
 function addSampleProducts() {
     var productList = $('#productList');
+    if(!productList.length) return;
     productList.empty();
-    let count = 0;
+    let hasItems = false;
     for (var i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
         if (key.startsWith('product_')) {
-            count++;
+            hasItems = true;
             let p = JSON.parse(localStorage.getItem(key));
             productList.append(`
                 <div class="product-item" style="display:flex; align-items:center; margin-bottom:5px; background:#fff; border:1px solid #ddd; border-radius:5px;">
@@ -292,37 +310,43 @@ function addSampleProducts() {
                 </div>`);
         }
     }
-    if (count === 0) productList.append('<p class="text-center text-muted">הסל ריק</p>');
+    if (!hasItems) productList.append('<p class="text-center text-muted">הסל ריק</p>');
 }
 
-function removeItem(id) {
-    localStorage.removeItem('product_' + id);
-    addSampleProducts();
-}
-
+function removeItem(id) { localStorage.removeItem('product_' + id); addSampleProducts(); }
+function resetLocalStorage() { if(confirm("לרוקן סל?")) { localStorage.clear(); addSampleProducts(); } }
 function closess() { $('#sidebar').removeClass('active'); }
 
-// פונקציה לחיפוש בתוך קטגוריה
+// חיפוש בתוך קטגוריה
 function InputSearchInCategory(category) {
     var val = document.getElementById("InputSearch").value.toLowerCase();
     if (val.length == 0) return createGallery(category);
     var filtered = productsDB.products.filter(p => p.descraption.toLowerCase().includes(val) && p.category == category);
     var gallery = `<p class="text-center">נמצאו ${filtered.length} תוצאות</p><div class="row">`;
-    filtered.forEach(p => { gallery += getProductHTML_Simple(p); });
+    filtered.forEach(p => { gallery += getProductHTML(p); });
     gallery += `</div>` + getSidebarHTML();
     document.getElementById("id_gallery").innerHTML = gallery;
     addSampleProducts();
 }
 
-function getProductHTML_Simple(p) {
-    return `
-    <div class='col-md-3 col-xs-6' style="margin-bottom:20px;">
-        <div class='thumbnail'>
-            <img src='../image/${p.image || 2043}.WebP' style='height:150px; width: 100%; object-fit: contain;'>
-            <div class='caption text-center'>
-                <h5 style="height:35px; overflow:hidden;">${p.descraption}</h5>
-                <button class='btn btn-info btn-xs' onclick='openPicker(${p.id})'>הוסף</button>
+// יצירת קטגוריות בדף הבית - החזרתי את השמות המקוריים של הפונקציות!
+function createCategory() {
+    var gallery = "";
+    productsDB.category.forEach(element => {
+        gallery += `
+        <div class="col-md-3 col-xs-6" id='category${element.image}'>
+            <div class='thumbnail change-color carsor' onclick='index${element.image}()'>
+                <img src='../imgctg/${element.image}.WebP' class='img-rounded' alt='${element.p}' style='width:100%;height:270px; object-fit: cover;'>
+                <div class='caption text-center'>
+                    <p class='text-primary'><br />
+                        <a class='btn btn-primary' href='../products/index${element.image}.html'>&laquo; ${element.p}</a>
+                    </p>
+                </div>
             </div>
-        </div>
-    </div>`;
+        </div>`;
+    });
+    document.getElementById("id_category").innerHTML = gallery;
 }
+
+function createModal() { document.getElementById("id_Module").innerHTML = productsDB.modal; }
+function main() { createCategory(); createModal(); }
