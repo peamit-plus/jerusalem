@@ -173,180 +173,156 @@ const productsDB = {
         { "image": "10", "p": "עזרי ניקיון" },
         { "image": "11", "p": "היגיינה וטיפוח" },
         { "image": "12", "p": "שונות - חומרי ניקוי" }
-    ],
-    modal: `
-    <div class='modal fade' id='myModal' role='dialog'>
-        <div class='modal-dialog modal-lg'>
-          <div class='modal-content'>
-          <div class='modal-header'>
-          <button type='button' class='close' data-dismiss='modal'>&times;</button>
-          <h4 class='modal-title text-center'>מידע - יצירת קשר</h4>
-          </div><div class='modal-body' style='text-align:right;'>
-         <h4 style='text-align: center;'><u>? איך משתמשים באתר</u></h2>
-         <p><button class='btn btn-info' onclick='help()'>לצפיה במדריך שימוש באתר</button></p>
-        <h4 class='text-center'><u>דרכים נוספות ליצירת קשר</u> </h4>
-        <p><span><a href='tel:+972556610747'>0556610747</a></span> | avizeev85@gmail.com</p>
-        </div>
-        <div class='modal-footer'>
-        <button type='button' class='btn btn-default' data-dismiss='modal'>סגור</button>
-        </div></div></div></div>`
+    ]
 };
 
-function getProductHTML(product) {
-    return `
-    <div class='col-md-3 col-sm-6 product-container' id='${product.image}'>
-        <div class='thumbnail'>
-            <img src='../image/${product.image || 2043}.WebP' alt='${product.descraption}' style='height:200px; width: 100%; object-fit: contain;'>
-            <div class='caption product-caption'>
-                <h4 class="text-center">${product.descraption}</h4>
-                <p class='text-center'>
-                    <b style="font-size: 18px;">₪${product.price}</b><br/><br/>
-                    <button class='btn btn-info w-100' onclick='openProductModal(${product.id})'>
-                        <span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל
-                    </button>
-                </p>
-            </div>
-        </div>
-    </div>`;
-}
-
-let currentModalQty = 1;
-function openProductModal(productId) {
-    const product = productsDB.products.find(p => p.id == productId);
-    if (!product) return;
-    currentModalQty = 1;
-    const modalHTML = `
-    <div class="modal fade" id="productSelectModal" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content text-right" dir="rtl">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">${product.descraption}</h4>
-                </div>
-                <div class="modal-body text-center">
-                    <p>מחיר: ₪${product.price}</p>
-                    <div style="margin: 15px 0;">
-                        <label>בחר כמות:</label><br/>
-                        <button class="btn btn-default" onclick="updateModalQty(-1)">-</button>
-                        <b id="modalQty" style="font-size: 20px; margin: 0 15px;">1</b>
-                        <button class="btn btn-default" onclick="updateModalQty(1)">+</button>
-                    </div>
-                    <div class="form-group">
-                        <label>צבע / הערה:</label>
-                        <input type="text" id="modalColor" class="form-control" placeholder="למשל: כחול, אדום...">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-block" onclick="confirmAddToCart(${product.id})">הוסף לסל</button>
-                </div>
-            </div>
-        </div>
-    </div>`;
-    $('#productSelectModal').remove();
-    $('body').append(modalHTML);
-    $('#productSelectModal').modal('show');
-}
-
-function updateModalQty(amt) {
-    currentModalQty = Math.max(1, currentModalQty + amt);
-    document.getElementById('modalQty').innerText = currentModalQty;
-}
-
-function confirmAddToCart(productId) {
-    const product = {...productsDB.products.find(p => p.id == productId)};
-    product.quantity = currentModalQty;
-    product.color = document.getElementById('modalColor').value || "מה שקיים במלאי";
-    localStorage.setItem(`product_${productId}`, JSON.stringify(product));
-    $('#productSelectModal').modal('hide');
+// פונקציית העזר לטעינת דף קטגוריה - קריטי להשארת השם הזה!
+function initForCategory(categoryID) {
+    createGallery(categoryID);
     addSampleProducts();
-    $('#sidebar').addClass('active');
-}
-
-function initForCategory(val_filter) {
-    createGallery(val_filter);
 }
 
 function createGallery(val_filter) {
     var product_json = productsDB.products.filter(item => val_filter == item.category);
-    var gallery = `<p class="text-center">בדף זה יש ${product_json.length} מוצרים</p><div class="row">`;
-    product_json.forEach(p => { gallery += getProductHTML(p); });
-    gallery += `</div>` + getSidebarHTML();
-    document.getElementById("id_gallery").innerHTML = gallery;
-    addSampleProducts();
-}
-
-function getSidebarHTML() {
-    return `
+    var gallery = `<p class="text-center">נמצאו ${product_json.length} מוצרים בקטגוריה</p><div class="row">`;
+    
+    product_json.forEach(p => {
+        gallery += `
+        <div class='col-md-3 col-xs-6' style="margin-bottom:20px;">
+            <div class='thumbnail' style="border-radius:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src='../image/${p.image || 2043}.WebP' style='height:180px; width: 100%; object-fit: contain; padding:10px;'>
+                <div class='caption text-center'>
+                    <h5 style="height:40px; overflow:hidden;"><b>${p.descraption}</b></h5>
+                    <p><b style="font-size:16px;">₪${p.price}</b></p>
+                    <button class='btn btn-info btn-block' onclick='openPicker(${p.id})'>
+                        <span class="glyphicon glyphicon-shopping-cart"></span> הוסף לסל
+                    </button>
+                </div>
+            </div>
+        </div>`;
+    });
+    gallery += `</div>`;
+    
+    // הוספת ה-sidebar בתוך id_gallery אם הוא חסר
+    gallery += `
     <div id="sidebar">
         <div class="sidebar-header"><h3 class="text-center">סל קניות</h3></div>
         <div class="sidebar-content"><div id="productList"></div></div>
         <div class="fixed-buttons">
-            <button class="btn btn-link btn-block text-danger" onclick="resetLocalStorage()">רוקן סל</button>
             <button class="btn btn-primary btn-block" onclick="end()">לסיכום ושליחה</button>
             <button class="btn btn-default btn-block" onclick="closess()">המשך בקנייה</button>
         </div>
     </div>`;
+
+    document.getElementById("id_gallery").innerHTML = gallery;
+}
+
+// פונקציה חדשה: פותחת מודאל לבחירת כמות וצבע
+let modalQty = 1;
+function openPicker(productId) {
+    const p = productsDB.products.find(item => item.id == productId);
+    modalQty = 1;
+    
+    // השתמש במודאל הקיים ב-Bootstrap 3
+    const modalHTML = `
+    <div class="modal fade" id="pickerModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content text-right" dir="rtl">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">${p.descraption}</h4>
+          </div>
+          <div class="modal-body text-center">
+            <label>כמות:</label><br/>
+            <div class="btn-group">
+                <button class="btn btn-default" onclick="changeModalQty(-1)">-</button>
+                <button class="btn btn-link" disabled><b id="mQty">1</b></button>
+                <button class="btn btn-default" onclick="changeModalQty(1)">+</button>
+            </div>
+            <hr/>
+            <div class="form-group text-right">
+                <label>צבע / הערה:</label>
+                <input type="text" id="mColor" class="form-control" placeholder="למשל: כחול, חבילה סגורה...">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-block" onclick="finalAdd(${p.id})">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+    
+    $('#pickerModal').remove();
+    $('body').append(modalHTML);
+    $('#pickerModal').modal('show');
+}
+
+function changeModalQty(val) {
+    modalQty = Math.max(1, modalQty + val);
+    document.getElementById('mQty').innerText = modalQty;
+}
+
+function finalAdd(pid) {
+    const p = {...productsDB.products.find(i => i.id == pid)};
+    p.quantity = modalQty;
+    p.color = document.getElementById('mColor').value || "מה שקיים במלאי";
+    
+    localStorage.setItem(`product_${pid}`, JSON.stringify(p));
+    $('#pickerModal').modal('hide');
+    addSampleProducts();
+    $('#sidebar').addClass('active');
 }
 
 function addSampleProducts() {
     var productList = $('#productList');
     productList.empty();
-    let hasItems = false;
+    let count = 0;
     for (var i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
         if (key.startsWith('product_')) {
-            hasItems = true;
-            let product = JSON.parse(localStorage.getItem(key));
+            count++;
+            let p = JSON.parse(localStorage.getItem(key));
             productList.append(`
-                <div class="product-item">
-                    <button class="btn delete-product" onclick="removeFromLocalStorage(${product.id})"><span class="glyphicon glyphicon-trash"></span></button>
-                    <div class="product-info">
-                        <strong>${product.descraption}</strong>
-                        <p>${product.quantity} יח' | ₪${(product.price * product.quantity).toFixed(1)}</p>
+                <div class="product-item" style="display:flex; align-items:center; margin-bottom:5px; background:#fff; border:1px solid #ddd; border-radius:5px;">
+                    <button class="btn btn-danger btn-xs" onclick="removeItem(${p.id})" style="margin:5px;">&times;</button>
+                    <div style="flex-grow:1; padding:5px; text-align:right;">
+                        <small><b>${p.descraption}</b></small><br/>
+                        <small class="text-muted">${p.quantity} יח' | ${p.color}</small>
                     </div>
                 </div>`);
         }
     }
-    if (!hasItems) productList.append(`<h4 class="text-center text-danger">אין מוצרים בסל</h4>`);
+    if (count === 0) productList.append('<p class="text-center text-muted">הסל ריק</p>');
 }
 
-function removeFromLocalStorage(productId) {
-    localStorage.removeItem('product_' + productId);
+function removeItem(id) {
+    localStorage.removeItem('product_' + id);
     addSampleProducts();
 }
 
-function resetLocalStorage() {
-    if (confirm("לרוקן את הסל?")) {
-        localStorage.clear();
-        addSampleProducts();
-    }
-}
+function closess() { $('#sidebar').removeClass('active'); }
 
+// פונקציה לחיפוש בתוך קטגוריה
 function InputSearchInCategory(category) {
-    var val_input = document.getElementById("InputSearch").value.toLowerCase();
-    if (val_input.length == 0) return createGallery(category);
-    var filtered = productsDB.products.filter(p => p.descraption.toLowerCase().includes(val_input) && p.category == category);
-    var newGallery = `<p class="text-center">נמצאו ${filtered.length} מוצרים</p><div class="row">`;
-    filtered.forEach(p => { newGallery += getProductHTML(p); });
-    newGallery += `</div>` + getSidebarHTML();
-    document.getElementById("id_gallery").innerHTML = newGallery;
+    var val = document.getElementById("InputSearch").value.toLowerCase();
+    if (val.length == 0) return createGallery(category);
+    var filtered = productsDB.products.filter(p => p.descraption.toLowerCase().includes(val) && p.category == category);
+    var gallery = `<p class="text-center">נמצאו ${filtered.length} תוצאות</p><div class="row">`;
+    filtered.forEach(p => { gallery += getProductHTML_Simple(p); });
+    gallery += `</div>` + getSidebarHTML();
+    document.getElementById("id_gallery").innerHTML = gallery;
     addSampleProducts();
 }
 
-function createCategory() {
-    var gallery = "";
-    productsDB.category.forEach(element => {
-        gallery += `
-        <div class="col-md-3 col-xs-6">
-            <div class='thumbnail carsor' onclick='window.location.href="../products/index${element.image}.html"'>
-                <img src='../imgctg/${element.image}.WebP' style='width:100%; height:200px; object-fit: cover;'>
-                <div class='caption text-center'>
-                    <h4 class='text-primary'>${element.p}</h4>
-                </div>
+function getProductHTML_Simple(p) {
+    return `
+    <div class='col-md-3 col-xs-6' style="margin-bottom:20px;">
+        <div class='thumbnail'>
+            <img src='../image/${p.image || 2043}.WebP' style='height:150px; width: 100%; object-fit: contain;'>
+            <div class='caption text-center'>
+                <h5 style="height:35px; overflow:hidden;">${p.descraption}</h5>
+                <button class='btn btn-info btn-xs' onclick='openPicker(${p.id})'>הוסף</button>
             </div>
-        </div>`;
-    });
-    document.getElementById("id_category").innerHTML = gallery;
+        </div>
+    </div>`;
 }
-
-function main() { createCategory(); document.getElementById("id_Module").innerHTML = productsDB.modal; }
